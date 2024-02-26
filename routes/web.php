@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+//tentang kami
+Route::get('/TentangKami', function () {
+    return view('Tentang_Kami');
+});
