@@ -26,3 +26,7 @@ Route::get('/TentangKami', function () {
 Route::get('/Riset', function () {
     return view('riset');
 });
+
+Route::get('/Konsultasi', function () {
+    return view('konsultasi');
+});
