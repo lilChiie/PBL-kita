@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/TentangKami', function () {
     return view('Tentang_Kami');
 });
+
+//riset
+Route::get('/Riset', function () {
+    return view('riset');
+});
