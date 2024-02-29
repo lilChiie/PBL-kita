@@ -45,27 +45,31 @@ Route::prefix('user')->group(function () {
 });
 
 Route::prefix('admin')->group(function () {
+    Route::get('/home', function () {
+        return view('admin/homeAdmin');
+    });
+
     Route::get('/TentangKami', function () {
-        return view('admin/Tentang_Kami');
+        return view('admin/tentangkamiAdmin');
     });
 
     Route::get('/Riset', function () {
-        return view('user/riset');
+        return view('admin/risetAdmin');
     });
 
     Route::get('/Konsultasi', function () {
-        return view('user/konsultasi');
+        return view('admin/konsultasiAdmin');
     });
 
     Route::get('/Publikasi', function () {
-        return view('user/publikasi');
+        return view('admin/publikasiAdmin');
     });
 
     Route::get('/Akademi', function () {
-        return view('user/akademi');
+        return view('admin/akademiAdmin');
     });
 
     Route::get('/Berita', function () {
-        return view('user/berita');
+        return view('admin/beritaAdmin');
     });
 });
