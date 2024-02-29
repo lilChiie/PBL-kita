@@ -13,20 +13,59 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('home');
+    return view('user/home');
+});
+Route::prefix('user')->group(function () {
+    Route::get('/TentangKami', function () {
+        return view('user/Tentang_Kami');
+    });
+
+
+    Route::get('/Riset', function () {
+        return view('user/riset');
+    });
+
+    Route::get('/Konsultasi', function () {
+        return view('user/konsultasi');
+    });
+
+    Route::get('/Publikasi', function () {
+        return view('user/publikasi');
+    });
+
+    Route::get('/Akademi', function () {
+        return view('user/akademi');
+    });
+
+    Route::get('/Berita', function () {
+        return view('user/berita');
+    });
 });
 
-//tentang kami
-Route::get('/TentangKami', function () {
-    return view('Tentang_Kami');
-});
+Route::prefix('admin')->group(function () {
+    Route::get('/TentangKami', function () {
+        return view('admin/Tentang_Kami');
+    });
 
-//riset
-Route::get('/Riset', function () {
-    return view('riset');
-});
+    Route::get('/Riset', function () {
+        return view('user/riset');
+    });
 
-Route::get('/Konsultasi', function () {
-    return view('konsultasi');
+    Route::get('/Konsultasi', function () {
+        return view('user/konsultasi');
+    });
+
+    Route::get('/Publikasi', function () {
+        return view('user/publikasi');
+    });
+
+    Route::get('/Akademi', function () {
+        return view('user/akademi');
+    });
+
+    Route::get('/Berita', function () {
+        return view('user/berita');
+    });
 });
