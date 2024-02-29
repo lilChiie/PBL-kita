@@ -15,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('user/home');
+    return view('login');
 });
+
 Route::prefix('user')->group(function () {
+    Route::get('/Home', function () {
+        return view('user/home');
+    });
     Route::get('/TentangKami', function () {
         return view('user/Tentang_Kami');
     });
