@@ -31,12 +31,8 @@
                     <a href="#"><img src="{{ asset('storage/properti/1.jpg') }}" alt="gambar properti"
                     class="w-8 my-2 mx-1 rounded-full sm:w-10 sm:ml-3"></a>
                 </div>
-                <div class="grow">
-                <input type="search" class="mt-3 ml-4 w-44 p-1 text-xs focus:outline-none focus:ring focus:ring-indigo-100
-                rounded-sm sm:w-8/12 sm:ml-10 sm:mt-2 md:max-w-[592px] sm:text-base" />
-                </div>
                 <div>
-                <a href="#"><img src="{{ asset('storage/properti/1.jpg') }}" alt="gambar properti"
+                <a href="/login"><img src="{{ asset('storage/properti/1.jpg') }}" alt="gambar properti"
                     class="w-8 my-2 mx-2 rounded-lg  sm:w-10 sm:ml-10 sm:mr-4 md:ml-24"></a>
                 </div>
             </div>
@@ -52,11 +48,11 @@
                     top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:py-3 lg:w-full">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
+                                <a href="/user/Home" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                 lg:mx-5" id="navhome">Home</a>
                             </li>
                             <li class="group relative">
-                                <a href="#tentangkami" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
+                                <a href="/user/TentangKami" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                 lg:mx-5" id="tentangkami">Tentang Kami</a>
                                 <ul class="dropdown bg-latar lg:bg-fot hidden lg:absolute py-3 px-8 lg:ml-8 lg:px-5 lg:pt-5 lg:shadow-md lg:rounded-md" 
                                 id="dropdowntentangkami">
@@ -67,7 +63,7 @@
                                 </ul>
                             </li>
                             <li class="group relative ">
-                                <a href="#konsultasi" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
+                                <a href="/konsultasi" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                 lg:mx-5" id="konsultasi">Konsultasi</a>
                                 <ul class="dropdown bg-latar lg:bg-fot hidden lg:absolute py-3 px-8 lg:ml-5 lg:px-5 lg:pt-5 lg:shadow-md lg:rounded-md" 
                                 id="dropdownkonsultasi">
@@ -130,6 +126,11 @@
     <section id="home" class="pt-36 sm:pt-40 mb-60">
         <div class="container max-w-full flex justify-center">
             <div class="max-w-full self-center px-3 md:px-10">
+                <div>
+                    <input type="search" class="mb-6 w-6/12 rounded-sm py-1 px-3 text-xs focus:outline-none focus:ring focus:ring-indigo-100
+                     lg:text-base lg:px-4"
+                     placeholder="Search..">
+                </div>
                 <div>
                     <img src="{{ asset('storage/properti/2.jpg') }}" alt="">
                 </div>
