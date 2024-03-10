@@ -15,6 +15,8 @@ export default {
         'nav': '#03428B',
         'fot': '#F2F2F2',
         'latar': '#C2D2DA',
+        'grad' : '#6591B9',
+        'gradb' : '#000347',
       },
       
     },
