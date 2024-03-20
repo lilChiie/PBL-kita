@@ -1,8 +1,8 @@
-import "./bootstrap";
-
-// resources/js/app.js
+import './bootstrap';
 
 import "tailwindcss/tailwind.css";
+
+
 
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
@@ -12,118 +12,88 @@ hamburger.addEventListener("click", function () {
     navMenu.classList.toggle("hidden");
 });
 
+//dropdownuser
+const dropdownuser = document.querySelector("#dropdownuser");
+user.addEventListener("mouseover", function () {
+    dropdownuser.classList.remove("hidden");
+    dropdownakademi.classList.add("hidden");
+});
+
+user.addEventListener("click", function () {
+    dropdownuser.classList.remove("hidden");
+    dropdownakademi.classList.add("hidden");
+});
+
+dropdownuser.addEventListener("mouseleave", function(){
+    dropdownakademi.classList.add("hidden");
+});
+
+
+
 // home
 const navhome = document.querySelector("#navhome");
 
 navhome.addEventListener("mouseover", function () {
-    // berita.classList.toggle('hidden');
     dropdownakademi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdowntentangkami.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
 });
 
-// dropdown tentang kami
+
+// tentang kami
 const tentangkami = document.querySelector("#tentangkami");
-const dropdowntentangkami = document.querySelector("#dropdowntentangkami");
+
 
 tentangkami.addEventListener("mouseover", function () {
-    dropdowntentangkami.classList.remove("hidden");
-    dropdownriset.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdownakademi.classList.add("hidden");
-});
-
-dropdowntentangkami.addEventListener("mouseleave", function(){
-    dropdowntentangkami.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
+   
     dropdownakademi.classList.add("hidden");
 });
 
 
 
-// dropdown konsultasi
+// konsultasi
 const konsultasi = document.querySelector("#konsultasi");
-const dropdownkonsultasi = document.querySelector("#dropdownkonsultasi");
+
 
 konsultasi.addEventListener("mouseover", function () {
-    dropdownkonsultasi.classList.remove("hidden");
-    dropdownriset.classList.add("hidden");
-    dropdowntentangkami.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
+   
     dropdownakademi.classList.add("hidden");
 });
 
-dropdownkonsultasi.addEventListener("mouseleave", function(){
-    dropdowntentangkami.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdownakademi.classList.add("hidden");
-});
 
-// dropdown riset
+
+//  riset
 const riset = document.querySelector("#riset");
-const dropdownriset = document.querySelector("#dropdownriset");
+
 
 riset.addEventListener("mouseover", function () {
-    dropdownriset.classList.remove("hidden");
-    dropdowntentangkami.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
     dropdownakademi.classList.add("hidden");
 });
 
-dropdownriset.addEventListener("mouseleave", function(){
-    dropdowntentangkami.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdownakademi.classList.add("hidden");
-});
 
-// dropdown publikasi
+
+// publikasi
 const publikasi = document.querySelector("#publikasi");
-const dropdownpublikasi = document.querySelector("#dropdownpublikasi");
 
 publikasi.addEventListener("mouseover", function () {
-    dropdownpublikasi.classList.remove("hidden");
-    dropdowntentangkami.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
     dropdownakademi.classList.add("hidden");
 });
 
-dropdownpublikasi.addEventListener("mouseleave", function(){
-    dropdowntentangkami.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdownakademi.classList.add("hidden");
-});
 
-// dropdown akademi
+
+// akademi
 const akademi = document.querySelector("#akademi");
-const dropdownakademi = document.querySelector("#dropdownakademi");
 
 akademi.addEventListener("mouseover", function () {
     dropdownakademi.classList.remove("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdowntentangkami.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
+    dropdownuser.classList.add("hidden");
+});
+
+akademi.addEventListener("click", function () {
+    dropdownakademi.classList.remove("hidden");
+    dropdownuser.classList.add("hidden");
 });
 
 dropdownakademi.addEventListener("mouseleave", function(){
-    dropdowntentangkami.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdownakademi.classList.add("hidden");
+    dropdownuser.classList.add("hidden");
 });
 
 // berita
@@ -131,48 +101,23 @@ const berita = document.querySelector("#berita");
 
 berita.addEventListener("mouseover", function () {
     dropdownakademi.classList.add("hidden");
-    dropdownpublikasi.classList.add("hidden");
-    dropdowntentangkami.classList.add("hidden");
-    dropdownkonsultasi.classList.add("hidden");
-    dropdownriset.classList.add("hidden");
+    
 });
 
-// Sembunyikan dropdown apabila mengklik di tempat lain.
-document.addEventListener("click", function (event) {
+// Sembunyikan dropdown apabila mouse berada di tempat lain.
+document.addEventListener("mouseover", function (event) {
     const targetElement = event.target;
-
-    if (
-        !targetElement.closest("#dropdowntentangkami") &&
-        !targetElement.closest("#tentangkami")
-    ) {
-        dropdowntentangkami.classList.add("hidden");
-    }
-
-    if (
-        !targetElement.closest("#dropdownkonsultasi") &&
-        !targetElement.closest("#konsultasi")
-    ) {
-        dropdownkonsultasi.classList.add("hidden");
-    }
-
-    if (
-        !targetElement.closest("#dropdownriset") &&
-        !targetElement.closest("#riset")
-    ) {
-        dropdownriset.classList.add("hidden");
-    }
-
-    if (
-        !targetElement.closest("#dropdownpublikasi") &&
-        !targetElement.closest("#publikasi")
-    ) {
-        dropdownpublikasi.classList.add("hidden");
-    }
 
     if (
         !targetElement.closest("#dropdownakademi") &&
         !targetElement.closest("#akademi")
     ) {
         dropdownakademi.classList.add("hidden");
+    }
+    if (
+        !targetElement.closest("#dropdownuser") &&
+        !targetElement.closest("#user")
+    ) {
+        dropdownuser.classList.add("hidden");
     }
 });
