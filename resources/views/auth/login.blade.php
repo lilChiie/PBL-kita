@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    @vite(['resources/css/app.css','resources/js/app.js'])
+    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
 
     @vite('resources/css/app.css')
 
@@ -28,9 +28,9 @@
 </head>
 <body>
 <section class="bg-gradient-to-b from-gradb to-grad h-screen">
-  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+  <div class="flex flex-col items-center justify-center px-6 mx-auto h-screen">
       <div class="w-full md:mt-0 sm:max-w-md xl:p-0" data-aos="zoom-in">
-          <div class="p-6 space-y-6 md:space-y-6 sm:p-8 text-white ">
+          <div class="p-6 space-y-4 sm:p-8 text-white ">
               <h1 class="text-xl leading-tight tracking-tight md:text-2xl">
                   TAX-D
               </h1>
@@ -52,12 +52,12 @@
 
                   <div class="flex items-center justify-between">
                       <a href="/lupa password" class="text-xs text-primary-600 hover:underline hover:text-gradb
-                    transition duration-700">Lupa Kata sandi?</a>
+                        transition duration-700">Lupa Kata sandi?</a>
                   </div>
 
                     <div class="text-center mt-4 lg:text-xs lg:mt-5">
-                        <button type="submit" class="bg-gradb text-[10px] w-10/12 rounded-2xl py-2 text-white lg:text-xs
-                        lg:py-3 lg:rounded-3xl hover:bg-nav transition duration-700 ">Masuk</button>
+                        <a href="/user/" type="submit" class="bg-gradb text-[10px] w-10/12 rounded-2xl py-2 text-white lg:text-xs
+                        lg:py-3 lg:rounded-3xl hover:bg-nav transition duration-700 ">Masuk</a>
                     </div>
 
                     <div class="text-center my-4 text-[10px] lg:my-5">

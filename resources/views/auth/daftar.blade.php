@@ -28,9 +28,9 @@
 </head>
 <body>
 <section class="bg-gradient-to-b from-gradb to-grad h-screen">
-  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+  <div class="flex flex-col items-center justify-center px-6 py-2 mx-auto h-screen ">
       <div class="w-full md:mt-0 sm:max-w-md xl:p-0" data-aos="zoom-in">
-          <div class="p-4 space-y-4 md:space-y-5 sm:p-8 text-white ">
+          <div class="p-4 space-y-2 md:space-y-3 sm:p-8 text-white ">
               <h1 class="text-xl leading-tight tracking-tight md:text-2xl">
                   TAX-D
               </h1>
@@ -39,13 +39,13 @@
               </p>
               <hr>
               <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-bold">Daftar</h1>
-              <form class="space-y-4 md:space-y-4" action="#">
+              <form class="space-y-4 md:space-y-2" action="#">
                   <div>
                       <label for="email" class="block mb-2 text-xs  text-white">Masukkan alamat email anda</label>
                       <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Email" required="">
                   </div>
                   
-                  <div class="flex gap-2 w-full">
+                  <div class="grid grid-cols-2 gap-2 w-full">
                         <div>
                             <label for="username" class="block mb-2 text-xs  text-white">Nama Pengguna</label>
                             <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Nama Pengguna" required="">
