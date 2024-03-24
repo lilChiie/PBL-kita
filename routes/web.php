@@ -127,6 +127,18 @@ Route::prefix('guest')->group(function () {
         return view('guest/publikasi_detail');
     });
 
+    Route::get('/Akademi', function () {
+        return view('guest/akademi');
+    });
+
+    Route::get('/Pelatihan', function () {
+        return view('guest/pelatihan');
+    });
+
+    Route::get('/Kegiatan', function () {
+        return view('guest/kegiatan');
+    });
+    
     Route::get('/Berita', function () {
         return view('guest/berita');
     });
