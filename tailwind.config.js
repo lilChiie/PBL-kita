@@ -21,7 +21,11 @@ export default {
         'wjudul' : "#06354B",
         'wform' : "#D9D9D9",
         'wform1' : '#CEE0F0'
-        
+      },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '16/9': '16 / 9',
+        '3/4': '3 / 4',
       },
     },
   },
