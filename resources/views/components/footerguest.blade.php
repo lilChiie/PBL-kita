@@ -1,16 +1,16 @@
 <!-- Footer Start -->
-<footer class="bg-fot mt-20" data-aos="fade-up" data-aos-duration="1000">
+<footer class="bg-fot mt-10" data-aos="fade-up" data-aos-duration="1000">
     <div class="container max-w-full pt-2">
       <div class="grid grid-cols-3 gap-x-3 ">
           <div class="border-r-2 border-black px-5 justify-items-center grid ">
-            <div class="grid">
+            <div class="gap-3">
               <h1 class="py-5 w-full font-bold text-xs sm:text-lg lg:text-xl">Layanan</h1>
-                  <a href="/guest/Tentang Kami" class="hover:text-sky-600 text-xs sm:text-base">Tentang Kami</a>
-                  <a href="/guest/Konsultasi" class="hover:text-sky-600 text-xs sm:text-base">Konsultasi</a>
-                  <a href="/guest/Riset" class="hover:text-sky-600 text-xs sm:text-base">Riset</a>
-                  <a href="/guest/Publikasi" class="hover:text-sky-600 text-xs sm:text-base">Publikasi</a>
-                  <a href="/guest/Akademi" class="hover:text-sky-600 text-xs sm:text-base ">Akademi</a>
-                  <a href="/guest/Berita" class="hover:text-sky-600 text-xs sm:text-base ">Berita</a>
+                  <a href="/guest/Tentang Kami" class="hover:text-sky-600 block text-xs sm:text-base ">Tentang Kami</a>
+                  <a href="/guest/Konsultasi" class="hover:text-sky-600 text-xs block sm:text-base">Konsultasi</a>
+                  <a href="/guest/Riset" class="hover:text-sky-600 text-xs block sm:text-base">Riset</a>
+                  <a href="/guest/Publikasi" class="hover:text-sky-600 text-xs block sm:text-base">Publikasi</a>
+                  <a href="/guest/Akademi" class="hover:text-sky-600 text-xs block sm:text-base ">Akademi</a>
+                  <a href="/guest/Berita" class="hover:text-sky-600 text-xs block sm:text-base ">Berita</a>
             </div>
           </div>
 
@@ -27,21 +27,32 @@
           </div>
 
           <div class="px-2">
-            <div class="flex justify-end mx-5 my-5">
-              <img src="{{ asset('storage/properti/logo.png') }}" alt="" class="w-1/3 ml-5 mb-12">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <img src="{{ asset('storage/properti/logo 5.png') }}" alt="" class="w-4/5">
+              </div>
+              <div>
+                <img src="{{ asset('storage/properti/logo polibatam.png') }}" alt="" class="w-4/5">
+              </div>
             </div>
-            <div class="flex justify-end gap-1 lg:gap-4 mr-4">
-              <a href="https://www.facebook.com/NASA?mibextid=ZbWKwL"><i class="fab fa-facebook mr-2 text-xl lg:text-3xl"></i></a>
-              <a href="https://www.instagram.com/nasa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram mr-2 text-xl lg:text-3xl"></i></a>
-              <a href="https://x.com/NASA?s=20"><i class="fab fa-twitter mr-2 text-xl lg:text-3xl"></i></a>
-              <a href="https://www.youtube.com/@NASA"><i class="fab fa-youtube text-xl lg:text-3xl"></i></a>
+            <div class="flex justify-end gap-1 mt-4 sm:gap-3 sm:me-10 ">
+              <a href="https://www.facebook.com/NASA?mibextid=ZbWKwL"><i class="fab fa-facebook text-xl lg:text-xl xl:text-2xl"></i></a>
+              <a href="https://www.instagram.com/nasa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram text-xl lg:text-xl xl:text-2xl"></i></a>
+              <a href="https://x.com/NASA?s=20"><i class="fab fa-twitter text-xl lg:text-xl xl:text-2xl"></i></a>
+              <a href="https://www.youtube.com/@NASA"><i class="fab fa-youtube text-xl lg:text-xl xl:text-2xl"></i></a>
             </div>
           </div>
       </div>
 
       <div class="mt-14 pb-8 text-[6px] lg:text-xs ">
-        <p class="text-center"><i class="far fa-copyright"></i> COPYRIGHT {{ date ('Y')}} TAX Digital. All rights reserved. Not for further distribution without the permission of TAX digital</p>
+        <p class="text-center"><i class="far fa-copyright"></i> COPYRIGHT {{ date ('Y')}} TAX Digital. All rights reserved. Not for further distribution without the permission of PJAP</p>
       </div>
     </div>
 </footer>
-    <!-- Footer End -->
+<!-- Footer End -->
+
+<!-- javascript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>

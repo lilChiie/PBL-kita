@@ -4,25 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riset</title>
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
 </head>
 <body class="bg-latar text-black pb-12 min-h-screen">
     
@@ -30,12 +11,13 @@
    @include('components.headeradmin')
 
     <!-- Content Start -->
-    <div class="fixed right-0 bottom-28 z-10">
+    <div class="fixed right-0 bottom-16 z-10">
         <a href="/admin/riset/tambah" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Tambah
         </a>
     </div>
+
     <section  class="pt-36 sm:pt-40 mb-12 mx-8 flex justify-center">
         <div class="bg-white w-full rounded-md pb-40">
             <div class="mx-3 my-2">
@@ -49,10 +31,11 @@
             </div>
 
             <div class="grid gap-x-5 sm:gap-x-10 gap-y-2 grid-cols-2 mx-5 sm:mx-10 my-2 ">
+                <!-- content 1 -->
                 <div class="w-full" data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/riset/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/riset/detail">
@@ -64,11 +47,12 @@
                     </div>
                 </div>
 
+                <!-- content 2 -->
                 <div class="w-full "
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/riset/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/riset/detail">
@@ -80,11 +64,12 @@
                     </div>
                 </div>
 
+                <!-- content 2 -->
                 <div class="w-full "
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/riset/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/riset/detail">
@@ -96,11 +81,12 @@
                     </div>
                 </div>
 
+                <!-- content 3 -->
                 <div class="w-full "
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/riset/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/3.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/riset/detail">
@@ -121,6 +107,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

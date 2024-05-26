@@ -73,6 +73,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- data 1 -->
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td class="px-2 py-4 border border-slate-500">
                                 BRI
@@ -81,10 +82,12 @@
                                 bercodebri.jpg
                             </td>
                             <td class="px-2 py-4 border border-slate-500 text-center">
-                                <button class=" text-white p-1 px-2 sm:px-4 rounded-md bg-nav 
+                                <button onclick="showDialog()" class=" text-white p-1 px-2 sm:px-4 rounded-md bg-nav 
                                 hover:bg-gradb focus:bg-gradb transition duration-700">Hapus</button>
                             </td>
                         </tr>
+
+                        <!-- data 2 -->
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td class="px-2 py-4 border border-slate-500">
                                 BNI
@@ -93,7 +96,7 @@
                                 bercodebni.jpg
                             </td>
                             <td class="px-2 py-4 border border-slate-500 text-center">
-                                <button class=" text-white p-1 px-2 sm:px-4 rounded-md bg-nav 
+                                <button onclick="showDialog()" class=" text-white p-1 px-2 sm:px-4 rounded-md bg-nav 
                                 hover:bg-gradb focus:bg-gradb transition duration-700">Hapus</button>
                             </td>
                         </tr>
@@ -109,13 +112,14 @@
     </section>
     <!-- Content End -->
 
-
+    <!-- modal -->
+    @include('modals.modal-hapus_barcode')
 
     <!-- javascript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

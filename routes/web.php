@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TentangkamiController;
-use App\Http\Controllers\KonsultasiController;
-use App\Models\Konsultasi;
-use App\Models\Tentangkami;
+// use App\Http\Controllers\TentangkamiController;
+// use App\Http\Controllers\KonsultasiController;
+// use App\Models\Konsultasi;
+// use App\Models\Tentangkami;
 
 
 
@@ -289,5 +289,3 @@ Route::prefix('admin')->group(function () {
 
 
 // controller
-Route::get('/guest/TentangKami', [TentangkamiController::class, 'selectTentangkami']);
-Route::get('/guest/Konsultasi', [KonsultasiController::class, 'index']);

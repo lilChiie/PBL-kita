@@ -4,31 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita</title>
-
-    @vite(['resources/css/app.css','resources/js/app.js'])
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
     @include('components.headeruser')
     
     <!-- Content Start -->
-    <section class="pt-36 sm:pt-40 pb-12 mx-8 flex justify-center">
+    <section class="pt-36 sm:pt-40 mx-8 flex justify-center">
         <div class="bg-white w-full rounded-md pb-20">
             <div class="mx-3 my-2"
                 data-aos="fade-zoom-in"
@@ -38,6 +20,7 @@
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6"
                 >Detail Riwayat</h1>
 
+                <!-- data -->
                 <div class="mx-4 text-xs md:text-base sm:mx-10 my-3">
                     <label for="username" >Nama Pengguna</label>
                     <p class="border border-black rounded-md p-2">Niati_05</p>
@@ -79,10 +62,6 @@
     @include('components.footeruser')
 
     <!-- javascript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

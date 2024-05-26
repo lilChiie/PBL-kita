@@ -4,49 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita</title>
-
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
     @include('components.headeradmin')
     
     <!-- Content Start -->
-    <div class="fixed right-0 bottom-40 z-10">
+    <div class="fixed right-0 bottom-16 z-10">
     <a href="/admin/berita/tambah" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
     transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
     <section  class="pt-36 sm:pt-40 pb-12 mx-8">
         <div class="bg-white w-full pt-2 pb-20 mb-12">
-           <div class="grid grid-cols-3 gap-4 mx-5 sm:mx-10 my-2">
-                <div class="col-span-2">
-                    <a href="/admin/berita/detail"><img src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" data-aos="fade-right"></a>
+           <!-- berita utama start-->
+           <div class="flex gap-7 lg:gap-12 mx-5 sm:mx-10 my-2">
+                <div class="w-9/12">
+                    <a href="/admin/berita/detail">
+                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/6.jpg') }}" alt="gambar berita" data-aos="fade-right">
+                    </a>
                 </div>
-                <div class="gap-y-2">
-                    <a href="/admin/berita/detail"><img src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" data-aos="fade-down"></a>
-                    <a href="/admin/berita/detail"><img src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" class="mt-2" data-aos="fade-up"></a>
+                <div class="w-4/12">
+                    <a href="/admin/berita/detail">
+                        <img class=" w-full aspect-16/9 mb-4 md:mb-11 2xl:mb-20 2xl:mt-8" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" data-aos="fade-down">
+                    </a>
+                    <a href="/admin/berita/detail">
+                        <img class=" w-full aspect-16/9 mt-5 md:mt-11 2xl:mt-20 2xl:mb-8" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" class="mt-2" data-aos="fade-up">
+                    </a>
                 </div>
-           </div>
+            </div>
+            <!-- berita utama end -->
            <div class="mx-5 sm:mx-10 mt-4">
                 <div class=" w-4/12">
                     <h2 class="text-base md:text-2xl">Sub News</h2>
-                    <hr class="border-t-1 border-black my-1">
+                    <hr class="border-t-1 border-black my-1 lg:my-3">
                 </div>
 
                 <div class="items-center mb-2 sm:mb-4 lg:mb-8" data-aos="fade-right"
@@ -55,7 +45,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/admin/berita/detail">
-                                <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">
@@ -75,7 +65,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/admin/berita/detail">
-                                <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">
@@ -95,7 +85,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/admin/berita/detail">
-                                <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">
@@ -115,7 +105,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/admin/berita/detail">
-                                <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">
@@ -140,6 +130,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

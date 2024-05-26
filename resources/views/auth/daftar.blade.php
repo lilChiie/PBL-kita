@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar</title>
 
-    @vite(['resources/css/app.css','resources/js/app.js'])
+    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
 
     @vite('resources/css/app.css')
 
@@ -32,10 +32,10 @@
       <div class="w-full md:mt-0 sm:max-w-md xl:p-0" data-aos="zoom-in">
           <div class="p-4 space-y-2 md:space-y-3 sm:p-8 text-white ">
               <h1 class="text-xl leading-tight tracking-tight md:text-2xl">
-                  TAX-D
+                  PJAP
               </h1>
               <p>Selamat Datang di <br>
-              Tax Digital
+              Penyedia Jasa Aplikasi Perpajakan
               </p>
               <hr>
               <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-bold">Daftar</h1>
@@ -82,6 +82,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    <!-- @vite('resources/js/app.js') -->
 </body>
 </html>

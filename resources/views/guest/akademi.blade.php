@@ -5,24 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akademi</title>
 
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
@@ -40,6 +22,7 @@
             </div>
 
             <div class="grid gap-x-5 sm:gap-x-10 gap-y-2 grid-cols-2 mx-5 sm:mx-10 mt-2">
+                <!-- pelatihan start -->
                 <div class="group " data-aos="zoom-out-up" data-aos-delay="300">
                     <a href="/guest/Pelatihan" class="hover:brightness-50">
                     <div class="hero bg-cover bg-center h-36 md:h-64 lg:h-80" style="background-image: url('/storage/properti/4.jpg');">
@@ -54,6 +37,9 @@
                     </div>
                     </a>
                 </div>
+                <!-- pelatihan end -->
+
+                <!-- kegiatan start -->
                 <div class="group" data-aos="zoom-out-up" data-aos-delay="200">
                     <a href="/guest/Kegiatan" class="hover:brightness-50">
                     <div class="hero bg-cover bg-center h-36 md:h-64 lg:h-80" style="background-image: url('/storage/properti/4.jpg');">
@@ -68,6 +54,7 @@
                     </div>
                     </a>
                 </div>
+                <!-- kegiatan end -->
             </div>
         </div>
     </section>
@@ -77,10 +64,6 @@
     @include('components.footerguest')
 
     <!-- javascript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fiturguest.js')
 </body>
 </html>

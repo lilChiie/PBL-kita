@@ -13,7 +13,7 @@
             </button>
             <button onclick="hideDialog()" class="mt-4 text-xs md:text-lg border-1 border-gray-800 py-2 px-3 rounded-lg hover:border-none hover:bg-gray-500 hover:text-white
             focus:bg-gray-500">
-                Cencel
+                Cancel
             </button>
         </div>
     </div>

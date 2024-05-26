@@ -1,18 +1,38 @@
+@vite('resources/css/app.css')
+
+<!-- font Family -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- library fontawesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
  <!-- Header Start -->
  <header class="w-full bg-transparent fixed top-0 left-0 h-28 z-50">
      <div class="container">
          <div class="bg-nav w-full absolute top-0 left-0 justify-between flex">
              <div class="flex">
-                 <a href="/user/">
-                     <img src="{{ asset('storage/properti/logo.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full sm:w-10 sm:mx-4">
-                 </a>
-                 <p class="font-thin text-xs mx-2 mt-4 text-white sm:text-base">
-                     Digital Tax Consultation
-                 </p>
+                <a href="/user/">
+                    <img src="{{ asset('storage/properti/logo polibatam.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full sm:w-10">
+                </a>
+                <a href="/user/">
+                    <img src="{{ asset('storage/properti/logo 5.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full sm:w-10 sm:mx-2">
+                </a>
+                <p class="font-thin text-xs mx-2 mt-4 text-white sm:text-base">
+                    Penyedia Jasa Aplikasi Perpajakan
+                </p>
              </div>
              <div class="relative text-black">
-                 <img src="{{ asset('storage/properti/3.jpg') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full sm:w-10 sm:ml-10 sm:mr-4 md:ml-24
-                    object-cover h-10" id="user">
+                 <img src="{{ asset('storage/properti/3.jpg') }}" alt="gambar properti" class="mt-1 mx-2 rounded-full sm:w-10 sm:ml-10 sm:mr-4 md:ml-24 md:mt-2
+                 object-fill w-10 h-10" id="user">
                  <ul class="dropdown bg-fot absolute top-0 right-0 mt-10 lg:mt-12 py-3 px-4 mr-5 lg:px-8 shadow-md z-20 hidden
                     transition duration-700" id="dropdownuser">
                      <li class="my-1 lg:my-2">
@@ -107,8 +127,10 @@
                      </ul>
                  </nav>
              </div>
+
+             <!-- untuk menentukan besar pada navbar -->
              <div class="my-6 mx-2">
-                 <p class="w-8 rounded-lg  sm:w-10 sm:ml-10 sm:mr-2 md:ml-24">
+                <p class="w-8 rounded-lg  sm:w-10 sm:ml-10 sm:mr-2 md:ml-24">
              </div>
          </div>
          <!-- navbar end -->

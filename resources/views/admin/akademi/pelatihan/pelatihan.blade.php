@@ -4,31 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelatihan</title>
-
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
     @include('components.headeradmin')
     
     <!-- Content Start -->
-    <div class="fixed right-0 bottom-40 z-10">
+    <div class="fixed right-0 bottom-16 z-10">
     <a href="/admin/pelatihan/tambah" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
     transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
@@ -48,7 +30,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/admin/pelatihan/detail" class="flex items-center">
-                        <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/admin/pelatihan/detail"> 
@@ -65,7 +47,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/admin/pelatihan/detail" class="flex items-center">
-                        <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/3.jpg') }}" alt="gambar pelatihan" />    
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/admin/pelatihan/detail"> 
@@ -82,7 +64,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/admin/pelatihan/detail" class="flex items-center">
-                        <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/admin/pelatihan/detail"> 
@@ -99,7 +81,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/admin/pelatihan/detail" class="flex items-center">
-                        <img class="w-full hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/admin/pelatihan/detail"> 
@@ -121,6 +103,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

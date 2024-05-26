@@ -4,30 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelatihan</title>
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
     @include('components.headerguest')
 
     <!-- Start content -->
-    <section  class="pt-36 sm:pt-40 mb-12 mx-8 flex justify-center">
+    <section  class="pt-36 sm:pt-40 mx-3 sm:mx-8 flex justify-center">
         <div class="bg-white w-full rounded-md pb-10">
             <div class="mx-3 my-2">
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6"
@@ -39,13 +22,13 @@
                 </h1>
             </div>
 
-            
+            <!-- content 1 -->
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right"
                 data-aos-offset="150"
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/3.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
@@ -56,12 +39,13 @@
                 </div>
             </div>
 
+            <!-- content 2 -->
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right"
                 data-aos-offset="150"
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
@@ -72,12 +56,13 @@
                 </div>
             </div>
 
+            <!-- content 3 -->
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right"
                 data-aos-offset="150"
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
@@ -88,12 +73,13 @@
                 </div>
             </div>
 
+            <!-- content 4 -->
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right"
                 data-aos-offset="150"
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
@@ -115,10 +101,6 @@
 
 
     <!-- javascript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fiturguest.js')
 </body>
 </html>

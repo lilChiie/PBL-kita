@@ -4,25 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profil</title>
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
 </head>
 <body class="bg-latar text-black min-h-screen">
     
@@ -43,7 +24,7 @@
                     <div class="box-border bg-cover h-36 w-32 md:w-52 md:h-64 p-4 border border-black"></div>
                 </div>
                 <div >
-                    <input class="block w-full text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file">
+                    <input id="foto" class="block w-full text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file">
                 </div>
                 <div>
                     <label for="username" class="block text-xs md:text-base font-thin">
@@ -52,10 +33,10 @@
                     <input type="text" id="username" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 ">
                 </div>
                 <div>
-                    <label for="username" class="block text-xs md:text-base font-thin">
+                    <label for="name" class="block text-xs md:text-base font-thin">
                         Nama Lengkap
                     </label>
-                    <input type="text" id="nama" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 ">
+                    <input type="text" id="name" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 ">
                 </div>
                 <div>
                     <label for="email" class="block text-xs md:text-base font-thin">
@@ -88,10 +69,6 @@
     <!-- content end -->
    
     <!-- javascript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

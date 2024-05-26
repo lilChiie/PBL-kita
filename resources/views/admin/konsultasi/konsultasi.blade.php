@@ -4,25 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konsultasi</title>
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
 </head>
 <body class="bg-latar text-black pb-12 min-h-screen">
     
@@ -46,7 +27,7 @@
                 <div class="w-full" data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/konsultasi/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/konsultasi/detail">
@@ -62,7 +43,7 @@
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/konsultasi/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/konsultasi/detail">
@@ -78,7 +59,7 @@
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/konsultasi/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/konsultasi/detail">
@@ -94,7 +75,7 @@
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom">
                     <a href="/admin/konsultasi/detail">
-                        <img src="{{ asset('storage/properti/2.jpg') }}" alt="konsultasi" class="w-full hover:brightness-50"/>
+                        <img src="{{ asset('storage/properti/1.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50"/>
                     </a>
                     <div class="py-3">
                         <a href="/admin/konsultasi/detail">
@@ -107,7 +88,7 @@
                 </div>
             </div>
             <div class="mx-5 mt-5 mb-20 sm:mx-10">
-                <a href="/admin/konsultasi/tambah" class="text-xs sm:text-base bg-nav py-1 px-3 rounded-md text-white hover:bg-gradb focus:bg-gradb
+                <a href="/admin/konsultasi/tambah" class="text-xs sm:text-base bg-nav py-2 px-6 rounded-md text-white hover:bg-gradb focus:bg-gradb
                     transition duration-700">
                     Tambah
                 </a>
@@ -128,6 +109,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

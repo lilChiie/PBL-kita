@@ -4,24 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Pembayaran</title>
-
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
@@ -37,6 +19,7 @@
                 data-aos-delay="200"
                 data-aos-offset="0">Detail Pembayaran</h1>
 
+                <!-- data start-->
                 <div class="mx-4 text-xs md:text-base sm:mx-10 my-3">
                     <label for="username" >Nama Pengguna</label>
                     <p class="border border-black rounded-md p-2">Niati_05</p>
@@ -72,6 +55,7 @@
                 <div class="flex justify-center my-10">
                     <a href="/admin/akademi" class="text-xs md:text-base bg-nav py-1 px-5 md:px-9 text-white rounded-full hover:bg-gradb focus:bg-gradb transition duration-700">Konfirmasi</a>
                 </div>  
+                <!-- data  end-->
             </div>
         </div>
     </section>
@@ -84,6 +68,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

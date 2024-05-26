@@ -4,26 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
 </head>
+
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
    @include('components.headeradmin')
@@ -43,16 +25,67 @@
                 <button type="submit" class="text-white absolute end-0.5 bottom-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-base rounded-lg text-xs lg:text-sm px-3 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
             </div>
         </form>
-        <div  class="grid mx-10 my-12 gap-x-8 gap-y-8 md:grid-cols-3">
-            <img src="{{ asset('storage/properti/4.jpg') }}" alt="gambar properti" class="transition-all duration-300 rounded-lg hover:brightness-50" data-aos="fade-up">
-            <img src="{{ asset('storage/properti/4.jpg') }}" alt="gambar properti" class="transition-all duration-300 rounded-lg hover:brightness-50" data-aos="fade-up">
-            <img src="{{ asset('storage/properti/4.jpg') }}" alt="gambar properti" class="transition-all duration-300 rounded-lg hover:brightness-50" data-aos="fade-up">
+       
+        <!-- slider start-->
+        <div id="silder" class="relative w-full px-2 md:px-5 my-12" data-carousel="slide">
+            <!-- pembungkus -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/properti/4.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+
+                <!-- item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/properti/1.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+
+                <!-- item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/properti/2.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+
+                <!-- item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/properti/3.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+
+                <!-- item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/properti/5.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+            </div>
+
+            <!-- tombol start -->
+            <div class="flex justify-center items-center pt-4">
+                <button type="button" class="flex justify-center items-center me-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
+                        <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
+                        <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+            <!-- tombol end -->
         </div>
+        <!-- silder end -->
+
+        <!-- text start -->
         <div class="bg-white">
             <p class="text-center font-serif py-10 text-lg md:text-2xl lg:text-4xl">
-                Selamat Datang di Web Tax Digital
+                Selamat Datang di Penyedia Jasa Aplikasi Perpajakan
             </p>
         </div>
+        <!-- text end -->
     </section>
     <!-- Content End -->
     
@@ -60,10 +93,6 @@
     @include('components.footeradmin')
 
     <!-- javascript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
     @vite('resources/js/app.js')
 </body>
 </html>

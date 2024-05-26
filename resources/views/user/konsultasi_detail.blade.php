@@ -4,34 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konsultasi Detail</title>
-
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
     @include('components.headeruser')
     
     <!-- Content Start -->
-    <section  class="pt-36 sm:pt-40 mb-12 mx-8">
+    <section  class="pt-36 sm:pt-40 mx-8">
         <div class="bg-white w-full">
-            <div class="p-5 md:p-20 w-full">
+            <div class="p-3 md:p-20 w-full">
                 <img class="object-cover w-full rounded-md" src="{{ asset('storage/properti/2.jpg') }}" alt="detail tentang kami"
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
@@ -64,15 +45,17 @@
                     data-aos-offset="0">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo nulla aperiam officiis, nisi quas modi. Corrupti debitis hic cumque ullam harum dignissimos tenetur quod quas voluptates delectus, fugiat animi obcaecati, optio explicabo quis eius aut omnis enim aperiam quidem alias nesciunt culpa? Modi nobis enim nulla, quod, nam magnam sed commodi inventore explicabo corrupti odit mollitia velit a fugit, soluta eos? Reprehenderit vero sapiente quo et quia consequatur fugit, assumenda eum delectus provident, voluptatum voluptas quasi unde nemo? Fuga quis iusto quidem accusamus perspiciatis alias officiis asperiores repellat deserunt vero voluptas minus fugit, pariatur libero tempore commodi voluptatum earum sint?
                     </p>
+
+                    <!-- form pertanyaan start -->
                     <section class="bg-wform1 rounded-xl mt-20 " data-aos="fade-zoom-in">
                     <div class="py-6 lg:py-8">
                         <h2 class="mb-4 lg:text-2xl px-4">Formulir Pertanyaan</h2>
                         <form action="#" class=" p-4 bg-white">
                             <div>
-                                <input type="text" id="name" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 my-4 " placeholder="Nama" required>
+                                <input type="text" id="name" autocomplete="name" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 my-4 " placeholder="Nama" required>
                             </div>
                             <div>
-                                <input type="email" id="email" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 my-4"   placeholder="Email" required>
+                                <input type="email" id="email" autocomplete="email" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 my-4"   placeholder="Email" required>
                             </div>
                             
                             <div class="sm:col-span-2">
@@ -84,6 +67,7 @@
                         </form>
                     </div>
                     </section>
+                    <!-- form pertanyaan end -->
                 </div>
             </div>
         </div>
@@ -94,10 +78,6 @@
     @include('components.footeruser')
 
     <!-- javascript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

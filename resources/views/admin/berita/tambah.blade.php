@@ -4,25 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Berita</title>
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
 </head>
 <body class="bg-latar text-black pb-12 min-h-screen">
     
@@ -30,7 +11,6 @@
    @include('components.headeradmin')
 
     <!-- Content Start -->
-    
     <section  class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
         <div class="bg-white w-full rounded-md pb-12">
             <div class="px-5 pt-20 md:px-20 w-full ">
@@ -45,10 +25,10 @@
                             <input class="block w-full mb-5 text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file">
                         </div>
                         <div >
-                            <input type="text" class="w-full text-xs md:text-base border-black rounded-lg" placeholder="Edit Judul..">
+                            <input name="judul" type="text" class="w-full text-xs md:text-base border-black rounded-lg" placeholder="Tambah Judul..">
                         </div>
                         <div class="border border-black my-5 rounded-lg">
-                        <textarea id="informasi" rows="15" class="block w-full border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll text-xs  md:text-base" placeholder="Edit Informasi..."></textarea>
+                        <textarea id="informasi" rows="15" class="block w-full border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll text-xs  md:text-base" placeholder="Tambah Informasi..."></textarea>
                         </div>
                         <div class="w-full mb-14">
                             <select id="countries" class="bg-gray-50 border border-black text-gray-900 text-xs  md:text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
@@ -76,6 +56,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 </html>

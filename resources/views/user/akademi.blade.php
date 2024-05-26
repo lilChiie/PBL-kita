@@ -5,24 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita</title>
-
-    <!-- @vite(['resources/css/app.css','resources/js/app.js']) -->
-
-    @vite('resources/css/app.css')
-
-    <!-- font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- library fontawesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="bg-latar text-black min-h-screen">
@@ -65,8 +47,8 @@
                 </div>
             </div>
 
-            <!-- riwayat pembayaran -->
-            <div class="mx-5 sm:mx-10">
+            <!-- riwayat pembayaran start -->
+            <section class="mx-5 sm:mx-10">
                 <hr class="border-t-2 my-4 md:my-6  border-black">
                 <h1 class="text-nav mb-3 md:my-5 md:text-2xl">Riwayat Pembayaran</h1>
                 <div class=" relative overflow-x-auto">
@@ -121,20 +103,16 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </section>
+            <!-- riwayat pembayaran end -->
     </section>
     <!-- Content End -->
+
     <!-- footer -->
     @include('components.footeruser')
 
-
-
     <!-- javascript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    @vite('resources/js/app.js')
+    @vite('resources/js/fituruser.js')
 </body>
 
 </html>
