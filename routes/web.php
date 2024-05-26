@@ -1,10 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\TentangkamiController;
-// use App\Http\Controllers\KonsultasiController;
-// use App\Models\Konsultasi;
-// use App\Models\Tentangkami;
+use App\Http\Controllers\TentangkamiController;
+use App\Http\Controllers\KonsultasiController;
+use App\Http\Controllers\RisetController;
+use App\Http\Controllers\PublikasiController;
+use App\Http\Controllers\PertanyaanController;
+use App\Models\Konsultasi;
+use App\Models\Riset;
+use App\Models\Tentangkami;
+use App\Models\Publikasi;
+use App\Models\Pertanyaan;
 
 
 
@@ -35,33 +41,18 @@ Route::prefix('user')->group(function () {
         return view('user/user_home');
     });
 
-    Route::get('/TentangKami', function () {
-        return view('user/tentang_kami');
-    });
-    Route::get('/Detail_TentangKami', function () {
-        return view('user/tentangkami_detail');
-    });
+    Route::get('/TentangKami', [TentangkamiController::class, 'selectUser'])->name('user.tentangkami');
+    Route::get('/TentangKami/Detail/{id}', [TentangkamiController::class, 'showUser'])->name('user.tentangkami.detail');
 
-    Route::get('/Riset', function () {
-        return view('user/riset');
-    });
-    Route::get('/Detail_Riset', function () {
-        return view('user/riset_detail');
-    });
+    Route::get('/Riset', [RisetController::class, 'selectUser'])->name('user.riset');
+    Route::get('/Detail_Riset/{id}', [RisetController::class, 'ShowUser'])->name('user.riset.detail');
 
-    Route::get('/Konsultasi', function () {
-        return view('user/konsultasi');
-    });
-    Route::get('/Detail_Konsultasi', function () {
-        return view('user/konsultasi_detail');
-    });
+    Route::get('/Konsultasi', [KonsultasiController::class, 'selectUser'])->name('user.konsultasi');
+    Route::get('/Konsultasi/Detail/{id}', [KonsultasiController::class, 'ShowUser'])->name('user.konsultasi.detail');
+    Route::post('/Konsultasi/Detail', [PertanyaanController::class, 'insertPertanyaanUser'])->name('user.pertanyaan.tambah');
 
-    Route::get('/Publikasi', function () {
-        return view('user/publikasi');
-    });
-    Route::get('/Detail_Publikasi', function () {
-        return view('user/publikasi_detail');
-    });
+    Route::get('/Publikasi', [PublikasiController::class, 'selectUser'])->name('user.publikasi');
+    Route::get('/Publikasi/Detail/{id}', [PublikasiController::class, 'showUser'])->name('user.publikasi.detail');
 
     Route::get('/Berita', function () {
         return view('user/berita');
@@ -106,33 +97,20 @@ Route::prefix('user')->group(function () {
 
 Route::prefix('guest')->group(function () {
 
-    Route::get('/TentangKami', function () {
-        return view('guest/tentang_kami');
-    });
-    Route::get('/Detail_TentangKami', function () {
-        return view('guest/tentangkami_detail');
-    });
+    Route::get('/TentangKami', [TentangkamiController::class, 'selectGuest'])->name('guest.tentangkami');
+    Route::get('/TentangKami/Detail/{id}', [TentangkamiController::class, 'showGuest'])->name('guest.tentangkami.detail');
 
-    Route::get('/Riset', function () {
-        return view('guest/riset');
-    });
-    Route::get('/Detail_Riset', function () {
-        return view('guest/riset_detail');
-    });
+    Route::get('/Riset', [RisetController::class, 'selectGuest'])->name('guest.riset');
+    Route::get('/Riset/Detail/{id}', [RisetController::class, 'ShowGuest'])->name('guest.riset.detail');
 
-    Route::get('/Konsultasi', function () {
-        return view('guest/konsultasi');
-    });
-    Route::get('/Detail_Konsultasi', function () {
-        return view('guest/konsultasi_detail');
-    });
 
-    Route::get('/Publikasi', function () {
-        return view('guest/publikasi');
-    });
-    Route::get('/Detail_Publikasi', function () {
-        return view('guest/publikasi_detail');
-    });
+    Route::get('/Konsultasi', [KonsultasiController::class, 'selectGuest'])->name('guest.konsultasi');
+    Route::get('/Konsultasi/Detail/{id}', [KonsultasiController::class, 'ShowGuest'])->name('guest.konsultasi.detail');
+    Route::post('/Konsultasi/Detail', [PertanyaanController::class, 'insertPertanyaanGuest'])->name('guest.pertanyaan.tambah');
+
+
+    Route::get('/Publikasi', [PublikasiController::class, 'selectGuest'])->name('guest.publikasi');
+    Route::get('/Publikasi/Detail/{id}', [PublikasiController::class, 'showGuest'])->name('guest.publikasi.detail');
 
     Route::get('/Akademi', function () {
         return view('guest/akademi');
@@ -164,69 +142,55 @@ Route::prefix('admin')->group(function () {
     });
 
     Route::prefix('tentangkami')->group(function () {
-        Route::get('/', function () {
-            return view('admin/tentangkami/tentang_kami');
-        });
-        Route::get('/detail', function () {
-            return view('admin/tentangkami/detail');
-        });
-        Route::get('/edit', function () {
-            return view('admin/tentangkami/edit');
-        });
+        Route::get('/', [TentangkamiController::class, 'selectAdmin'])->name('admin.tentangkami');
+        Route::get('/detail/{id}', [TentangkamiController::class, 'showAdmin'])->name('admin.tentangkami.detail');
         Route::get('/tambah', function () {
             return view('admin/tentangkami/tambah');
         });
+        Route::post('/tambah', [TentangkamiController::class, 'insertTentangkami'])->name('admin.tentangkami.tambah');
+        Route::get('/edit/{id}', [TentangkamiController::class, 'edit'])->name('admin.tentangkami.edit');
+        Route::post('/update/{id}', [TentangkamiController::class, 'update'])->name('admin.tentangkami.update');
+        Route::delete('/delete/{id}', [TentangkamiController::class, 'delete'])->name('admin.tentangkami.delete');
     });
 
     Route::prefix('konsultasi')->group(function () {
-        Route::get('/', function () {
-            return view('admin/konsultasi/konsultasi');
-        });
-        Route::get('/detail', function () {
-            return view('admin/konsultasi/detail');
-        });
-        Route::get('/edit', function () {
-            return view('admin/konsultasi/edit');
-        });
+        Route::get('/', [KonsultasiController::class, 'selectAdmin'])->name('admin.konsultasi');
+        Route::get('/detail/{id}', [KonsultasiController::class, 'showAdmin'])->name('admin.konsultasi.detail');
         Route::get('/tambah', function () {
             return view('admin/konsultasi/tambah');
         });
-        Route::get('/pertanyaan', function () {
-            return view('admin/konsultasi/pertanyaan');
-        });
-        Route::get('/detail_pertanyaan', function () {
-            return view('admin/konsultasi/detail_pertanyaan');
-        });
+        Route::get('/edit/{id}', [KonsultasiController::class, 'edit'])->name('admin.konsultasi.edit');
+        Route::post('/tambah', [KonsultasiController::class, 'insertKonsultasi'])->name('admin.konsultasi.tambah');
+        Route::post('/update/{id}', [KonsultasiController::class, 'update'])->name('admin.konsultasi.update');
+        Route::delete('/delete/{id}', [KonsultasiController::class, 'delete'])->name('admin.konsultasi.delete');
+
+        Route::get('/pertanyaan', [PertanyaanController::class, 'selectAdmin'])->name('admin.konsultasi.pertanyaan');
+        Route::get('/pertanyaan/detail/{id}', [PertanyaanController::class, 'showAdmin'])->name('admin.detail.pertanyaan');
     });
 
     Route::prefix('riset')->group(function () {
-        Route::get('/', function () {
-            return view('admin/riset/riset');
-        });
-        Route::get('/detail', function () {
-            return view('admin/riset/detail');
-        });
-        Route::get('/edit', function () {
-            return view('admin/riset/edit');
-        });
+        Route::get('/', [RisetController::class, 'selectAdmin'])->name('admin.riset');
+        Route::get('/detail/{id}', [RisetController::class, 'showAdmin'])->name('admin.riset.detail');
+        Route::get('/edit/{id}', [RisetController::class, 'edit'])->name('admin.riset.edit');
         Route::get('/tambah', function () {
             return view('admin/riset/tambah');
         });
+        Route::post('/tambah', [RisetController::class, 'insertRiset'])->name('admin.riset.tambah');
+        Route::post('/update/{id}', [RisetController::class, 'update'])->name('admin.riset.update');
+        Route::delete('/delete/{id}', [RisetController::class, 'delete'])->name('admin.riset.delete');
     });
 
     Route::prefix('publikasi')->group(function () {
-        Route::get('/', function () {
-            return view('admin/publikasi/publikasi');
-        });
-        Route::get('/detail', function () {
-            return view('admin/publikasi/detail');
-        });
-        Route::get('/edit', function () {
-            return view('admin/publikasi/edit');
-        });
+        Route::get('/', [PublikasiController::class, 'selectAdmin'])->name('admin.publikasi');
+        Route::get('/detail/{id}', [PublikasiController::class, 'showAdmin'])->name('admin.publikasi.detail');
+
         Route::get('/tambah', function () {
             return view('admin/publikasi/tambah');
         });
+        Route::post('/tambah', [PublikasiController::class, 'insertPublikasi'])->name('admin.publikasi.tambah');
+        Route::get('/edit/{id}', [PublikasiController::class, 'edit'])->name('admin.publikasi.edit');
+        Route::post('/update/{id}', [PublikasiController::class, 'update'])->name('admin.publikasi.update');
+        Route::delete('/delete/{id}', [PublikasiController::class, 'delete'])->name('admin.publikasi.delete');
     });
 
     Route::prefix('berita')->group(function () {
@@ -289,3 +253,5 @@ Route::prefix('admin')->group(function () {
 
 
 // controller
+// Route::get('/guest/TentangKami', [TentangkamiController::class, 'selectTentangkami']);
+// Route::get('/guest/Konsultasi', [KonsultasiController::class, 'index']);

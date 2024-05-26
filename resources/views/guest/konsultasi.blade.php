@@ -12,80 +12,32 @@
     @include('components.headerguest')
 
     <!-- Content Start -->
-    <section class="pt-36 sm:pt-40 mx-3 sm:mx-8 flex justify-center">
+    <section class="pt-36 sm:pt-40 mx-3 sm:mx-8">
         <div class="bg-white w-full rounded-md">
             <div class="mx-3 my-2">
-                <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Konsultasi</h1>
+                <h1 class="font-bold pt-6 text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Konsultasi</h1>
             </div>
 
             <!-- content 1 -->
             <div class="grid gap-x-5 sm:gap-x-10 gap-y-2 grid-cols-2 mx-5 sm:mx-10 my-2 ">
+                @foreach ($files as $file)
                 <div class="w-full" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <a href="/guest/Detail_Konsultasi">
-                        <img src="{{ asset('storage/properti/10.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50" />
+                    <a href="{{ route('guest.konsultasi.detail', $file->konsultasi_id) }}">
+                        <img src="{{ asset('images/'.$file->photo) }}" alt="konsultasi" class="w-full object-cover aspect-16/9 hover:brightness-50" />
                     </a>
                     <div class="py-3">
-                        <a href="/guest/Detail_Konsultasi">
+                        <a href="{{ route('guest.konsultasi.detail', $file->konsultasi_id) }}">
                             <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">
-                                Title Konsultasi
+                            {{ $file->title }}
                             </h5>
                         </a>
                         <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus sint qui cumque alias natus sed modi nisi, quaerat pariatur autem? Repellendus quas odio eveniet nostrum soluta voluptate excepturi expedita atque magnam voluptatibus nesciunt, praesentium, dicta quibusdam deleniti culpa vitae, velit sed? Voluptatum, odio! Maiores dignissimos a, praesentium delectus, id eius, sit officiis nam placeat illum nihil officia tempore! Qui, commodi.
+                        {{ $file->content }}
                         </p>
                     </div>
                 </div>
+                @endforeach
 
-                <!-- content 2 -->
-                <div class="w-full" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <a href="/guest/Detail_Konsultasi">
-                        <img src="{{ asset('storage/properti/3.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50" />
-                    </a>
-                    <div class="py-3">
-                        <a href="/guest/Detail_Konsultasi">
-                            <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">
-                                Title Konsultasi
-                            </h5>
-                        </a>
-                        <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus sint qui cumque alias natus sed modi nisi, quaerat pariatur autem? Repellendus quas odio eveniet nostrum soluta voluptate excepturi expedita atque magnam voluptatibus nesciunt, praesentium, dicta quibusdam deleniti culpa vitae, velit sed? Voluptatum, odio! Maiores dignissimos a, praesentium delectus, id eius, sit officiis nam placeat illum nihil officia tempore! Qui, commodi.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- content 3 -->
-                <div class="w-full" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <a href="/guest/Detail_Konsultasi">
-                        <img src="{{ asset('storage/properti/1.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50" />
-                    </a>
-                    <div class="py-3">
-                        <a href="/guest/Detail_Konsultasi">
-                            <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">
-                                Title Konsultasi
-                            </h5>
-                        </a>
-                        <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus sint qui cumque alias natus sed modi nisi, quaerat pariatur autem? Repellendus quas odio eveniet nostrum soluta voluptate excepturi expedita atque magnam voluptatibus nesciunt, praesentium, dicta quibusdam deleniti culpa vitae, velit sed? Voluptatum, odio! Maiores dignissimos a, praesentium delectus, id eius, sit officiis nam placeat illum nihil officia tempore! Qui, commodi.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- content 4 -->
-                <div class="w-full" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                    <a href="/guest/Detail_Konsultasi">
-                        <img src="{{ asset('storage/properti/4.jpg') }}" alt="konsultasi" class="w-full aspect-16/9 hover:brightness-50" />
-                    </a>
-                    <div class="py-3">
-                        <a href="/guest/Detail_Konsultasi">
-                            <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">
-                                Title Konsultasi
-                            </h5>
-                        </a>
-                        <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus sint qui cumque alias natus sed modi nisi, quaerat pariatur autem? Repellendus quas odio eveniet nostrum soluta voluptate excepturi expedita atque magnam voluptatibus nesciunt, praesentium, dicta quibusdam deleniti culpa vitae, velit sed? Voluptatum, odio! Maiores dignissimos a, praesentium delectus, id eius, sit officiis nam placeat illum nihil officia tempore! Qui, commodi.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
