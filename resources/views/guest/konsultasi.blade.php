@@ -13,6 +13,20 @@
 
     <!-- Content Start -->
     <section class="pt-36 sm:pt-40 mx-3 sm:mx-8">
+        @if (session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "{{ session('success') }}",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            });
+        </script>
+        @endif
+        
         <div class="bg-white w-full rounded-md">
             <div class="mx-3 my-2">
                 <h1 class="font-bold pt-6 text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Konsultasi</h1>

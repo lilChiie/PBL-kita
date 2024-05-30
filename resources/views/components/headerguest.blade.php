@@ -55,7 +55,7 @@
                         </li>
                         <li class="group relative">
                             <a href="/guest/TentangKami" class="text-base py-2 mx-8 flex group-hover:text-sky-600
-                                    lg:mx-5 {{ request()->is('guest/Tentang Kami', 'guest/Detail Tentang Kami') ? 'text-sky-600' : 'text-black' }}" id="tentangkami">
+                                    lg:mx-5 {{ request()->is('guest/TentangKami', 'guest/Detail Tentang Kami') ? 'text-sky-600' : 'text-black' }}" id="tentangkami">
                                 Tentang Kami
                             </a>
                         </li>

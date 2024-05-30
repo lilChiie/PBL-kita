@@ -13,9 +13,15 @@
     <!-- Content Start -->
     <section  class="pt-36 sm:pt-40 mb-12 mx-8">
         @if (session('success'))
-        <div class="bg-blue-400 text-white p-4 rounded mb-8" style=" margin-bottom: 1rem;">
-            {{ session('success') }}
-        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                Swal.fire({
+                    title: "{{ session('success') }}",
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            });
+        </script>
         @endif
 
         <div class="bg-white w-full rounded-md">

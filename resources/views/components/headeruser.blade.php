@@ -15,6 +15,9 @@
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+<!-- Script modal -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
  <!-- Header Start -->
  <header class="w-full bg-transparent fixed top-0 left-0 h-28 z-50">
      <div class="container">

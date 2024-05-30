@@ -15,7 +15,7 @@
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<!-- Script delete -->
+<!-- Script modal -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Header Start -->
@@ -69,14 +69,14 @@
                         <li class="group relative">
                             <a href="/admin/tentangkami/" class="text-base py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-5 
-                                    {{ request()->is('admin/tentang kami', 'admin/tentang kami/detail', 'admin/tentang kami/edit', 'admin/tentang kami/tambah') ? 'text-sky-600' : 'text-black' }}" id="tentangkami">
+                                    {{ request()->is('admin/tentangkami', 'admin/tentangkami/detail', 'admin/tentangkami/edit', 'admin/tentangkami/tambah') ? 'text-sky-600' : 'text-black' }}" id="tentangkami">
                                 Tentang Kami
                             </a>
                         </li>
                         <li class="group relative ">
                             <a href="/admin/konsultasi/" class="text-base py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-5 
-                                    {{ request()->is('admin/konsultasi/', 'admin/konsultasi/detail', 'admin/konsultasi/edit', 'admin/konsultasi/tambah',
+                                    {{ request()->is('admin/konsultasi', 'admin/konsultasi/detail', 'admin/konsultasi/edit', 'admin/konsultasi/tambah',
                                     'admin/konsultasi/pertanyaan', 'admin/konsultasi/detail pertanyaan') ? 'text-sky-600' : 'text-black' }}" id="konsultasi">
                                 Konsultasi
                             </a>

@@ -66,18 +66,36 @@
                     <!-- barcode start -->
                     <div class="px-5 sm:px-10 md:px-16 my-2">
                         <div>
-                            <div class="text-xs md:text-base">
-                                Pilih Qris</div>
+                            <label class="text-xs md:text-base">
+                                Pilih Qris</label>
+                            @foreach ($barcodes as $barcode)
                             <div class="my-2">
-                                <button onclick="showDialog()" class="text-xs md:text-base border border-gradb rounded-md py-2 px-5 sm:px-10">
-                                    Bank BNI
+                                <button class="testButton text-xs md:text-base border border-gradb rounded-md py-2 px-5 sm:px-10">
+                                    {{ $barcode->bank }}
                                 </button>
                             </div>
-                            <div class="">
-                                <button onclick="showDialog()" class="text-xs md:text-base border border-gradb rounded-md py-2 px-5 sm:px-10">
-                                    Bank BRI
-                                </button>
-                            </div>
+                            @endforeach
+
+                            <script>
+                            // Gunakan selector kelas untuk menangkap semua tombol
+                            const buttons = document.querySelectorAll('.testButton');
+
+                            // Loop melalui setiap tombol untuk menambahkan event listener
+                            buttons.forEach(button => {
+                                button.addEventListener('click', function() {
+                                    const photo = "{{ $barcode->photo }}"; // Pastikan nilai ini sesuai dengan data yang diinginkan
+                                    const imageUrl = "{{ asset('barcode') }}/" + photo;
+                                    console.log("Image URL:", imageUrl); // Log URL gambar
+
+                                    Swal.fire({
+                                        imageUrl: imageUrl,
+                                        imageWidth: 400,
+                                        imageHeight: 400,
+                                        imageAlt: 'Test Image'
+                                    });
+                                });
+                            });
+                            </script>
                         </div>
                     
                         <!-- tombol kirim start -->
