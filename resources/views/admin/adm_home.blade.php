@@ -32,27 +32,27 @@
             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                 <!-- item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ asset('storage/properti/home 1.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="{{ asset('storage/properti/slider 1.png') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
                 </div>
 
                 <!-- item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ asset('storage/properti/home 2.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="{{ asset('storage/properti/slider 2.png') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
                 </div>
 
                 <!-- item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ asset('storage/properti/home 3.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="{{ asset('storage/properti/slider 3.png') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
                 </div>
 
                 <!-- item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ asset('storage/properti/home 4.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="{{ asset('storage/properti/slider 4.png') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
                 </div>
 
                 <!-- item 5 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="{{ asset('storage/properti/home 5.jpg') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="{{ asset('storage/properti/slider 5.png') }}" class="absolute block  object-fill h-auto w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
                 </div>
             </div>
 

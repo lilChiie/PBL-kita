@@ -48,7 +48,7 @@
                   <div class="grid grid-cols-2 gap-2 w-full">
                         <div>
                             <label for="username" class="block mb-2 text-xs  text-white">Nama Pengguna</label>
-                            <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Nama Pengguna" required="">
+                            <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Nama Pengguna" required="">
                         </div>
                         <div>
                             <label for="notelp" class="block mb-2 text-xs  text-white">No.Telp</label>

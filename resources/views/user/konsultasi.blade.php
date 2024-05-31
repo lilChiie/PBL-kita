@@ -12,7 +12,7 @@
     @include('components.headeruser')
 
     <!-- Content Start -->
-    <section class="pt-36 sm:pt-40 mx-3 sm:mx-8">
+    <section class="pt-36 sm:pt-40 mb-12 mx-8">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
