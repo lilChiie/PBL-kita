@@ -24,7 +24,7 @@
             <!-- button end -->
 
             <div class="px-5 pt-5 md:px-20 w-full ">
-                <img class="object-cover w-full aspect-16/9 rounded-md" src="{{ asset('storage/properti/3.jpg') }}" alt="detail tentang kami"
+                <img class="object-cover w-4/5 aspect-16/9 rounded-md" src="{{ asset('storage/properti/3.jpg') }}" alt="detail tentang kami"
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
                 data-aos-delay="150"

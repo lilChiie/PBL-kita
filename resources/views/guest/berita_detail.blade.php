@@ -15,7 +15,7 @@
     <section  class="pt-36 sm:pt-40 mx-8">
         <div class="bg-white w-full">
             <div class="p-3 md:p-20 w-full">
-                <img class="object-cover w-full rounded-md aspect-16/9" src="{{ asset('storage/properti/10.jpg') }}" alt="detail tentang kami"
+                <img class="object-cover w-4/5 rounded-md aspect-16/9" src="{{ asset('storage/properti/10.jpg') }}" alt="detail tentang kami"
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
                 data-aos-delay="150"

@@ -24,10 +24,10 @@
          <div class="bg-nav w-full absolute top-0 left-0 justify-between flex">
              <div class="flex">
                 <a href="/user/">
-                    <img src="{{ asset('storage/properti/logo polibatam.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full sm:w-10">
+                    <img src="{{ asset('storage/properti/logo polibatam.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 aspect-square object-cover rounded-full sm:w-10">
                 </a>
                 <a href="/user/">
-                    <img src="{{ asset('storage/properti/logo 5.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full sm:w-10 sm:mx-2">
+                    <img src="{{ asset('storage/properti/logo 5.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full aspect-square object-cover sm:w-10 sm:mx-2">
                 </a>
                 <p class="font-thin text-xs mx-2 mt-4 text-white sm:text-base">
                     Penyedia Jasa Aplikasi Perpajakan
@@ -65,35 +65,35 @@
                      <ul class="block lg:flex">
                          <li class="group">
                              <a href="/user/" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
-                                    lg:mx-5 {{ request()->is('/') ? 'text-sky-600' : 'text-black' }}" id="navhome">
+                                    lg:mx-5 {{ request()->is('user') ? 'text-sky-600' : 'text-black' }}" id="navhome">
                                  Home
                              </a>
                          </li>
                          <li class="group relative">
                              <a href="/user/TentangKami" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-5 
-                                    {{ request()->is('user/TentangKami', 'user/Detail_TentangKami') ? 'text-sky-600' : 'text-black' }}" id="tentangkami">
+                                    {{ request()->is('user/TentangKami', 'user/TentangKami/Detail/*') ? 'text-sky-600' : 'text-black' }}" id="tentangkami">
                                  Tentang Kami
                              </a>
                          </li>
                          <li class="group relative ">
                              <a href="/user/Konsultasi" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-5 
-                                    {{ request()->is('user/Konsultasi', 'user/Detail_Konsultasi') ? 'text-sky-600' : 'text-black' }}" id="konsultasi">
+                                    {{ request()->is('user/Konsultasi', 'user/Konsultasi/Detail/*') ? 'text-sky-600' : 'text-black' }}" id="konsultasi">
                                  Konsultasi
                              </a>
                          </li>
                          <li class="group relative">
                              <a href="/user/Riset" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-5 
-                                    {{ request()->is('user/Riset', 'user/Detail_Riset') ? 'text-sky-600' : 'text-black' }}" id="riset">
+                                    {{ request()->is('user/Riset', 'user/Detail_Riset/*') ? 'text-sky-600' : 'text-black' }}" id="riset">
                                  Riset
                              </a>
                          </li>
                          <li class="group relative">
                              <a href="/user/Publikasi" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-6 
-                                    {{ request()->is('user/Publikasi', 'user/Detail_Publikasi') ? 'text-sky-600' : 'text-black' }}" id="publikasi">
+                                    {{ request()->is('user/Publikasi', 'user/Publikasi/Detail*') ? 'text-sky-600' : 'text-black' }}" id="publikasi">
                                  Publikasi
                              </a>
                          </li>
@@ -108,13 +108,13 @@
                                 w-full transition duration-700" id="dropdownakademi">
                                  <li class="my-2">
                                      <a href="/user/Pelatihan" class="hover:text-sky-600
-                                            {{ request()->is('user/Pelatihan', 'user/Detail_Pelatihan') ? 'text-sky-600' : 'text-black' }}">
+                                            {{ request()->is('user/Pelatihan', 'user/Pelatihan/Detail/*') ? 'text-sky-600' : 'text-black' }}">
                                          Pelatihan
                                      </a>
                                  </li>
                                  <li class="my-2">
                                      <a href="/user/Kegiatan" class="hover:text-sky-600 
-                                            {{ request()->is('user/Kegiatan', 'user/Detail_Kegiatan') ? 'text-sky-600' : 'text-black' }}">
+                                            {{ request()->is('user/Kegiatan', 'user/Kegiatan/Detail/*') ? 'text-sky-600' : 'text-black' }}">
                                          Kegiatan
                                      </a>
                                  </li>
@@ -123,7 +123,7 @@
                          <li class="group relative">
                              <a href="/user/Berita" class="text-base text-black py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-6 
-                                    {{ request()->is('user/Berita', 'user/Detail_Berita') ? 'text-sky-600' : 'text-black' }}" id="berita">
+                                    {{ request()->is('user/Berita', 'user/Berita/Detail/*') ? 'text-sky-600' : 'text-black' }}" id="berita">
                                  Berita
                              </a>
                          </li>

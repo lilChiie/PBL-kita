@@ -18,15 +18,15 @@
              <div class="flex gap-7 lg:gap-12 mx-5 sm:mx-10 my-2">
                 <div class="w-9/12">
                     <a href="/user/Detail_Berita">
-                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/6.jpg') }}" alt="gambar berita" data-aos="fade-right">
+                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/6.jpg') }}" alt="gambar berita" data-aos="fade-right">
                     </a>
                 </div>
                 <div class="w-4/12">
                     <a href="/user/Detail_Berita">
-                        <img class=" w-full aspect-16/9 mb-4 md:mb-11 2xl:mb-20 2xl:mt-8" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" data-aos="fade-down">
+                        <img class=" w-full aspect-16/9 object-cover mb-4 md:mb-11 2xl:mb-20 2xl:mt-8 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" data-aos="fade-down">
                     </a>
                     <a href="/user/Detail_Berita">
-                        <img class=" w-full aspect-16/9 mt-5 md:mt-11 2xl:mt-20 2xl:mb-8" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" class="mt-2" data-aos="fade-up">
+                        <img class=" w-full aspect-16/9 object-cover mt-5 md:mt-11 2xl:mt-20 2xl:mb-8 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar berita" class="mt-2" data-aos="fade-up">
                     </a>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/user/Detail_Berita">
-                                <img class="w-full xl:object-fill xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">
@@ -65,7 +65,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/user/Detail_Berita">
-                                <img class="w-full xl:object-fill xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">
@@ -84,7 +84,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/user/Detail_Berita">
-                                <img class="w-full xl:object-fill xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">
@@ -103,7 +103,7 @@
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="/user/Detail_Berita">
-                                <img class="w-full xl:object-fill xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                                <img class="w-full xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                             </a>
                         </div>
                         <div class="ml-4 md:ml-8 h-16 sm:px-2 md:h-44 md:pt-5 overflow-hidden col-span-2 ">

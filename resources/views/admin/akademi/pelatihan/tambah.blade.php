@@ -18,7 +18,6 @@
                 data-aos-easing="ease-in-back"
                 data-aos-delay="150"
                 data-aos-offset="0">
-                <img class="object-cover aspect-16/9 w-8/12 rounded-md" src="{{ asset('storage/properti/2.jpg') }}" alt="detail tentang kami">
                 <div class="flex flex-col justify-between py-4 leading-normal">
                     <form action="">
                         <div>
@@ -38,11 +37,11 @@
                         </div>
                         <div>
                             <label for="harga" class="text-xs md:text-base">Harga</label>
-                            <input type="text" id="harga" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
+                            <input type="number" id="harga" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
                         </div>
                         <div>
                             <label for="slot" class="text-xs md:text-base">Slot Peserta</label>
-                            <input type="text" id="slot" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
+                            <input type="number" id="slot" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
                         </div>
                         <div>
                             <label for="pelatih" class="text-xs md:text-base">Nama Pelatih</label>

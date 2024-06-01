@@ -51,58 +51,59 @@
             <section class="mx-5 sm:mx-10">
                 <hr class="border-t-2 my-4 md:my-6  border-black">
                 <h1 class="text-nav mb-3 md:my-5 md:text-2xl">Riwayat Pembayaran</h1>
-                <div class=" relative overflow-x-auto">
-                    <table class="w-full text-xs sm:text-base text-left border-collapse border border-slate-500 ">
-                        <thead class="text-xs text-center sm:text-base">
+                 <!-- edited -->
+                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                        <thead class="text-xs uppercase bg-gray-500 text-gray-100">
                             <tr>
-                                <th scope="col" class="px-2 py-3 border border-slate-500">
-                                    Judul Pendaftaran
+                                <th scope="col" class="px-6 py-3">
+                                    Judul Pembayaran
                                 </th>
-                                <th scope="col" class="px-2 py-3 border border-slate-500">
+                                <th scope="col" class="px-6 py-3">
                                     Tanggal
                                 </th>
-                                <th scope="col" class="px-2 py-3 border border-slate-500">
+                                <th scope="col" class="px-6 py-3">
                                     Status
                                 </th>
-                                <th scope="col" class="px-2 py-3 border border-slate-500">
-
+                                <th scope="col" class="px-6 py-3">
+                                    
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <td class="px-2 py-4 border border-slate-500">
-                                    Pelatihan 1
+                            <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    Pelatihan
+                                </th>
+                                <td class="px-6 py-4">
+                                    17/10/2024
                                 </td>
-                                <td class="px-2 py-4 border border-slate-500">
-                                    Tanggal
+                                <td class="px-6 py-4">
+                                    Belum dikonfirmasi
                                 </td>
-                                <td class="px-2 py-4 border border-slate-500">
-                                    Sudah diKonfirmasi
-                                </td>
-                                <td class="px-2 py-4 border border-slate-500 text-center">
-                                    <a href="/user/Detail_Riwayat" class=" text-white p-2 sm:px-4 rounded-md bg-nav 
-                                hover:bg-gradb focus:bg-gradb transition duration-700">Detail</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <td class="px-2 py-4 border border-slate-500">
-                                    Kegiatan 1
-                                </td>
-                                <td class="px-2 py-4 border border-slate-500">
-                                    Tanggal
-                                </td>
-                                <td class="px-2 py-4 border border-slate-500">
-                                    Sudah diKonfirmasi
-                                </td>
-                                <td class="px-2 py-4 border border-slate-500 text-center">
-                                    <a href="/user/Detail_Riwayat" class=" text-white p-2 sm:px-4 rounded-md bg-nav 
-                                hover:bg-gradb focus:bg-gradb transition duration-700">Detail</a>
+                                <td class="px-6 py-4">
+                                    <a href="/user/Detail_Riwayat" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
                                 </td>
                             </tr>
+                            <tr class="odd:bg-gray-300 even:bg-gray-50 border-b border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    Kegiatan
+                                </th>
+                                <td class="px-6 py-4">
+                                    25/10/2024
+                                </td>
+                                <td class="px-6 py-4">
+                                    Sudah dikonfirmasi
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="/user/Detail_Riwayat" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
+                                </td>
+                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
+                <!-- edited -->
             </section>
             <!-- riwayat pembayaran end -->
     </section>

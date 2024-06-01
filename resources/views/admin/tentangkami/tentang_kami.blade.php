@@ -21,7 +21,7 @@
     </div>
     <!-- tombol tambah end -->
 
-    <section  class="pt-36 mx-2 sm:mx-8 sm:pt-40 ">
+    <section  class="pt-36 mx-2 sm:mx-8 sm:pt-40 pb-20">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {

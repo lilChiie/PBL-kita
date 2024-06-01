@@ -18,7 +18,6 @@
                 data-aos-easing="ease-in-back"
                 data-aos-delay="150"
                 data-aos-offset="0">
-                <img class="object-cover w-8/12 aspect-16/9 rounded-md" src="{{ asset('storage/properti/2.jpg') }}" alt="detail tentang kami">
                 <div class="flex flex-col justify-between py-4 leading-normal">
                     <form action="">
                         <div>
@@ -38,15 +37,15 @@
                         </div>
                         <div>
                             <label for="harga" class="text-xs md:text-base">Harga</label>
-                            <input type="text" id="harga" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
+                            <input type="number" id="harga" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
                         </div>
                         <div>
                             <label for="slot" class="text-xs md:text-base">Slot Peserta</label>
-                            <input type="text" id="slot" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
+                            <input type="number" id="slot" class="text-xs md:text-base w-full border-black rounded-lg my-2" >
                         </div>
                         
                         <div class="border border-black my-5 rounded-lg">
-                        <textarea id="informasi" rows="15" class="block w-full  text-sm border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll" placeholder="Edit Informasi..."></textarea>
+                        <textarea id="informasi" rows="15" class="block w-full  text-sm border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll" placeholder="Tambah Informasi..."></textarea>
                         </div>
                         <div class="flex justify-end">
                             <a href="/admin/kegiatan" type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8

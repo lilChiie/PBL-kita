@@ -28,7 +28,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/3.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 object-cover" src="{{ asset('storage/properti/3.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
@@ -45,7 +45,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 object-cover" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
@@ -62,7 +62,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 object-cover" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
@@ -79,7 +79,7 @@
                 data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
-                        <img class="w-full aspect-16/9" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
+                        <img class="w-full aspect-16/9 object-cover" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />    
                     </div>
                     <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
                         <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>

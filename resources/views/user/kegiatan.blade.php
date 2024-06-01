@@ -24,7 +24,7 @@
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/user/Detail_Kegiatan" class="flex items-center">
-                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/user/Detail_Kegiatan">
@@ -40,7 +40,7 @@
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/user/Detail_Kegiatan" class="flex items-center">
-                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />
+                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/1.jpg') }}" alt="gambar pelatihan" />
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/user/Detail_Kegiatan">
@@ -56,7 +56,7 @@
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/user/Detail_Kegiatan" class="flex items-center">
-                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/user/Detail_Kegiatan">
@@ -72,7 +72,7 @@
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <a href="/user/Detail_Kegiatan" class="flex items-center">
-                        <img class="w-full aspect-16/9 hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
+                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
                     </a>
                     <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
                         <a href="/user/Detail_Kegiatan">

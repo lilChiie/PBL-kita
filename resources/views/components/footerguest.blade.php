@@ -5,7 +5,7 @@
           <div class="border-r-2 border-black px-5 justify-items-center grid ">
             <div class="gap-3">
               <h1 class="py-5 w-full font-bold text-xs sm:text-lg lg:text-xl">Layanan</h1>
-                  <a href="/guest/Tentang Kami" class="hover:text-sky-600 block text-xs sm:text-base ">Tentang Kami</a>
+                  <a href="/guest/TentangKami" class="hover:text-sky-600 block text-xs sm:text-base ">Tentang Kami</a>
                   <a href="/guest/Konsultasi" class="hover:text-sky-600 text-xs block sm:text-base">Konsultasi</a>
                   <a href="/guest/Riset" class="hover:text-sky-600 text-xs block sm:text-base">Riset</a>
                   <a href="/guest/Publikasi" class="hover:text-sky-600 text-xs block sm:text-base">Publikasi</a>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="mt-14 pb-8 text-[6px] lg:text-xs ">
-        <p class="text-center"><i class="far fa-copyright"></i> COPYRIGHT {{ date ('Y')}} TAX Digital. All rights reserved. Not for further distribution without the permission of PJAP</p>
+        <p class="text-center"><i class="far fa-copyright"></i> COPYRIGHT {{ date ('Y')}} PJAP. All rights reserved. Not for further distribution without the permission of PJAP</p>
       </div>
     </div>
 </footer>

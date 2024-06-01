@@ -142,6 +142,10 @@ Route::prefix('admin')->group(function () {
         return view('admin/adm_home');
     });
 
+    Route::get('/profil', function () {
+        return view('admin/profil');
+    });
+
     Route::prefix('tentangkami')->group(function () {
         Route::get('/', [TentangkamiController::class, 'selectAdmin'])->name('admin.tentangkami');
         Route::get('/detail/{id}', [TentangkamiController::class, 'showAdmin'])->name('admin.tentangkami.detail');

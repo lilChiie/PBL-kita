@@ -38,11 +38,11 @@
                         </div>
                         <div>
                             <label for="harga" class="text-xs md:text-base">Harga</label>
-                            <input type="text" id="harga" class="text-xs md:text-base w-full border-black rounded-lg my-2">
+                            <input type="number" id="harga" class="text-xs md:text-base w-full border-black rounded-lg my-2">
                         </div>
                         <div>
                             <label for="slot" class="text-xs md:text-base">Slot Peserta</label>
-                            <input type="text" id="slot" class="text-xs md:text-base w-full border-black rounded-lg my-2">
+                            <input type="number" id="slot" class="text-xs md:text-base w-full border-black rounded-lg my-2">
                         </div>
                         <div class="border border-black my-5 rounded-lg">
                         <textarea id="informasi" rows="15" class="block w-full  text-sm border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll" placeholder="Edit Informasi..."></textarea>

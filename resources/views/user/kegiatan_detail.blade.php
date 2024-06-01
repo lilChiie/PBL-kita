@@ -16,7 +16,7 @@
     <section  class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
         <div class="bg-white w-full rounded-md pb-40">
             <div class="px-3 pt-5 md:px-20 w-full ">
-                <img class="object-cover w-full rounded-md" src="{{ asset('storage/properti/2.jpg') }}" alt="detail tentang kami"
+                <img class="object-cover w-4/5 rounded-md" src="{{ asset('storage/properti/2.jpg') }}" alt="detail tentang kami"
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
                 data-aos-delay="150"
