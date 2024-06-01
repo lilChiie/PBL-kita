@@ -48,7 +48,7 @@
             </div>
 
             <div class="mt-20">
-                <a href="/admin/konsultasi" class="bg-latar py-1 pr-4 pl-8 font-bold text-nav text-xs sm:text-base
+                <a href="/admin/konsultasi/pertanyaan" class="bg-latar py-1 pr-4 pl-8 font-bold text-nav text-xs sm:text-base
                  hover:text-black focus:text-white transition duration-1000">Kembali</a>
             </div>
         </div>
