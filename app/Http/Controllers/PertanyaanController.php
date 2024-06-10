@@ -26,12 +26,17 @@ class PertanyaanController extends Controller
     public function insertPertanyaanGuest(request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255',
-            'pertanyaan' => 'required|string',
+            'name' => 'required|',
+            'email' => 'required|email|',
+            'pertanyaan' => 'required',
+        ], [
+            'name.required' => 'Nama harus di isi',
+            'email.required' => 'Email harus di isi',
+            'email.email' => 'Email tidak valid',
+            'pertanyaan' => 'Pertanyaan wajib di isi'
         ]);
 
-        
+
         $produk = new Pertanyaan();
         $produk->name = $request->input('name');
         $produk->email = $request->input('email');
@@ -44,12 +49,17 @@ class PertanyaanController extends Controller
     public function insertPertanyaanUser(request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255',
-            'pertanyaan' => 'required|string',
+            'name' => 'required',
+            'email' => 'required|email',
+            'pertanyaan' => 'required',
+        ], [
+            'name.required' => 'Nama harus di isi',
+            'email.required' => 'Email harus di isi',
+            'email.email' => 'Email tidak valid',
+            'pertanyaan' => 'Pertanyaan wajib di isi'
         ]);
 
-        
+
         $produk = new Pertanyaan();
         $produk->name = $request->input('name');
         $produk->email = $request->input('email');

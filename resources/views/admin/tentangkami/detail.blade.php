@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>detail</title>
 </head>
+
 <body class="bg-latar text-black min-h-screen pb-12">
-    
+
     <!-- header -->
-   @include('components.headeradmin')
+    @include('components.headeradmin')
 
     <!-- Content Start -->
-    <section  class="pt-36 mx-8 sm:pt-40">
+    <section class="pt-36 mx-8 sm:pt-40">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -54,41 +56,30 @@
                 </script>
 
                 <a href="{{ route('admin.tentangkami.edit', $files->tentang_id) }}" class="text-xs bg-nav text-white py-1 px-4 rounded-md md:text-base hover:bg-latar focus:bg-latar
-                hover:text-black focus:text-black transition duration-700">Edit</a> 
+                hover:text-black focus:text-black transition duration-700">Edit</a>
             </div>
             <!-- button end -->
 
             <div class="px-5 pt-5 md:px-20 w-full ">
-                <img class="object-cover w-4/5 aspect-16/9 rounded-md" src="{{ asset('images/'.$files->photo) }}" alt="detail tentang kami"
-                data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="150"
-                data-aos-offset="0">
+                <img class="object-cover w-4/5 aspect-16/9 rounded-md" src="{{ asset('images/'.$files->photo) }}" alt="detail tentang kami" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-offset="0">
                 <div class="flex flex-col justify-between py-4 leading-normal">
-                    <h5 class="mb-4 text-xl md:text-3xl font-bold "
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="150"
-                    data-aos-offset="0">{{$files->title}}</h5>
-                    <p class="mb-3 font-normal "
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="150"
-                    data-aos-offset="0">
-                        {{$files->content}}
-                    </p>
+                    <h5 class="mb-4 text-xl md:text-3xl font-bold " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-offset="0">{{$files->title}}</h5>
+                    <a class="mb-3 font-normal " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-offset="0">
+                        {!! nl2br($files->content) !!}
+                    </a>
                 </div>
             </div>
         </div>
-    </section>   
+    </section>
     <!-- Content End -->
 
-    
+
     <!-- javascript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-    AOS.init();
+        AOS.init();
     </script>
     @vite('resources/js/fituruser.js')
 </body>
+
 </html>

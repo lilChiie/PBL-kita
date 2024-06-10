@@ -20,42 +20,42 @@
             </h1>
 
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-5 sm:mx-10">
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                        <thead class="text-xs uppercase bg-gray-500 text-gray-100">
-                            <tr>
-                                <th scope="col" class="px-6 py-3">
-                                    Nama
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Email
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    
-                                </th>
-                            </tr>
-                        </thead>
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                    <thead class="text-xs uppercase bg-gray-500 text-gray-100">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                Nama
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Email
+                            </th>
+                            <th scope="col" class="px-6 py-3">
 
-                        
-                        <tbody>
+                            </th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
                         @foreach ($files as $file)
-                            <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $file->name }}
-                                </th>
-                               
-                                <td class="px-6 py-4">
+                            </th>
+
+                            <td class="px-6 py-4">
                                 {{ $file->email }}
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="{{ route('admin.detail.pertanyaan', $file->pertanyaan_id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                            
-                        </tbody>
-                        
-                    </table>
-                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="{{ route('admin.detail.pertanyaan', $file->pertanyaan_id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
+                            </td>
+                        </tr>
+                        @endforeach
+
+                    </tbody>
+
+                </table>
+            </div>
 
 
             <div class="my-20">

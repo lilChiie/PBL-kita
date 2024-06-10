@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami</title>    
+    <title>Tentang Kami</title>
 </head>
+
 <body class="bg-latar text-black min-h-screen">
-    
+
     <!-- header -->
-   @include('components.headeradmin')
+    @include('components.headeradmin')
 
     <!-- Content Start -->
 
@@ -21,7 +23,7 @@
     </div>
     <!-- tombol tambah end -->
 
-    <section  class="pt-36 mx-2 sm:mx-8 sm:pt-40 pb-20">
+    <section class="pt-36 mx-2 sm:mx-8 sm:pt-40 pb-20">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -35,19 +37,13 @@
         @endif
 
         <div class="bg-white w-full rounded-md pb-12">
-            <h1 class="ml-2 pt-2 sm:pt-6 md:ml-8 font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-8"
-                data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="200"
-                data-aos-offset="0">
+            <h1 class="ml-2 pt-2 sm:pt-6 md:ml-8 font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-8" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
                 Tentang Kami
             </h1>
 
             @foreach ($files as $file)
             <!-- item 1 -->
-            <div class="px-2 md:px-10 items-center mb-8" data-aos="fade-right"
-                data-aos-offset="150"
-                data-aos-easing="ease-in-sine">
+            <div class="px-2 md:px-10 items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
                         <a href="{{ route('admin.tentangkami.detail', $file->tentang_id) }}">
@@ -71,12 +67,13 @@
         </div>
     </section>
     <!-- Content End -->
-    
+
     <!-- javascript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-    AOS.init();
+        AOS.init();
     </script>
     @vite('resources/js/fituruser.js')
 </body>
+
 </html>

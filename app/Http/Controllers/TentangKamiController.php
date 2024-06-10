@@ -8,7 +8,19 @@ use Illuminate\Support\Facades\File;
 
 class TentangKamiController extends Controller
 {
-    // admin
+
+    //home user
+    public function home()
+    {
+        return view('user.user_home')->with('success', 'Login berhasil');
+    }
+    public function dashboard()
+    {
+        return view('home');
+    }
+
+
+    //admin
     public function selectAdmin()
     {
         $files = Tentangkami::all();
@@ -155,3 +167,124 @@ class TentangKamiController extends Controller
         return view('user.tentangkami_detail', compact('files'));
     }
 }
+
+
+    //punya api
+
+    // admin
+//     public function selectAdmin()
+//     {
+//         $files = Tentangkami::all();
+//         return response()->json($files);
+//     }
+
+//     public function showAdmin($id)
+//     {
+//         $files = Tentangkami::findOrFail($id);
+//         return response()->json($files);
+//     }
+
+//     public function insertTentangkami(Request $request)
+//     {
+//         $request->validate([
+//             'title' => 'required|string|max:255',
+//             'content' => 'required|string',
+//             'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+//         ]);
+
+//         $imageName = time() . '.' . $request->photo->extension();
+//         $request->photo->move(public_path('images'), $imageName);
+
+//         $produk = new Tentangkami();
+//         $produk->title = $request->input('title');
+//         $produk->content = $request->input('content');
+//         $produk->photo = $imageName;
+//         $produk->save();
+
+//         return response()->json(['message' => 'Data Berhasil Disimpan!', 'data' => $produk], 201);
+//     }
+
+//     public function edit($id)
+//     {
+//         $post = Tentangkami::findOrFail($id);
+//         return response()->json($post);
+//     }
+
+//     public function update(Request $request, $id)
+//     {
+//         $request->validate([
+//             'title' => 'required|string|max:255',
+//             'content' => 'required|string',
+//             'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+//         ]);
+
+//         $post = Tentangkami::findOrFail($id);
+
+//         if ($request->hasFile('photo')) {
+//             $image = $request->file('photo');
+//             $imageName = time() . '.' . $image->getClientOriginalExtension();
+//             $image->move(public_path('images'), $imageName);
+
+//             if ($post->photo) {
+//                 $oldImagePath = public_path('images/' . $post->photo);
+//                 if (File::exists($oldImagePath)) {
+//                     File::delete($oldImagePath);
+//                 }
+//             }
+
+//             $post->update([
+//                 'photo' => $imageName,
+//                 'title' => $request->title,
+//                 'content' => $request->content,
+//             ]);
+//         } else {
+//             $post->update([
+//                 'title' => $request->title,
+//                 'content' => $request->content,
+//             ]);
+//         }
+
+//         return response()->json(['message' => 'Data Berhasil Diubah!', 'data' => $post], 200);
+//     }
+
+//     public function delete($id)
+//     {
+//         $files = Tentangkami::findOrFail($id);
+
+//         if ($files->photo) {
+//             $oldImagePath = public_path('images/' . $files->photo);
+//             if (File::exists($oldImagePath)) {
+//                 File::delete($oldImagePath);
+//             }
+//         }
+
+//         $files->delete();
+
+//         return response()->json(['message' => 'Data berhasil dihapus'], 200);
+//     }
+
+//     // guest
+//     public function selectGuest()
+//     {
+//         $files = Tentangkami::all();
+//         return response()->json($files);
+//     }
+
+//     public function showGuest($id)
+//     {
+//         $files = Tentangkami::findOrFail($id);
+//         return response()->json($files);
+//     }
+
+//     // user
+//     public function selectUser()
+//     {
+//         $files = Tentangkami::all();
+//         return response()->json($files);
+//     }
+
+//     public function showUser($id)
+//     {
+//         $files = Tentangkami::findOrFail($id);
+//         return response()->json($files);
+//     }
