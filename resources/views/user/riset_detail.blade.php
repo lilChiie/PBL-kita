@@ -11,6 +11,15 @@
     <!-- header -->
     @include('components.headeruser')
 
+     <!-- edited -->
+     <div class="fixed left-0 bottom-16 z-10">
+        <a href="/user/Riset" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+            transition duration-700 focus:bg-gradb">
+            Kembali
+        </a>
+    </div>
+    <!-- edited -->
+
     <!-- Content Start -->
     <section class="pt-36 sm:pt-40 mx-8">
         <div class="bg-white w-full">
