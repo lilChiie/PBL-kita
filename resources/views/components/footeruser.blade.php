@@ -45,7 +45,7 @@
       </div>
 
       <div class="mt-14 pb-8 text-[6px] lg:text-xs ">
-        <p class="text-center"><i class="far fa-copyright"></i> COPYRIGHT {{ date ('Y')}} PJAP. All rights reserved. Not for further distribution without the permission of PJAP</p>
+        <p class="text-center"><i class="far fa-copyright"></i> COPYRIGHT {{ date ('Y')}} PJAP Polibatam. All rights reserved. Not for further distribution without the permission of PJAP Polibatam</p>
       </div>
     </div>
 </footer>

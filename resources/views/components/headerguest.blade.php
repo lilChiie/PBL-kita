@@ -30,7 +30,7 @@
                     <img src="{{ asset('storage/properti/logo 5.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 aspect-square object-cover rounded-full sm:w-10 sm:mx-2">
                 </a>
                 <p class="font-thin text-xs mx-2 mt-4 text-white sm:text-base">
-                    Penyedia Jasa Aplikasi Perpajakan
+                    PJAP Polibatam
                 </p>
             </div>
             <div class="relative text-black">
