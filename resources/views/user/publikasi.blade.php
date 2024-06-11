@@ -25,7 +25,7 @@
                     Publikasi
                 </h1>
             </div>
-            
+
             <div class="grid gap-x-5 sm:gap-x-10 gap-y-2 grid-cols-2 mx-5 sm:mx-10 my-2 ">
                 @foreach ($files as $file)
                 <!-- content 1 -->
@@ -38,12 +38,12 @@
                             <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">{{ $file->title }}</h5>
                         </a>
                         <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                            {{ $file->content }}
+                            {!! nl2br($file->content) !!}
                         </p>
                     </div>
                 </div>
                 @endforeach
-                
+
             </div>
         </div>
     </section>

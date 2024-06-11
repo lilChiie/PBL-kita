@@ -32,7 +32,7 @@
                             {{ $file->title }}
                         </h5>
                         <p class="text-[9px] md:text-base overflow-hidden h-[40px] sm:h-10 md:h-12 lg:h-[72px]">
-                            {{ $file->content }}
+                            {!! nl2br($file->content) !!}
                         </p>
                         <hr class="border-t-1 border-black mt-1">
                         <a href="{{ route('user.tentangkami.detail', $file->tentang_id) }}" class="text-[8px] md:text-xs lg:text-base hover:text-sky-600">
@@ -43,7 +43,7 @@
             </div>
             @endforeach
 
-            
+
         </div>
     </section>
     <!-- Content End -->

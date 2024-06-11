@@ -27,11 +27,11 @@
                     <div class="py-3">
                         <a href="{{ route('guest.publikasi.detail', $file->publikasi_id) }}">
                             <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">
-                            {{ $file->title }}
+                                {{ $file->title }}
                             </h5>
                         </a>
                         <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                        {{ $file->content }}
+                            {!! nl2br($file->content) !!}
                         </p>
                     </div>
                 </div>

@@ -26,9 +26,15 @@ class RisetController extends Controller
     public function insertRiset(request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
-            'photo' => 'required|image:jpeg,jpg,gif,svg|max:2048',
+            'title' => 'required',
+            'content' => 'required',
+            'photo' => 'required|image:jpeg,jpg,png|max:2048',
+        ], [
+            'title.required' => 'Judul wajib di isi',
+            'content.required' => 'Informasi wajib di isi',
+            'photo.required' => 'Gambar wajib di isi',
+            'photo.image' => 'Format gambar tidak sesuai',
+            'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb'
         ]);
 
         $imageName = time() . '.' . $request->photo->extension();
@@ -56,9 +62,14 @@ class RisetController extends Controller
     {
         //validate form
         $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'title' => 'required',
+            'content' => 'required',
+            'photo' => 'nullable|image:jpeg,png,jpg|max:2048',
+        ], [
+            'title.required' => 'Judul wajib di isi',
+            'content.required' => 'Informasi wajib di isi',
+            'photo.image' => 'Format gambar tidak sesuai',
+            'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb'
         ]);
 
         //get post by ID

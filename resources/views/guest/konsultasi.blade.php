@@ -26,7 +26,7 @@
             });
         </script>
         @endif
-        
+
         <div class="bg-white w-full rounded-md">
             <div class="mx-3 my-2">
                 <h1 class="font-bold pt-6 text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Konsultasi</h1>
@@ -42,11 +42,11 @@
                     <div class="py-3">
                         <a href="{{ route('guest.konsultasi.detail', $file->konsultasi_id) }}">
                             <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">
-                            {{ $file->title }}
+                                {{ $file->title }}
                             </h5>
                         </a>
                         <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                        {{ $file->content }}
+                            {!! nl2br($file->content) !!}
                         </p>
                     </div>
                 </div>
