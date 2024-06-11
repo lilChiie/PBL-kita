@@ -14,7 +14,7 @@
 
     <!-- Content Start -->
     <div class="fixed right-0 bottom-16 z-10">
-        <a href="{{route('admin.riset.tambah')}}" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+        <a href="{{route('admin.riset.tambah')}}" class="bg-nav rounded-l-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Tambah
         </a>
