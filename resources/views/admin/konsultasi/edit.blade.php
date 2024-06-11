@@ -12,6 +12,15 @@
     <!-- header -->
     @include('components.headeradmin')
 
+    <!-- edited -->
+   <div class="fixed left-0 bottom-16 z-10">
+        <a href="{{ route('admin.konsultasi.detail', $post->konsultasi_id) }}" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+            transition duration-700 focus:bg-gradb">
+            Kembali
+        </a>
+    </div>
+    <!-- edited -->
+
     <!-- Content Start -->
     <section class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
         <div class="bg-white w-full rounded-md pb-12">

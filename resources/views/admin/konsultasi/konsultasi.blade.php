@@ -12,6 +12,15 @@
     <!-- header -->
     @include('components.headeradmin')
 
+    <!-- edited -->
+   <div class="fixed left-0 bottom-16 z-10">
+        <a href="{{route('admin.konsultasi.tambah')}}" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+            transition duration-700 focus:bg-gradb">
+            Tambah
+        </a>
+    </div>
+    <!-- edited -->
+
     <!-- Content Start -->
     <section class="pt-36 sm:pt-40 mb-12 mx-8">
         @if (session('success'))
@@ -52,12 +61,12 @@
 
 
             </div>
-            <div class="mx-5 mt-5 mb-20 sm:mx-10">
+            <!-- <div class="mx-5 mt-5 mb-20 sm:mx-10">
                 <a href="{{route('admin.konsultasi.tambah')}}" class="text-xs sm:text-base bg-nav py-2 px-6 rounded-md text-white hover:bg-gradb focus:bg-gradb
                     transition duration-700">
                     Tambah
                 </a>
-            </div>
+            </div> -->
             <div class="flex justify-end mb-20">
                 <a href="/admin/konsultasi/pertanyaan" class="bg-latar py-1 pl-4 mb-14 pr-8 font-bold text-nav text-xs sm:text-base
                     hover:text-black focus:text-white transition duration-1000">

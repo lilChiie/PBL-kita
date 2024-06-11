@@ -11,6 +11,14 @@
     <!-- header -->
     @include('components.headerguest')
 
+    <!-- edited -->
+    <div class="fixed left-0 bottom-16 z-10">
+        <a href="/guest/Konsultasi" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+            transition duration-700 focus:bg-gradb">
+            Kembali
+        </a>
+    </div>
+
     <!-- Content Start -->
     <section class="pt-36 sm:pt-40 mx-8">
         <div class="bg-white w-full">
@@ -30,19 +38,19 @@
                             <form method="POST" action="{{route('guest.pertanyaan.tambah')}}" class=" p-4 bg-white">
                                 @csrf
                                 <div>
-                                    <input type="text" name="name" id="name" autocomplete="name" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  " placeholder="Nama" value="{{ old('name') }}">
+                                    <input type="text" name="name" id="name" autocomplete="name" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  mt-4 " placeholder="Nama" value="{{ old('name') }}">
                                 </div>
                                 @error('name')
                                 <small>{{ $message }}</small>
                                 @enderror
                                 <div>
-                                    <input type="email" name="email" id="email" autocomplete="email" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="Email" value="{{ old('email') }}">
+                                    <input type="email" name="email" id="email" autocomplete="email" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4 " placeholder="Email" value="{{ old('email') }}">
                                 </div>
                                 @error('email')
                                 <small>{{ $message }}</small>
                                 @enderror
                                 <div class="sm:col-span-2">
-                                    <textarea id="message" name="pertanyaan" rows="6" class="block p-2.5 w-full bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 " placeholder="Pertanyaan...">{{ old('pertanyaan') }}</textarea>
+                                    <textarea id="message" name="pertanyaan" rows="6" class="block p-2.5 w-full bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 mt-4 " placeholder="Pertanyaan...">{{ old('pertanyaan') }}</textarea>
                                 </div>
                                 @error('pertanyaan')
                                 <small>{{ $message }}</small>
