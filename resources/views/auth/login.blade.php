@@ -32,23 +32,29 @@
             <div class="w-full md:mt-0 sm:max-w-md xl:p-0" data-aos="zoom-in">
                 <div class="p-6 space-y-4 sm:p-8 text-white ">
                     <h1 class="text-xl leading-tight tracking-tight md:text-2xl">
-                        PJAP
+                        PJAP Polibatam
                     </h1>
                     <p>Selamat Datang di <br>
-                        Penyedia Jasa Aplikasi Perpajakan
-                    </p>
-                    <hr>
+                        PJAP Polibatam
+                        <hr>
                     <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-bold">Masuk</h1>
-                    <form class="space-y-4 md:space-y-6" action="/">
+                    <form class="space-y-4 md:space-y-6" action="{{ route('sign') }}" method="post">
+                        @csrf
                         <div>
                             <label for="username" class="block mb-2 text-xs  text-white">Nama Pengguna</label>
-                            <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Nama Pengguna">
+                            <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Nama Pengguna" value="{{ old('username') }}">
                         </div>
+                        @error('username')
+                        <small>{{ $message }}</small>
+                        @enderror
 
                         <div>
                             <label for="password" class="block mb-2 text-xs text-white">Masukkan Kata Sandi</label>
-                            <input type="password" name="password" id="password" placeholder="Kata Sandi" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3  placeholder:text-xs " required="">
+                            <input type="password" name="password" id="password" placeholder="Kata Sandi" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3  placeholder:text-xs " value="{{ old('password') }}">
                         </div>
+                        @error('password')
+                        <small>{{ $message }}</small>
+                        @enderror
 
                         <div class="flex items-center justify-between">
                             <a href="/LupaPassword" class="text-xs text-primary-600 hover:underline hover:text-gradb
@@ -62,7 +68,7 @@
 
                         <div class="text-center my-4 text-[10px] lg:my-5">
                             <p class="mb-4 text-white lg:text-xs">Belum Punya Akun?</p>
-                            <a href="/daftar" type="button" class="bg-white text-black w-8/12 rounded-2xl py-2 lg:text-xs
+                            <a href="{{ route('daftar') }}" type="button" class="bg-white text-black w-8/12 rounded-2xl py-2 lg:text-xs
                         lg:py-3 lg:rounded-3xl hover:bg-nav hover:text-white transition duration-700 ">Daftar</a>
                         </div>
                     </form>
@@ -71,7 +77,33 @@
         </div>
     </section>
 
+    @if (session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            Swal.fire({
+                position: "middle",
+                icon: "success",
+                title: "{{ session('success') }}",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        });
+    </script>
+    @endif
 
+    @if (session('failed'))
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            Swal.fire({
+                position: "middle",
+                icon: "error",
+                title: "{{ session('failed') }}",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        });
+    </script>
+    @endif
     <!-- javascript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

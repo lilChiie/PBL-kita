@@ -9,23 +9,20 @@ use App\Http\Controllers\PertanyaanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarcodeController;
 use App\Http\Controllers\PembayaranController;
-use App\Models\Konsultasi;
-use App\Models\Riset;
-use App\Models\Tentangkami;
-use App\Models\Publikasi;
-use App\Models\Pertanyaan;
 
 
 
 
 
-Route::get('/login', function () {
-    return view('auth/login');
-});
 
-Route::get('/daftar', function () {
-    return view('auth/daftar');
-});
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/sign', [LoginController::class, 'sign'])->name('sign');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+Route::get('/daftar', [LoginController::class, 'daftar'])->name('daftar');
+Route::post('/register', [LoginController::class, 'register'])->name('register');
 
 Route::get('/LupaPassword', function () {
     return view('auth/lupa_password');
