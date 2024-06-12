@@ -62,8 +62,8 @@
                         </div>
 
                         <div class="text-center mt-4 lg:text-xs lg:mt-5">
-                            <a href="/user/" type="submit" class="bg-gradb text-[10px] w-10/12 rounded-2xl py-2 text-white lg:text-xs
-                        lg:py-3 lg:rounded-3xl hover:bg-nav transition duration-700 ">Masuk</a>
+                            <button href="/user/" type="submit" class="bg-gradb text-[10px] w-10/12 rounded-2xl py-2 text-white lg:text-xs
+                        lg:py-3 lg:rounded-3xl hover:bg-nav transition duration-700 ">Masuk</button>
                         </div>
 
                         <div class="text-center my-4 text-[10px] lg:my-5">

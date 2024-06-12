@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
+
 
 class LoginController extends Controller
 {
@@ -22,6 +21,9 @@ class LoginController extends Controller
         $request->validate([
             'username' => 'required',
             'password' => 'required',
+        ], [
+            'username.required' => 'Nama pengguna wajib di isi',
+            'password.required' => 'Kata sandi wajib di isi'
         ]);
 
         // Ambil user berdasarkan username
@@ -96,11 +98,8 @@ class LoginController extends Controller
             'password' => $request->password
         ];
 
-        if (Auth::attempt($login)) {
-            return redirect()->route('login');
-        } else {
-            return redirect()->route('login')->with('failed', 'Login gagal');
-        }
+        Auth::attempt($login);
+        return redirect()->route('login')->with('success', 'Pendaftaran berhasil, silahkan login');
     }
 
     //api
