@@ -19,11 +19,12 @@ class BarcodeController extends Controller
     {
         $request->validate([
             'bank' => 'required|max:255',
-            'photo' => 'required|image:jpeg,png,jpg|max:2048',
+            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ], [
             'bank.required' => 'Nama bank harus di isi',
             'photo.required' => 'Gambar barcode harus di isi',
             'photo.image' => 'Format gambar tidak sesuai',
+            'photo.mimes' => 'Format gambar tidak sesuai',
             'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb'
         ]);
 

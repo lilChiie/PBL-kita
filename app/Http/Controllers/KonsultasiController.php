@@ -65,11 +65,12 @@ class KonsultasiController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
-            'photo' => 'nullable|image:jpeg,png,jpg|max:2048',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ], [
             'title.required' => 'Judul wajib di isi',
             'content.required' => 'Informasi wajib di isi',
             'photo.image' => 'Format gambar tidak sesuai',
+            'photo.mimes' => 'Format gambar tidak sesuai',
             'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb'
         ]);
 
