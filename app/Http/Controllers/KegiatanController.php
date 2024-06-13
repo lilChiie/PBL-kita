@@ -75,121 +75,6 @@ class KegiatanController extends Controller
         return redirect()->route('admin.kegiatan')->with('success', 'Data Berhasil Disimpan!');
     }
 
-    public function edit($id)
-    {
-        //get post by ID
-        $post = Akademi::findOrFail($id);
-
-        //render view with post
-        return view('admin.akademi.edit', compact('post'));
-    }
-
-    public function update(request $request, $id)
-    {
-
-        //validate form
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'location' => 'required',
-            'price' => 'required',
-            'slot'  => 'required|integer|min:1',
-            'date'  => 'required|date',
-
-        ], [
-            'title.required' => 'Judul wajib di isi',
-            'description.required' => 'Informasi wajib di isi',
-            'photo.image' => 'Format gambar tidak sesuai',
-            'photo.mimes' => 'Format gambar tidak sesuai',
-            'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb',
-
-            'location.required' => 'Lokasi wajib diisi',
-            'price.required' => 'Harga wajib diisi',
-
-            'slot.required' => 'Slot wajib diisi',
-            'slot.integer' => 'Slot harus berupa angka bulat',
-            'slot.min' => 'Slot tidak boleh kurang dari 1',
-
-            'date.required' => 'Tanggal wajib diisi',
-            'date.date' => 'Format tanggal tidak sesuai',
-
-
-        ]);
-
-        //get post by ID
-        $post = Akademi::findOrFail($id);
-
-        //check if image is uploaded
-        if ($request->hasFile('photo')) {
-            // Get the uploaded file
-            $image = $request->file('photo');
-            // Generate a new name for the file
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            // Store the new image in public/images
-            $image->move(public_path('images'), $imageName);
-
-            // Delete old image if it exists
-            if ($post->photo) {
-                $oldImagePath = public_path('images/' . $post->photo);
-                if (File::exists($oldImagePath)) {
-                    File::delete($oldImagePath);
-                }
-            }
-
-            //update post with new image
-            $post->update([
-                'photo' => $imageName,
-                'title' => $request->title,
-                'description' => $request->description,
-                'location' => $request->location,
-                'price' => $request->price,
-                'slot' => $request->slot,
-                'date' => $request->date,
-
-            ]);
-        } else {
-            //update post without new image
-            $post->update([
-                'title' => $request->title,
-                'description' => $request->description,
-                'location' => $request->location,
-                'price' => $request->price,
-                'slot' => $request->slot,
-                'date' => $request->date,
-
-            ]);
-        }
-
-
-        //redirect to index
-        return redirect()->route('admin.akademi.detail', $id)->with(['success' => 'Data Berhasil Diubah!']);
-    }
-
-    public function delete($id)
-    {
-        // Cari data berdasarkan ID
-        $files = Akademi::where('kegiatan_id', $id)->first();
-
-        if (!$files) {
-            // Jika data tidak ditemukan, redirect dengan pesan error
-            return redirect()->route('admin.pelatihan')->with(['error' => 'Data tidak ditemukan']);
-        }
-
-        // Hapus file gambar dari folder public/images jika ada
-        if ($files->photo) {
-            $oldImagePath = public_path('images/' . $files->photo);
-            if (File::exists($oldImagePath)) {
-                File::delete($oldImagePath);
-            }
-        }
-
-        // Hapus data dari database
-        $files->delete();
-
-        // Redirect ke halaman yang sesuai dengan pesan sukses
-        return redirect()->route('admin.pelatihan')->with(['success' => 'Data berhasil dihapus']);
-    }
 
 
     // guest
@@ -197,14 +82,7 @@ class KegiatanController extends Controller
     {
         $files = Akademi::all();
 
-        return view('guest.tentang_kami', compact('files'));
-    }
-
-    public function showGuest($id)
-    {
-        $files = Akademi::find($id);
-
-        return view('guest.tentangkami_detail', compact('files'));
+        return view('guest.kegiatan', compact('files'));
     }
 
 
@@ -213,13 +91,13 @@ class KegiatanController extends Controller
     {
         $files = Akademi::all();
 
-        return view('user.tentang_kami', compact('files'));
+        return view('user.kegiatan', compact('files'));
     }
 
     public function showUser($id)
     {
         $files = Akademi::find($id);
 
-        return view('user.tentangkami_detail', compact('files'));
+        return view('user.kegiatan_detail', compact('files'));
     }
 }

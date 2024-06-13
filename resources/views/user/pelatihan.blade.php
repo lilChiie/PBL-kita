@@ -19,69 +19,28 @@
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Pelatihan</h1>
             </div>
 
-            <!-- content 1 -->
+            @foreach($files as $file)
+            @if($file['category'] == 'pelatihan')
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
-                    <a href="/user/Detail_Pelatihan" class="flex items-center">
-                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
-                    </a>
-                    <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
-                        <a href="/user/Detail_Pelatihan">
-                            <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
-                        </a>
-                        <p class="my-1 text-[9px] md:text-base">Harga</p>
-                        <p class="text-[10px] md:text-base overflow-hidden h-7 sm:h-12 lg:h-[72px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. At repellendus corrupti nobis perferendis eos officiis iusto rem iure ad quis numquam natus error nesciunt, deserunt expedita nam veniam nihil nemo voluptatibus, recusandae quia eaque, laudantium aperiam? Delectus dicta repudiandae rem provident optio obcaecati nulla, necessitatibus, adipisci fuga perspiciatis quibusdam. Voluptates, minus facere eius quibusdam officia reprehenderit alias voluptatum quidem autem dicta iusto? Quos atque reprehenderit itaque officia aliquid enim. Sit, itaque repellat. Natus nobis accusantium doloribus tempora deleniti vitae quidem, nihil est aperiam aliquid, officiis repellendus debitis quos quae deserunt similique reiciendis molestiae ipsa odit quas, corporis consectetur dolores. Voluptate? blabala</p>
+                    <div class="flex items-center">
+                        <img class="w-full aspect-16/9 object-cover" src="{{ asset('images/'.$file->photo) }}" alt="gambar pelatihan" />
                     </div>
-                </div>
-            </div>
+                    <div class="mx-2 h-24 sm:px-2 sm:h-[120px] md:h-48 md:pt-5 overflow-hidden col-span-2 ">
+                        <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">{{ $file->title }}</h5>
+                        <p class="my-1 text-[9px] md:text-base">Rp {{ number_format($file->price, 0, ',', '.') }}</p>
 
-            <!-- content 2 -->
-            <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
-                <div class="w-full grid grid-cols-3">
-                    <a href="/user/Detail_Pelatihan" class="flex items-center">
-                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
-                    </a>
-                    <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
-                        <a href="/user/Detail_Pelatihan">
-                            <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
+                        <p class="text-[10px] md:text-base overflow-hidden h-7 sm:h-12 lg:h-[72px]">{!! nl2br($file->description) !!}</p>
+                        <hr class="border-t-1 border-black mt-1">
+                        <a href="{{ route('admin.akademi.detail', $file->kegiatan_id) }}" class="text-[8px] md:text-xs lg:text-base hover:text-sky-600">
+                            selengkapnya...
                         </a>
-                        <p class="my-1 text-[9px] md:text-base">Harga</p>
-                        <p class="text-[10px] md:text-base overflow-hidden h-7 sm:h-12 lg:h-[72px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. At repellendus corrupti nobis perferendis eos officiis iusto rem iure ad quis numquam natus error nesciunt, deserunt expedita nam veniam nihil nemo voluptatibus, recusandae quia eaque, laudantium aperiam? Delectus dicta repudiandae rem provident optio obcaecati nulla, necessitatibus, adipisci fuga perspiciatis quibusdam. Voluptates, minus facere eius quibusdam officia reprehenderit alias voluptatum quidem autem dicta iusto? Quos atque reprehenderit itaque officia aliquid enim. Sit, itaque repellat. Natus nobis accusantium doloribus tempora deleniti vitae quidem, nihil est aperiam aliquid, officiis repellendus debitis quos quae deserunt similique reiciendis molestiae ipsa odit quas, corporis consectetur dolores. Voluptate? blabala</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- content 3 -->
-            <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
-                <div class="w-full grid grid-cols-3">
-                    <a href="/user/Detail_Pelatihan" class="flex items-center">
-                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/2.jpg') }}" alt="gambar pelatihan" />
-                    </a>
-                    <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
-                        <a href="/user/Detail_Pelatihan">
-                            <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
-                        </a>
-                        <p class="my-1 text-[9px] md:text-base">Harga</p>
-                        <p class="text-[10px] md:text-base overflow-hidden h-7 sm:h-12 lg:h-[72px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. At repellendus corrupti nobis perferendis eos officiis iusto rem iure ad quis numquam natus error nesciunt, deserunt expedita nam veniam nihil nemo voluptatibus, recusandae quia eaque, laudantium aperiam? Delectus dicta repudiandae rem provident optio obcaecati nulla, necessitatibus, adipisci fuga perspiciatis quibusdam. Voluptates, minus facere eius quibusdam officia reprehenderit alias voluptatum quidem autem dicta iusto? Quos atque reprehenderit itaque officia aliquid enim. Sit, itaque repellat. Natus nobis accusantium doloribus tempora deleniti vitae quidem, nihil est aperiam aliquid, officiis repellendus debitis quos quae deserunt similique reiciendis molestiae ipsa odit quas, corporis consectetur dolores. Voluptate? blabala</p>
                     </div>
                 </div>
             </div>
-
-            <!-- content 4 -->
-            <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
-                <div class="w-full grid grid-cols-3">
-                    <a href="/user/Detail_Pelatihan" class="flex items-center">
-                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/4.jpg') }}" alt="gambar pelatihan" />
-                    </a>
-                    <div class="mx-2 h-20 sm:px-2 sm:h-40 md:h-48  sm:pt-5 overflow-hidden col-span-2 ">
-                        <a href="/user/Detail_Pelatihan">
-                            <h5 class="font-bold text-xs md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10">Judul Pelatihan</h5>
-                        </a>
-                        <p class="my-1 text-[9px] md:text-base">Harga</p>
-                        <p class="text-[10px] md:text-base overflow-hidden h-7 sm:h-12 lg:h-[72px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. At repellendus corrupti nobis perferendis eos officiis iusto rem iure ad quis numquam natus error nesciunt, deserunt expedita nam veniam nihil nemo voluptatibus, recusandae quia eaque, laudantium aperiam? Delectus dicta repudiandae rem provident optio obcaecati nulla, necessitatibus, adipisci fuga perspiciatis quibusdam. Voluptates, minus facere eius quibusdam officia reprehenderit alias voluptatum quidem autem dicta iusto? Quos atque reprehenderit itaque officia aliquid enim. Sit, itaque repellat. Natus nobis accusantium doloribus tempora deleniti vitae quidem, nihil est aperiam aliquid, officiis repellendus debitis quos quae deserunt similique reiciendis molestiae ipsa odit quas, corporis consectetur dolores. Voluptate? blabala</p>
-                    </div>
-                </div>
-            </div>
+            @endif
+            @endforeach
         </div>
     </section>
     <!-- Content End -->

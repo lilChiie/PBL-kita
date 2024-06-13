@@ -198,14 +198,7 @@ class AkademiController extends Controller
     {
         $files = Akademi::all();
 
-        return view('guest.tentang_kami', compact('files'));
-    }
-
-    public function showGuest($id)
-    {
-        $files = Akademi::find($id);
-
-        return view('guest.tentangkami_detail', compact('files'));
+        return view('guest.pelatihan', compact('files'));
     }
 
 
@@ -214,13 +207,13 @@ class AkademiController extends Controller
     {
         $files = Akademi::all();
 
-        return view('user.tentang_kami', compact('files'));
+        return view('user.pelatihan', compact('files'));
     }
 
     public function showUser($id)
     {
         $files = Akademi::find($id);
 
-        return view('user.tentangkami_detail', compact('files'));
+        return view('user.pelatihan_detail', compact('files'));
     }
 }

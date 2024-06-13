@@ -65,20 +65,11 @@ Route::prefix('user')->group(function () {
         return view('user/akademi');
     });
 
-    Route::get('/Pelatihan', function () {
-        return view('user/pelatihan');
-    });
-    Route::get('/Detail_Pelatihan', function () {
-        return view('user/pelatihan_detail');
-    });
+    Route::get('/Pelatihan', [AkademiController::class, 'selectUser'])->name('user.pelatihan');
+    Route::get('/Pelatihan/Detail/{id}', [AkademiController::class, 'showUser'])->name('user.pelatihan.detail');
 
-    Route::get('/Kegiatan', function () {
-        return view('user/kegiatan');
-    });
-
-    Route::get('/Detail_Kegiatan', function () {
-        return view('user/kegiatan_detail');
-    });
+    Route::get('/Kegiatan', [KegiatanController::class, 'selectUser'])->name('user.kegiatan');
+    Route::get('/Kegiatan/detail/{id}', [KegiatanController::class, 'showUser'])->name('user.kegiatan.detail');
 
     Route::get('/Pembayaran', [PembayaranController::class, 'showPembayaran'])->name('pembayaran');
 
@@ -114,13 +105,9 @@ Route::prefix('guest')->group(function () {
         return view('guest/akademi');
     });
 
-    Route::get('/Pelatihan', function () {
-        return view('guest/pelatihan');
-    });
+    Route::get('/Pelatihan', [AkademiController::class, 'selectGuest'])->name('guest.pelatihan');
 
-    Route::get('/Kegiatan', function () {
-        return view('guest/kegiatan');
-    });
+    Route::get('/Kegiatan', [KegiatanController::class, 'selectGuest'])->name('guest.kegiatan');
 
     Route::get('/Berita', function () {
         return view('guest/berita');
