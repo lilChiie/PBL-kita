@@ -119,6 +119,8 @@ class TentangKamiController extends Controller
                 'content' => $request->content,
             ]);
         }
+
+
         //redirect to index
         return redirect()->route('admin.tentangkami.detail', $id)->with(['success' => 'Data Berhasil Diubah!']);
     }

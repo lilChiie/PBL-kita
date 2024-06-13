@@ -5,21 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Akademi;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Log;
 
-
-class AkademiController extends Controller
+class KegiatanController extends Controller
 {
-
     //admin
-    public function selectAkademi()
+    public function selectKegiatan()
     {
         $files = Akademi::all();
 
-        return view('admin.akademi.pelatihan', compact('files'));
+        return view('admin.akademi.kegiatan', compact('files'));
     }
 
-    public function showAkademi($id)
+    public function showKegiatan($id)
     {
         $files = Akademi::find($id);
 
@@ -73,7 +70,7 @@ class AkademiController extends Controller
         $produk->photo = $imageName;
         $produk->save();
 
-        return redirect()->route('admin.pelatihan')->with('success', 'Data Berhasil Disimpan!');
+        return redirect()->route('admin.kegiatan')->with('success', 'Data Berhasil Disimpan!');
     }
 
     public function edit($id)
@@ -87,7 +84,6 @@ class AkademiController extends Controller
 
     public function update(request $request, $id)
     {
-
         //validate form
         $request->validate([
             'title' => 'required|string|max:255',
@@ -97,7 +93,7 @@ class AkademiController extends Controller
             'price' => 'required',
             'slot'  => 'required|integer|min:1',
             'date'  => 'required|date',
-
+            'category' => 'required'
         ], [
             'title.required' => 'Judul wajib di isi',
             'description.required' => 'Informasi wajib di isi',
@@ -115,7 +111,7 @@ class AkademiController extends Controller
             'date.required' => 'Tanggal wajib diisi',
             'date.date' => 'Format tanggal tidak sesuai',
 
-
+            'category.required' => 'Kategori wajib diisi',
         ]);
 
         //get post by ID
@@ -147,7 +143,7 @@ class AkademiController extends Controller
                 'price' => $request->price,
                 'slot' => $request->slot,
                 'date' => $request->date,
-
+                'category' => $request->category
             ]);
         } else {
             //update post without new image
@@ -158,13 +154,11 @@ class AkademiController extends Controller
                 'price' => $request->price,
                 'slot' => $request->slot,
                 'date' => $request->date,
-
+                'category' => $request->category
             ]);
         }
-
-
         //redirect to index
-        return redirect()->route('admin.akademi.detail', $id)->with(['success' => 'Data Berhasil Diubah!']);
+        return redirect()->route('admin.kegiatan.detail', $id)->with(['success' => 'Data Berhasil Diubah!']);
     }
 
     public function delete($id)
@@ -174,7 +168,7 @@ class AkademiController extends Controller
 
         if (!$files) {
             // Jika data tidak ditemukan, redirect dengan pesan error
-            return redirect()->route('admin.pelatihan')->with(['error' => 'Data tidak ditemukan']);
+            return redirect()->route('admin.kegiatan')->with(['error' => 'Data tidak ditemukan']);
         }
 
         // Hapus file gambar dari folder public/images jika ada
@@ -189,7 +183,7 @@ class AkademiController extends Controller
         $files->delete();
 
         // Redirect ke halaman yang sesuai dengan pesan sukses
-        return redirect()->route('admin.pelatihan')->with(['success' => 'Data berhasil dihapus']);
+        return redirect()->route('admin.kegiatan')->with(['success' => 'Data berhasil dihapus']);
     }
 
 

@@ -8,6 +8,8 @@ use App\Http\Controllers\PublikasiController;
 use App\Http\Controllers\PertanyaanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarcodeController;
+use App\Http\Controllers\AkademiController;
+use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\PembayaranController;
 
 
@@ -37,9 +39,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('user')->group(function () {
-    Route::get('/', function () {
-        return view('user/user_home');
-    });
+    Route::get('/', [TentangkamiController::class, 'home'])->name('user.home');
 
     Route::get('/TentangKami', [TentangkamiController::class, 'selectUser'])->name('user.tentangkami');
     Route::get('/TentangKami/Detail/{id}', [TentangkamiController::class, 'showUser'])->name('user.tentangkami.detail');
@@ -210,50 +210,36 @@ Route::prefix('admin')->group(function () {
         });
     });
 
-    Route::prefix('pelatihan')->group(function () {
-        Route::get('/', function () {
-            return view('admin/akademi/pelatihan/pelatihan');
-        });
-        Route::get('/detail', function () {
-            return view('admin/akademi/pelatihan/detail');
-        });
-        Route::get('/edit', function () {
-            return view('admin/akademi/pelatihan/edit');
-        });
-        Route::get('/tambah', function () {
-            return view('admin/akademi/pelatihan/tambah');
-        });
-    });
 
-    Route::prefix('kegiatan')->group(function () {
-        Route::get('/', function () {
-            return view('admin/akademi/kegiatan/kegiatan');
-        });
-        Route::get('/detail', function () {
-            return view('admin/akademi/kegiatan/detail');
-        });
-        Route::get('/edit', function () {
-            return view('admin/akademi/kegiatan/edit');
-        });
-        Route::get('/tambah', function () {
-            return view('admin/akademi/kegiatan/tambah');
-        });
-    });
+    Route::get('/pelatihan', [AkademiController::class, 'selectAkademi'])->name('admin.pelatihan');
+    Route::get('/kegiatan', [KegiatanController::class, 'selectKegiatan'])->name('admin.kegiatan');
+
 
     Route::prefix('akademi')->group(function () {
         Route::get('/', function () {
             return view('admin/akademi/akademi');
         });
+
+        //barcode
         Route::get('/barcode', [BarcodeController::class, 'index'])->name('barcode');
         Route::post('/tambah', [BarcodeController::class, 'insert'])->name('barcode.tambah');
         Route::delete('/delete/{id}', [BarcodeController::class, 'delete'])->name('barcode.delete');
+
+        //pelatihan dan kegiatan
+        Route::get('/detail/{id}', [AkademiController::class, 'showAkademi'])->name('admin.akademi.detail');
+
+        Route::get('/edit/{id}', [AkademiController::class, 'edit'])->name('admin.akademi.edit');
+        Route::put('/update/{id}', [AkademiController::class, 'update'])->name('admin.akademi.update');
+
+        Route::get('/tambah', function () {
+            return view('admin/akademi/tambah');
+        });
+        Route::post('/insert', [AkademiController::class, 'insertAkademi'])->name('admin.akademi.insert');
+
+        Route::delete('/delete/{id}', [AkademiController::class, 'delete'])->name('admin.akademi.delete');
+
         Route::get('/detail_pembayaran', function () {
             return view('admin/akademi/detail_bayar');
         });
     });
 });
-
-
-// controller
-// Route::get('/guest/TentangKami', [TentangkamiController::class, 'selectTentangkami']);
-// Route::get('/guest/Konsultasi', [KonsultasiController::class, 'index']);
