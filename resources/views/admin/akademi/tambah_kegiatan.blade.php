@@ -26,16 +26,16 @@
                             <input class="block w-full  text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file" name="photo" value="{{ old('photo') }}">
                         </div>
                         @error('photo')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div>
+                        <div class="mt-3">
                             <label for="judul" class="text-xs md:text-base ">Judul Akademi</label>
-                            <input type="text" id="title" name="title" class="text-xs md:text-base w-full border-black rounded-lg my-2" placeholder="cth. Perpajakan" value="{{ old('title') }}">
+                            <input type="text" id="title" name="title" class="text-xs md:text-base w-full border-black rounded-lg" placeholder="cth. Perpajakan" value="{{ old('title') }}">
                         </div>
                         @error('title')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div class="py-2">
+                        <div class="pt-3">
                             <label for="kategori" class="text-xs md:text-base">Kategori Akademi</label>
                             <select id="category" name="category" class="bg-gray-50 border border-black text-gray-900 text-xs md:text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                 <option selected disabled>Pilih Kategori Akademi</option>
@@ -44,43 +44,43 @@
                             </select>
                         </div>
                         @error('category')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div>
+                        <div class="mt-3">
                             <label for="date" class="text-xs md:text-base">Tanggal</label>
-                            <input type="date" id="date" name="date" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="{{ old('date') }}">
+                            <input type="date" id="date" name="date" class="text-xs md:text-base w-full border-black rounded-lg" value="{{ old('date') }}">
                         </div>
                         @error('date')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div>
+                        <div class="mt-3">
                             <label for="lokasi" class="text-xs md:text-base">Lokasi</label>
-                            <input type="text" id="location" name="location" class="text-xs md:text-base w-full border-black rounded-lg my-2" placeholder="cth. Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461" value="{{ old('location') }}">
+                            <input type="text" id="location" name="location" class="text-xs md:text-base w-full border-black rounded-lg" placeholder="cth. Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461" value="{{ old('location') }}">
                         </div>
                         @error('location')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div>
+                        <div class="mt-3">
                             <label for="price" class="text-xs md:text-base">Harga</label>
-                            <input type="text" id="price" name="price" class="text-xs md:text-base w-full border-black rounded-lg my-2" placeholder="cth. 200000" value="{{ old('price') }}">
+                            <input type="text" id="price" name="price" class="text-xs md:text-base w-full border-black rounded-lg" placeholder="cth. 200000" value="{{ old('price') }}">
                         </div>
                         @error('price')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div>
+                        <div class="mt-3">
                             <label for="slot" class="text-xs md:text-base">Slot Peserta</label>
-                            <input type="number" id="slot" name="slot" class="text-xs md:text-base w-full border-black rounded-lg my-2" placeholder="cth. 230" value="{{ old('slot') }}">
+                            <input type="number" id="slot" name="slot" class="text-xs md:text-base w-full border-black rounded-lg" placeholder="cth. 230" value="{{ old('slot') }}">
                         </div>
                         @error('slot')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div class="border border-black my-5 rounded-lg">
+                        <div class="border border-black mt-5 rounded-lg">
                             <textarea id="description" name="description" rows="15" class="block w-full  text-sm border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll" placeholder="Tambah Informasi...">{{ old('description') }}</textarea>
                         </div>
                         @error('description')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div class="flex justify-end">
+                        <div class="flex justify-end mt-5">
                             <button href="/admin/akademi" type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
                             rounded-md">Tambah</button>
                         </div>

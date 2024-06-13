@@ -41,19 +41,19 @@
                                     <input type="text" name="name" id="name" autocomplete="name" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  mt-4 " placeholder="Nama" value="{{ old('name') }}">
                                 </div>
                                 @error('name')
-                                <small>{{ $message }}</small>
+                                <small  class=" text-red-700">{{ $message }}</small>
                                 @enderror
                                 <div>
                                     <input type="email" name="email" id="email" autocomplete="email" class="bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4 " placeholder="Email" value="{{ old('email') }}">
                                 </div>
                                 @error('email')
-                                <small>{{ $message }}</small>
+                                <small  class=" text-red-700">{{ $message }}</small>
                                 @enderror
                                 <div class="sm:col-span-2">
                                     <textarea id="message" name="pertanyaan" rows="6" class="block p-2.5 w-full bg-wform text-sm border-none focus:ring-primary-500 focus:border-primary-500 mt-4 " placeholder="Pertanyaan...">{{ old('pertanyaan') }}</textarea>
                                 </div>
                                 @error('pertanyaan')
-                                <small>{{ $message }}</small>
+                                <small  class=" text-red-700">{{ $message }}</small>
                                 @enderror
 
 

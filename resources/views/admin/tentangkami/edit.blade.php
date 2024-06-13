@@ -32,23 +32,23 @@
                     <form method="POST" action="{{ route('admin.tentangkami.update', $post->tentang_id) }}" enctype="multipart/form-data">
                         @csrf
                         <div>
-                            <input class="block w-full mb-5 text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file" name="photo">
+                            <input class="block w-full text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file" name="photo">
                         </div>
                         @error('photo')
-                        <small>{{ $message }}</small>
+                        <small class=" text-red-700">{{ $message }}</small>
                         @enderror
 
                         <div>
-                            <input name="title" value="{{ $post->title }}" type="text" class="w-full border-black rounded-lg" placeholder="Edit Judul..">
+                            <input name="title" value="{{ $post->title }}" type="text" class="w-full mt-5 border-black rounded-lg" placeholder="Edit Judul..">
                         </div>
                         @error('title')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
                         <div class="border border-black my-5 rounded-lg">
                             <textarea name="content" id="informasi" rows="15" class="block w-full  text-sm border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll" placeholder="Edit Informasi...">{{ $post->content }}</textarea>
                         </div>
                         @error('content')
-                        <small>{{ $message }}</small>
+                        <small  class=" text-red-700">{{ $message }}</small>
                         @enderror
                         <div class="flex justify-end">
                             <button type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
