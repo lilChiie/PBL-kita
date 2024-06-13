@@ -32,7 +32,7 @@
 
                         <p class="text-[10px] md:text-base overflow-hidden h-7 sm:h-12 lg:h-[72px]">{!! nl2br($file->description) !!}</p>
                         <hr class="border-t-1 border-black mt-1">
-                        <a href="{{ route('admin.akademi.detail', $file->kegiatan_id) }}" class="text-[8px] md:text-xs lg:text-base hover:text-sky-600">
+                        <a href="{{ route('user.pelatihan.detail', $file->kegiatan_id) }}" class="text-[8px] md:text-xs lg:text-base hover:text-sky-600">
                             selengkapnya...
                         </a>
 
