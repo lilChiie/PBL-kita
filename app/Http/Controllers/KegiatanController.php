@@ -8,15 +8,16 @@ use Illuminate\Support\Facades\File;
 
 class KegiatanController extends Controller
 {
+
     //admin
-    public function selectKegiatan()
+    public function selectAkademi()
     {
         $files = Akademi::all();
 
         return view('admin.akademi.kegiatan', compact('files'));
     }
 
-    public function showKegiatan($id)
+    public function showAkademi($id)
     {
         $files = Akademi::find($id);
 
@@ -30,7 +31,7 @@ class KegiatanController extends Controller
             'description' => 'required|string',
             'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'location' => 'required',
-            'price' => 'required',
+            'price' => 'required|max:1000000000',
             'slot'  => 'required|integer|min:1',
             'date'  => 'required|date',
             'category' => 'required'
@@ -45,6 +46,7 @@ class KegiatanController extends Controller
 
             'location.required' => 'Lokasi wajib diisi',
             'price.required' => 'Harga wajib diisi',
+            'price.max' => 'Sudah mencapai batas maksimal harga',
 
             'slot.required' => 'Slot wajib diisi',
             'slot.integer' => 'Slot harus berupa angka bulat',
@@ -84,6 +86,7 @@ class KegiatanController extends Controller
 
     public function update(request $request, $id)
     {
+
         //validate form
         $request->validate([
             'title' => 'required|string|max:255',
@@ -93,7 +96,7 @@ class KegiatanController extends Controller
             'price' => 'required',
             'slot'  => 'required|integer|min:1',
             'date'  => 'required|date',
-            'category' => 'required'
+
         ], [
             'title.required' => 'Judul wajib di isi',
             'description.required' => 'Informasi wajib di isi',
@@ -111,7 +114,7 @@ class KegiatanController extends Controller
             'date.required' => 'Tanggal wajib diisi',
             'date.date' => 'Format tanggal tidak sesuai',
 
-            'category.required' => 'Kategori wajib diisi',
+
         ]);
 
         //get post by ID
@@ -143,7 +146,7 @@ class KegiatanController extends Controller
                 'price' => $request->price,
                 'slot' => $request->slot,
                 'date' => $request->date,
-                'category' => $request->category
+
             ]);
         } else {
             //update post without new image
@@ -154,11 +157,13 @@ class KegiatanController extends Controller
                 'price' => $request->price,
                 'slot' => $request->slot,
                 'date' => $request->date,
-                'category' => $request->category
+
             ]);
         }
+
+
         //redirect to index
-        return redirect()->route('admin.kegiatan.detail', $id)->with(['success' => 'Data Berhasil Diubah!']);
+        return redirect()->route('admin.akademi.detail', $id)->with(['success' => 'Data Berhasil Diubah!']);
     }
 
     public function delete($id)
@@ -168,7 +173,7 @@ class KegiatanController extends Controller
 
         if (!$files) {
             // Jika data tidak ditemukan, redirect dengan pesan error
-            return redirect()->route('admin.kegiatan')->with(['error' => 'Data tidak ditemukan']);
+            return redirect()->route('admin.pelatihan')->with(['error' => 'Data tidak ditemukan']);
         }
 
         // Hapus file gambar dari folder public/images jika ada
@@ -183,7 +188,7 @@ class KegiatanController extends Controller
         $files->delete();
 
         // Redirect ke halaman yang sesuai dengan pesan sukses
-        return redirect()->route('admin.kegiatan')->with(['success' => 'Data berhasil dihapus']);
+        return redirect()->route('admin.pelatihan')->with(['success' => 'Data berhasil dihapus']);
     }
 
 

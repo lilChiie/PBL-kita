@@ -212,7 +212,15 @@ Route::prefix('admin')->group(function () {
 
 
     Route::get('/pelatihan', [AkademiController::class, 'selectAkademi'])->name('admin.pelatihan');
-    Route::get('/kegiatan', [KegiatanController::class, 'selectKegiatan'])->name('admin.kegiatan');
+
+    Route::prefix('kegiatan')->group(function () {
+        Route::get('/', [KegiatanController::class, 'selectAkademi'])->name('admin.kegiatan');
+        Route::get('/tambah', function () {
+            return view('admin/akademi/tambah_kegiatan');
+        });
+        Route::post('/insert', [KegiatanController::class, 'insertAkademi'])->name('admin.kegiatan.insert');
+    });
+
 
 
     Route::prefix('akademi')->group(function () {
@@ -232,7 +240,7 @@ Route::prefix('admin')->group(function () {
         Route::put('/update/{id}', [AkademiController::class, 'update'])->name('admin.akademi.update');
 
         Route::get('/tambah', function () {
-            return view('admin/akademi/tambah');
+            return view('admin/akademi/tambah_pelatihan');
         });
         Route::post('/insert', [AkademiController::class, 'insertAkademi'])->name('admin.akademi.insert');
 
