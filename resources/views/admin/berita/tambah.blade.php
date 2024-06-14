@@ -18,7 +18,7 @@
                     <form action="">
                         <div>
                             <input class="block w-full mb-5 text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file">
-                        </div>
+                        </div> 
                         <div >
                             <input name="judul" type="text" class="w-full text-xs md:text-base border-black rounded-lg" placeholder="Tambah Judul..">
                         </div>
