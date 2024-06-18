@@ -13,7 +13,7 @@
     @include('components.headeradmin')
 
     <!-- edited -->
-   <div class="fixed left-0 bottom-16 z-10">
+    <div class="fixed left-0 bottom-16 z-10">
         <a href="/admin/konsultasi" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Kembali
@@ -75,7 +75,7 @@
                 <div class="flex flex-col justify-between py-4 leading-normal">
                     <h5 class="mb-4 text-xl md:text-3xl font-bold " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-offset="0">{{$files->title}}</h5>
                     <p class="mb-3 font-normal " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-offset="0">
-                        {!! nl2br($files->content) !!}
+                        {!! nl2br(e($files->content)) !!}
                     </p>
                 </div>
             </div>

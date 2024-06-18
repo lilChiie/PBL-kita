@@ -40,7 +40,7 @@
                     Pertanyaan :
                 </p>
                 <p class="my-2">
-                    {!! nl2br($files->pertanyaan) !!}
+                    {!! nl2br(e($files->pertanyaan)) !!}
                 </p>
             </div>
 

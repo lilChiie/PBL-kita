@@ -13,7 +13,7 @@
     @include('components.headeradmin')
 
     <!-- edited -->
-   <div class="fixed left-0 bottom-16 z-10">
+    <div class="fixed left-0 bottom-16 z-10">
         <a href="{{route('admin.konsultasi.tambah')}}" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Tambah
@@ -53,7 +53,7 @@
                             <h5 class="mb-2 text-xs md:text-lg font-bold tracking-tight hover:text-sky-600">{{ $file->title }}</h5>
                         </a>
                         <p class="mb-3 text-[10px] overflow-hidden md:text-xs h-[62px]">
-                            {!! nl2br($file->content) !!}
+                            {!! nl2br(e($file->content)) !!}
                         </p>
                     </div>
                 </div>

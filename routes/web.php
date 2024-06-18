@@ -6,6 +6,7 @@ use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\RisetController;
 use App\Http\Controllers\PublikasiController;
 use App\Http\Controllers\PertanyaanController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarcodeController;
 use App\Http\Controllers\AkademiController;
@@ -54,12 +55,8 @@ Route::prefix('user')->group(function () {
     Route::get('/Publikasi', [PublikasiController::class, 'selectUser'])->name('user.publikasi');
     Route::get('/Publikasi/Detail/{id}', [PublikasiController::class, 'showUser'])->name('user.publikasi.detail');
 
-    Route::get('/Berita', function () {
-        return view('user/berita');
-    });
-    Route::get('/Detail_Berita', function () {
-        return view('user/berita_detail');
-    });
+    Route::get('/Berita', [BeritaController::class, 'selectUser'])->name('user.berita');
+    Route::get('/Berita/Detail/{id}', [BeritaController::class, 'showUser'])->name('user.berita.detail');
 
     Route::get('/Akademi', function () {
         return view('user/akademi');
@@ -109,12 +106,8 @@ Route::prefix('guest')->group(function () {
 
     Route::get('/Kegiatan', [KegiatanController::class, 'selectGuest'])->name('guest.kegiatan');
 
-    Route::get('/Berita', function () {
-        return view('guest/berita');
-    });
-    Route::get('/Detail_Berita', function () {
-        return view('guest/berita_detail');
-    });
+    Route::get('/Berita', [BeritaController::class, 'selectGuest'])->name('guest.berita');
+    Route::get('/Berita/Detail/{id}', [BeritaController::class, 'showGuest'])->name('guest.berita.detail');
 });
 
 
@@ -136,8 +129,8 @@ Route::prefix('admin')->group(function () {
         Route::get('/tambah', function () {
             return view('admin/tentangkami/tambah');
         });
-        Route::post('/tambah', [TentangkamiController::class, 'insertTentangkami'])->name('admin.tentangkami.tambah');
         Route::get('/edit/{id}', [TentangkamiController::class, 'edit'])->name('admin.tentangkami.edit');
+        Route::post('/tambah', [TentangkamiController::class, 'insertTentangkami'])->name('admin.tentangkami.tambah');
         Route::post('/update/{id}', [TentangkamiController::class, 'update'])->name('admin.tentangkami.update');
         Route::delete('/delete/{id}', [TentangkamiController::class, 'delete'])->name('admin.tentangkami.delete');
     });
@@ -183,18 +176,15 @@ Route::prefix('admin')->group(function () {
     });
 
     Route::prefix('berita')->group(function () {
-        Route::get('/', function () {
-            return view('admin/berita/berita');
-        });
-        Route::get('/detail', function () {
-            return view('admin/berita/detail');
-        });
-        Route::get('/edit', function () {
-            return view('admin/berita/edit');
-        });
+        Route::get('/', [BeritaController::class, 'selectAdmin'])->name('admin.berita');
+        Route::get('/detail/{id}', [BeritaController::class, 'showAdmin'])->name('admin.berita.detail');
+        Route::get('/edit/{id}', [BeritaController::class, 'edit'])->name('admin.berita.edit');
         Route::get('/tambah', function () {
             return view('admin/berita/tambah');
         });
+        Route::post('/tambah', [BeritaController::class, 'insertBerita'])->name('admin.berita.tambah');
+        Route::put('/update/{id}', [BeritaController::class, 'update'])->name('admin.berita.update');
+        Route::delete('/delete/{id}', [BeritaController::class, 'delete'])->name('admin.berita.delete');
     });
 
 
