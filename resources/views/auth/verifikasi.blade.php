@@ -31,22 +31,22 @@
   <div class="flex flex-col items-center justify-center px-6  mx-auto h-screen ">
       <div class="w-full md:mt-0 sm:max-w-md xl:p-0" data-aos="zoom-in">
           <div class="px-6 py-16 space-y-4 md:space-y-6 sm:p-8 text-white ">
-              <h1 class="text-xl leading-tight tracking-tight md:text-2xl">
-                  PJAP
+              <h1 class="text-xl leading-tight tracking-tight md:text-2xl font-bold">
+                  PJAP Polibatam
               </h1>
               <p>Selamat Datang di <br>
-              Penyedia Jasa Aplikasi Perpajakan
+              PJAP Polibatam
               </p>
               <hr>
-              <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-bold py-6">Lupa Kata Sandi</h1>
+              <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-[700] py-6">Lupa Kata Sandi</h1>
               <form class="space-y-4 md:space-y-6" action="/login">
                   <div>
                       <label for="password" class="block mb-2 text-xs  text-white">Kata Sandi Baru</label>
-                      <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Kata Sandi Baru" required="">
+                      <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Kombinasi Huruf Kecil, Kapital dan Angka" required="">
                   </div>
                   <div>
                       <label for="password" class="block mb-2 text-xs  text-white">Konfirmasi Kata Sandi</label>
-                      <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Konfirmasi Kata Sandi" required="">
+                      <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Kombinasi Huruf Kecil, Kapital dan Angka" required="">
                   </div>
                     <div class="text-center mt-4 lg:text-xs lg:mt-5">
                         <button type="submit" class="bg-gradb text-[10px] w-8/12 rounded-2xl py-2 text-white lg:text-xs

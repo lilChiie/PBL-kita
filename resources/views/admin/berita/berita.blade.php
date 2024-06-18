@@ -47,10 +47,9 @@
                     <h2 class="text-base md:text-2xl">Sub News</h2>
                     <hr class="border-t-1 border-black my-1 lg:my-3">
                 </div>
-                @foreach ($files as $file)
 
-                <!-- item 1 -->
-                <div class="px-2 md:px-10 items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
+                @foreach ($files as $file)
+                <div class="items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
                             <a href="{{ route('admin.berita.detail', $file->berita_id) }}">
@@ -69,7 +68,6 @@
                         </div>
                     </div>
                 </div>
-
                 @endforeach
             </div>
         </div>

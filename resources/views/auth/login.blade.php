@@ -32,18 +32,18 @@
         <div class="flex flex-col items-center justify-center px-6 mx-auto h-screen">
             <div class="w-full md:mt-0 sm:max-w-md xl:p-0" data-aos="zoom-in">
                 <div class="p-6 space-y-4 sm:p-8 text-white ">
-                    <h1 class="text-xl leading-tight tracking-tight md:text-2xl">
+                    <h1 class="text-xl leading-tight tracking-tight md:text-2xl font-bold">
                         PJAP Polibatam
                     </h1>
                     <p>Selamat Datang di <br>
                         PJAP Polibatam
                         <hr>
-                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-bold">Masuk</h1>
+                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-[700]">Masuk</h1>
                     <form class="space-y-4 md:space-y-6" action="{{ route('sign') }}" method="post">
                         @csrf
                         <div>
                             <label for="username" class="block mb-2 text-xs  text-white">Nama Pengguna</label>
-                            <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Nama Pengguna" value="{{ old('username') }}">
+                            <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Liam_12" value="{{ old('username') }}">
                         </div>
                         @error('username')
                         <small>{{ $message }}</small>
@@ -51,7 +51,7 @@
 
                         <div>
                             <label for="password" class="block mb-2 text-xs text-white">Masukkan Kata Sandi</label>
-                            <input type="password" name="password" id="password" placeholder="Kata Sandi" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3  placeholder:text-xs " value="{{ old('password') }}">
+                            <input type="password" name="password" id="password" placeholder="Kombinasi Huruf Kecil, Kapital dan Angka" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3  placeholder:text-xs " value="{{ old('password') }}">
                         </div>
                         @error('password')
                         <small>{{ $message }}</small>

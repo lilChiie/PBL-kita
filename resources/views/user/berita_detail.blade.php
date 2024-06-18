@@ -9,12 +9,20 @@
 
     <!-- header -->
     @include('components.headeruser')
+
+    <!-- edited -->
+    <div class="fixed left-0 bottom-16 z-10">
+        <a href="/user/Berita" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+            transition duration-700 focus:bg-gradb">
+            Kembali
+        </a>
+    </div>
     
     <!-- Content Start -->
     <section  class="pt-36 sm:pt-40 mx-8">
         <div class="bg-white w-full">
             <div class="p-3 md:p-20 w-full">
-                <img class="object-cover w-4/5 rounded-md" src="{{ asset('storage/properti/2.jpg') }}" alt="detail tentang kami"
+                <img class="object-cover w-4/5 rounded-md aspect-16/9" src="{{ asset('images/'.$files->photo) }}" alt="detail tentang kami"
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
                 data-aos-delay="150"
@@ -24,28 +32,15 @@
                     data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="150"
-                    data-aos-offset="0">Judul Page</h5>
+                    data-aos-offset="0">{{ $files->title }}</h5>
                     <p class="mb-3 font-normal "
                     data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="150"
                     data-aos-offset="0">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid sequi nulla sunt excepturi nisi. Quidem perspiciatis neque molestias! Architecto, provident? Maiores repellendus, vero beatae laborum culpa quibusdam quod cupiditate suscipit et nulla delectus error earum harum alias dolor dolorum doloremque in? Repellat veniam ex impedit temporibus blanditiis eveniet voluptatibus ad.
+                    {!! nl2br(e($files->content)) !!}
                     </p>
-                    <p class="mb-3 font-normal "
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="150"
-                    data-aos-offset="0">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid sequi nulla sunt excepturi nisi. Quidem perspiciatis neque molestias! Architecto, provident? Maiores repellendus, vero beatae laborum culpa quibusdam quod cupiditate suscipit et nulla delectus error earum harum alias dolor dolorum doloremque in? Repellat veniam ex impedit temporibus blanditiis eveniet voluptatibus ad.
-                    </p>
-                    <p class="mb-3 font-normal "
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="150"
-                    data-aos-offset="0">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo nulla aperiam officiis, nisi quas modi. Corrupti debitis hic cumque ullam harum dignissimos tenetur quod quas voluptates delectus, fugiat animi obcaecati, optio explicabo quis eius aut omnis enim aperiam quidem alias nesciunt culpa? Modi nobis enim nulla, quod, nam magnam sed commodi inventore explicabo corrupti odit mollitia velit a fugit, soluta eos? Reprehenderit vero sapiente quo et quia consequatur fugit, assumenda eum delectus provident, voluptatum voluptas quasi unde nemo? Fuga quis iusto quidem accusamus perspiciatis alias officiis asperiores repellat deserunt vero voluptas minus fugit, pariatur libero tempore commodi voluptatum earum sint?
-                    </p>
+                   
                 </div>
             </div>
         </div>

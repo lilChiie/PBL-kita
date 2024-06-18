@@ -12,6 +12,15 @@
     <!-- header -->
     @include('components.headeradmin')
 
+    <!-- edited -->
+   <div class="fixed left-0 bottom-16 z-10">
+        <a href="{{ route('admin.berita.detail', $post->berita_id) }}" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+            transition duration-700 focus:bg-gradb">
+            Kembali
+        </a>
+    </div>
+    <!-- edited -->
+
     <!-- Content Start -->
     <section class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
         <div class="bg-white w-full rounded-md pb-12">
@@ -22,25 +31,25 @@
                         @csrf
                         @method('PUT')
                         <div>
-                            <input class="block w-full mb-5 text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file" name="photo">
+                            <input class="block w-full text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file" name="photo">
                         </div>
                         @error('photo')
                         <small class=" text-red-700">{{ $message }}</small>
                         @enderror
                         <div>
-                            <input name="title" type="text" class="w-full border-black rounded-lg" placeholder="Edit Judul.." value="{{ $post->title }}">
+                            <input name="title" type="text" class="w-full mt-5 border-black rounded-lg" placeholder="Edit Judul.." value="{{ $post->title }}">
                         </div>
                         @error('title')
                         <small class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div class="border border-black my-5 rounded-lg">
+                        <div class="border border-black mt-5 rounded-lg">
                             <textarea id="informasi" name="content" rows="15" class="block w-full  text-sm border-none focus:ring-primary-500 focus:border-primary-500 overflow-y-scroll" placeholder="Edit Informasi...">{{ $post->content }}</textarea>
                         </div>
                         @error('content')
                         <small class=" text-red-700">{{ $message }}</small>
                         @enderror
 
-                        <div class="w-full mb-14">
+                        <div class="w-full mt-5 mb-14">
                             <select id="countries" name="type" class="bg-gray-50 border border-black text-gray-900 text-xs  md:text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                 <option selected disabled>Pilih Jenis Berita</option>
                                 <option value="berita utama" {{ (old('type') == 'berita utama' || $post->type == 'berita utama') ? 'selected' : '' }}>Berita Utama</option>

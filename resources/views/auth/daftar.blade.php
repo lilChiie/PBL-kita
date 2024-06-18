@@ -33,19 +33,19 @@
         <div class="flex flex-col items-center justify-center px-6 py-2 mx-auto h-screen ">
             <div class="w-full md:mt-0 sm:max-w-md xl:p-0" data-aos="zoom-in">
                 <div class="p-4 space-y-2 md:space-y-3 sm:p-8 text-white ">
-                    <h1 class="text-xl leading-tight tracking-tight md:text-2xl">
+                    <h1 class="text-xl leading-tight tracking-tight md:text-2xl font-bold">
                         PJAP Polibatam
                     </h1>
                     <p>Selamat Datang di <br>
                         PJAP Polibatam
                     </p>
                     <hr>
-                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-bold">Daftar</h1>
+                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-[700]">Daftar</h1>
                     <form class="space-y-4 md:space-y-2" action="{{ route('register') }}" method="POST">
                         @csrf
                         <div>
                             <label for="email" class="block mb-2 text-xs  text-white">Masukkan alamat email anda</label>
-                            <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Email" value="{{ old('email') }}">
+                            <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="liam@gmail.com" value="{{ old('email') }}">
                         </div>
                         @error('email')
                         <small>{{ $message }}</small>
@@ -54,14 +54,14 @@
                         <div class="grid grid-cols-2 gap-2 w-full">
                             <div>
                                 <label for="username" class="block mb-2 text-xs  text-white">Nama Pengguna</label>
-                                <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Nama Pengguna" value="{{ old('username') }}">
+                                <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Liam_12" value="{{ old('username') }}">
                                 @error('username')
                                 <small>{{ $message }}</small>
                                 @enderror
                             </div>
                             <div>
                                 <label for="notelp" class="block mb-2 text-xs  text-white">No.Telp</label>
-                                <input type="number" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="No.Telp" value="{{ old('phone') }}">
+                                <input type="number" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="088888888888" value="{{ old('phone') }}">
                                 @error('phone')
                                 <small>{{ $message }}</small>
                                 @enderror
@@ -71,7 +71,7 @@
                         <div>
                             <label for="password" class="block mb-2 text-xs text-white">Masukkan Kata Sandi</label>
                             <div class="relative">
-                                <input type="password" name="password" id="password" placeholder="Kata Sandi" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" value="{{ old('password') }}">
+                                <input type="password" name="password" id="password" placeholder="Kombinasi Huruf Kecil, Kapital dan Angka" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" value="{{ old('password') }}">
                                 <button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-3 flex items-center text-gray-600">
                                     <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
