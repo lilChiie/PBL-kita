@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profil</title>
 </head>
+
 <body class="bg-latar text-black min-h-screen">
-    
+
     <!-- header -->
-   @include('components.headeruser')
+    @include('components.headeruser')
 
     <!-- Content Start -->
-    <section  class="pt-36 mx-8 sm:pt-40 flex justify-center relative pb-20">
-         <!-- edited -->
+    <section class="pt-36 mx-8 sm:pt-40 flex justify-center relative pb-20">
+        <!-- edited -->
         <div class="bg-white w-full rounded-md pb-16 px-5">
-            
+
             <h1 class="font-bold text-xl md:text-3xl mt-5 mb-10 flex justify-center sm:block sm:ms-5">
                 Profil User
             </h1>
-           
+
             <form action="" class="sm:grid sm:grid-flow-row-dense sm:grid-cols-3">
                 <div class="sm:col-span-1 mb-2 sm:mx-5">
                     <img src="{{ asset('storage/properti/3.jpg') }}" class=" aspect-1/1 object-cover rounded-full" alt="">
@@ -30,12 +32,12 @@
                     </div>
                 </div>
                 <div class="sm:col-span-2 sm:ms-10 grid gap-y-5">
-                    
+
                     <div>
                         <label for="username" class="block text-xs md:text-base font-thin">
                             Nama Pengguna
                         </label>
-                        <input type="text" id="username" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="Liam_12">
+                        <input type="text" id="username" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="Liam_12" value="{{ Auth::user->username }}">
                     </div>
                     <div>
                         <label for="name" class="block text-xs md:text-base font-thin">
@@ -60,7 +62,7 @@
                         <label for="alamat" class="block text-xs md:text-base font-thin">
                             Alamat
                         </label>
-                        <textarea id="alamat" rows="5" class="block w-full  text-sm border border-black focus:ring-primary-500 rounded-md focus:border-primary-500 overflow-y-scroll" placeholder="Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461" ></textarea>
+                        <textarea id="alamat" rows="5" class="block w-full  text-sm border border-black focus:ring-primary-500 rounded-md focus:border-primary-500 overflow-y-scroll" placeholder="Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461"></textarea>
                     </div>
 
                     <div class="flex justify-end">
@@ -77,11 +79,12 @@
             </a>
         </div>
         <!-- edited -->
-        
+
     </section>
     <!-- content end -->
-   
+
     <!-- javascript -->
     @vite('resources/js/fituruser.js')
 </body>
+
 </html>

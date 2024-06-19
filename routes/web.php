@@ -39,7 +39,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::prefix('user')->group(function () {
+Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
     Route::get('/', [TentangkamiController::class, 'home'])->name('user.home');
 
     Route::get('/TentangKami', [TentangkamiController::class, 'selectUser'])->name('user.tentangkami');
@@ -68,15 +68,13 @@ Route::prefix('user')->group(function () {
     Route::get('/Kegiatan', [KegiatanController::class, 'selectUser'])->name('user.kegiatan');
     Route::get('/Kegiatan/detail/{id}', [KegiatanController::class, 'showUser'])->name('user.kegiatan.detail');
 
-    Route::get('/Pembayaran', [PembayaranController::class, 'showPembayaran'])->name('pembayaran');
+    Route::get('/Pembayaran', [PembayaranController::class, 'showPembayaran'])->name('user.pembayaran');
 
     Route::get('/Detail_Riwayat', function () {
         return view('user/detail_riwayat');
     });
 
-    Route::get('/profil', function () {
-        return view('user/profil');
-    });
+    Route::get('/profil', [LoginController::class, 'profil'])->name('user.profil');
 });
 
 
@@ -114,10 +112,8 @@ Route::prefix('guest')->group(function () {
 
 
 
-Route::prefix('admin')->group(function () {
-    Route::get('/', function () {
-        return view('admin/adm_home');
-    });
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+    Route::get('/', [TentangkamiController::class, 'adminhome'])->name('admin.home');
 
     Route::get('/profil', function () {
         return view('admin/profil');

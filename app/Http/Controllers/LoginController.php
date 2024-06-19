@@ -34,7 +34,16 @@ class LoginController extends Controller
             if (Hash::check($request->password, $user->password)) {
                 // Jika password cocok, lakukan login
                 Auth::login($user);
-                return redirect()->route('user.home')->with('success', 'Login berhasil');
+
+                // Mengarahkan pengguna berdasarkan peran
+                if ($user->role == 'admin') {
+                    return redirect()->route('admin.home')->with('success', 'Login berhasil');
+                } elseif ($user->role == 'user') {
+                    return redirect()->route('user.home')->with('success', 'Login berhasil');
+                } else {
+                    // Jika peran tidak diketahui, redirect ke halaman default
+                    return redirect()->route('home')->with('success', 'Login berhasil');
+                }
             } else {
                 // Jika password salah
                 return redirect()->route('login')->with('failed', 'Kata sandi salah');
@@ -100,6 +109,13 @@ class LoginController extends Controller
 
         Auth::attempt($login);
         return redirect()->route('login')->with('success', 'Pendaftaran berhasil, silahkan login');
+    }
+
+    public function profil()
+    {
+        Auth::all();
+
+        return view('user.profil');
     }
 
     //api

@@ -14,6 +14,10 @@ class TentangKamiController extends Controller
     {
         return view('user.user_home')->with('success', 'Login berhasil');
     }
+    public function adminhome()
+    {
+        return view('admin.adm_home')->with('success', 'Login berhasil');
+    }
     public function dashboard()
     {
         return view('home');
