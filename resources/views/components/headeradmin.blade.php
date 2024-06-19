@@ -38,17 +38,17 @@
                  object-fill w-10 h-10" id="user">
                 <ul class="dropdown bg-fot absolute top-0 right-0 mt-10 lg:mt-12 py-3 px-4 mr-5 lg:px-8 shadow-md z-20 hidden
                     transition duration-700" id="dropdownuser">
-                     <li class="my-1 lg:my-2">
-                         <a href="/admin/profil" class="hover:text-sky-600">
-                             Profil
-                         </a>
-                     </li>
-                     <li class="my-1 lg:my-2">
-                         <a href="/" class="hover:text-sky-600">
-                             Logout
-                         </a>
-                     </li>
-                 </ul>
+                    <li class="my-1 lg:my-2">
+                        <a href="{{ route('admin.profil') }}" class="hover:text-sky-600">
+                            Profil
+                        </a>
+                    </li>
+                    <li class="my-1 lg:my-2">
+                        <a href="{{ route('logout') }}" class="hover:text-sky-600">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 

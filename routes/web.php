@@ -35,9 +35,7 @@ Route::get('/verifikasi', function () {
     return view('auth/verifikasi');
 });
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [TentangkamiController::class, 'dashboard'])->name('home');
 
 Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
     Route::get('/', [TentangkamiController::class, 'home'])->name('user.home');
