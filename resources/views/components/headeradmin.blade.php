@@ -33,37 +33,20 @@
                     PJAP Polibatam
                 </p>
             </div>
-            <div class="relative text-black">
-                <img src="{{ asset('storage/properti/3.jpg') }}" alt="gambar properti" class="mt-1 mx-2 rounded-full sm:w-10 sm:ml-10 sm:mr-4 md:ml-24 md:mt-2
-                 object-cover w-10 h-10" id="user">
-                <ul class="dropdown bg-fot absolute top-0 right-0 mt-10 lg:mt-12 py-3 px-4 mr-5 lg:px-8 shadow-md z-20 hidden
-                    transition duration-700" id="dropdownuser">
-                    <li class="my-1 lg:my-2">
-                        <a href="{{ route('admin.profil') }}" class="hover:text-sky-600">
-                            Profil
-                        </a>
-                    </li>
-                    <li class="my-1 lg:my-2">
-                        <a href="{{ route('logout') }}" class="hover:text-sky-600">
-                            Logout
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
 
+
         <!-- navbar start -->
-        <div class="bg-fot w-full absolute mt-12 sm:mt-14 justify-between flex ">
-            <div class="flex items-center px-5">
-                <button id="hamburger" name="hamburger" type="button" class="block absolute lg:hidden">
+        <div class=" sm:w-56 w-42 justify-between flex absolute mt-12 sm:mt-14">
+            <div class="flex items-center w-full">
+                <button id="hamburger" name="hamburger" type="button" class="block absolute top-0 bg-fot px-2 sm:hidden">
                     <span class="hamburger-line transition duration-500 ease-in-out origin-top-left"></span>
                     <span class="hamburger-line transition duration-500 ease-in-out"></span>
                     <span class="hamburger-line transition duration-500 ease-in-out origin-bottom-left"></span>
                 </button>
-
-                <nav id="nav-menu" class="hidden bg-fot  absolute py-5 shadow-md rounded-md max-w-[200px] w-full
-                        top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:py-3 lg:w-full">
-                    <ul class="block lg:flex">
+                <nav id="nav-menu" class=" bg-fot py-10 sm:py-5 shadow-md w-full min-h-screen
+                        top-full sm:absolute">
+                    <ul class="block relative">
                         <li class="group">
                             <a href="/admin/" class="text-base py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-5 
@@ -94,19 +77,19 @@
                         </li>
                         <li class="group relative">
                             <a href="/admin/publikasi/" class="text-base py-2 mx-8 flex group-hover:text-sky-600
-                                    lg:mx-6 
+                                    lg:mx-5 
                                     {{ request()->is('admin/publikasi', 'admin/publikasi/detail/*', 'admin/publikasi/edit/*', 'admin/publikasi/tambah') ? 'text-sky-600' : 'text-black' }}" id="publikasi">
                                 Publikasi
                             </a>
                         </li>
                         <li class="group relative text-black ">
                             <a href="/admin/akademi/" class="text-base py-2 mx-8 flex group-hover:text-sky-600
-                                    lg:mx-6
+                                    lg:mx-5
                                     {{ request()->is('admin/akademi', 'admin/akademi/bercode', 'admin/akademi/detail pembayaran', 'admin/pelatihan', 'admin/pelatihan/detail',
                                     'admin/pelatihan/edit', 'admin/pelatihan/tambah', 'admin/kegiatan', 'admin/kegiatan/detail', 'admin/kegiatan/edit', 'admin/kegiatan/tambah') ? 'text-sky-600' : 'text-black' }}" id="akademi">
                                 Akademi
                             </a>
-                            <ul class="dropdown bg-latar lg:bg-fot hidden lg:absolute py-3 px-8 lg:ml-5 lg:px-5 lg:pt-5 lg:shadow-md lg:rounded-md
+                            <ul class="dropdown bg-latar lg:bg-fot hidden py-3 px-8 lg:px-5 lg:pt-5 lg:shadow-md lg:rounded-md
                                     w-full transition duration-700" id="dropdownakademi">
                                 <li class="my-2">
                                     <a href="/admin/pelatihan/" class="hover:text-sky-600 
@@ -126,18 +109,36 @@
                         </li>
                         <li class="group relative">
                             <a href="/admin/berita/" class="text-base py-2 mx-8 flex group-hover:text-sky-600
-                                    lg:mx-6 {{ request()->is('admin/berita',  'admin/berita/detail/*', 'admin/berita/edit/*', 'admin/berita/tambah') ? 'text-sky-600' : 'text-black' }}" id="berita">
+                                    lg:mx-5 {{ request()->is('admin/berita',  'admin/berita/detail/*', 'admin/berita/edit/*', 'admin/berita/tambah') ? 'text-sky-600' : 'text-black' }}" id="berita">
                                 Berita
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr class="mx-3 border-t-1 border-black">
+
+                    <ul class="bottom-16 left-0 absolute">
+                        <li class="my-1 lg:my-2">
+                            <a href="" class="hover:text-sky-600 mx-8 lg:mx-5">
+                                List Pengguna
+                            </a>
+                        </li>
+                        <li class="my-1 lg:my-2">
+                            <a href="{{ route('admin.profil') }}" class="hover:text-sky-600 mx-8 lg:mx-5">
+                                Profil
+                            </a>
+                        </li>
+                        <li class="my-1 lg:my-2">
+                            <a href="{{ route('logout') }}" class="hover:text-sky-600 mx-8 lg:mx-5">
+                                Logout 
                             </a>
                         </li>
                     </ul>
                 </nav>
             </div>
+            <!-- navbar end -->
 
-            <!-- untuk menentukan besar pada navbar -->
-            <div class="my-6 mx-2">
-                <p class="w-8 rounded-lg  sm:w-10 sm:ml-10 sm:mr-2 md:ml-24">
-            </div>
+           
         </div>
         <!-- navbar end -->
     </div>

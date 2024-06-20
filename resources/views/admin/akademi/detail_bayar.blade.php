@@ -9,7 +9,7 @@
     <!-- header -->
     @include('components.headeradmin')
 
-    <div class="fixed left-0 bottom-16 z-10">
+    <div class="fixed left-40 sm:left-56 bottom-16 z-10">
         <a href="/admin/akademi/" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Kembali
@@ -17,7 +17,7 @@
     </div>
     
     <!-- Content Start -->
-    <section  class="pt-36 sm:pt-40 pb-12 mx-8 flex justify-center">
+    <section  class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center">
         <div class="bg-white w-full rounded-md">
             <div class="mx-3 my-2">
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6"
@@ -75,6 +75,6 @@
     <script>
     AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 </html>

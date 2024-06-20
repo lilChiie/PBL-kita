@@ -15,7 +15,7 @@
 
 
     <!-- Content Start -->
-    <section class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
+    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center relative">
         <div class="bg-white w-full rounded-md pb-12">
             <div class="px-5 pt-20 md:px-20 w-full " data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-offset="0">
                 <img class="object-cover w-8/12 aspect-16/9 rounded-md" src="{{ asset('images/' . $post->photo) }}" alt="detail tentang kami">
@@ -88,7 +88,7 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

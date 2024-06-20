@@ -7,7 +7,7 @@
     <title>Berita</title>
 </head>
 
-<body class="bg-latar text-black min-h-screen">
+<body class="bg-latar text-black min-h-screen pb-12">
     <!-- header -->
     @include('components.headeradmin')
 
@@ -16,7 +16,7 @@
         <a href="/admin/berita/tambah" class="bg-nav rounded-l-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
     transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
-    <section class="pt-36 sm:pt-40 pb-12 mx-8">
+    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -81,7 +81,7 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 
 </html>

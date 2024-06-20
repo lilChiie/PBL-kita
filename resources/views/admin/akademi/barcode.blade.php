@@ -13,7 +13,7 @@
     @include('components.headeradmin')
     
     <!-- Content Start -->
-    <section  class="pt-36 sm:pt-40 pb-12 mx-8 flex justify-center">
+    <section  class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -37,7 +37,7 @@
                 <form action="{{route('barcode.tambah')}}" method="POST" class="mx-5 sm:mx-16" enctype="multipart/form-data">
                     @csrf
                     <div class="my-6">
-                        <label for="nama-bank" class="block mb-2 text-xs md:text-base font-thin">Nama Bank</label>
+                        <label for="bank" class="block mb-2 text-xs md:text-base font-thin">Nama Bank</label>
                         <input type="text" id="bank" name="bank" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="cth. BNI" >
                     </div>
                     <div>
@@ -136,6 +136,6 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 </html>

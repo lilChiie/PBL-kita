@@ -13,9 +13,8 @@
     @include('components.headeradmin')
 
 
-
     <!-- Content Start -->
-    <section class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
+    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center relative">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -86,7 +85,7 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 
 </html>

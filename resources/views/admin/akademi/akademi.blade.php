@@ -12,8 +12,8 @@
     @include('components.headeradmin')
 
     <!-- Content Start -->
-    <section class="pt-36 sm:pt-40 pb-12 mx-8 flex justify-center">
-        <div class="bg-white w-full rounded-md pb-40">
+    <section class="pt-16 sm:ml-[220px] pb-12 flex justify-center">
+        <div class="bg-white w-full mx-5 rounded-md pb-40">
             <div class="mx-3 my-2">
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Akademi</h1>
             </div>
@@ -116,7 +116,7 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 
 </html>

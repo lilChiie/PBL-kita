@@ -17,7 +17,7 @@
     transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
 
-    <section class="pt-36 sm:pt-40 pb-12 mx-8 flex justify-center">
+    <section class="pt-16 sm:ml-[220px] pb-12 flex justify-center">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -29,7 +29,7 @@
             });
         </script>
         @endif
-        <div class="bg-white w-full rounded-md pb-40">
+        <div class="bg-white w-full rounded-md mx-5 pb-40">
             <div class="mx-3 my-2">
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Kegiatan</h1>
             </div>
@@ -69,7 +69,7 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 
 
 </body>

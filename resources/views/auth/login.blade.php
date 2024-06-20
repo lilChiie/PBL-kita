@@ -38,7 +38,7 @@
                     <p>Selamat Datang di <br>
                         PJAP Polibatam
                         <hr>
-                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-[700]">Masuk</h1>
+                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-[700]">Masuk</h1>
                     <form class="space-y-4 md:space-y-6" action="{{ route('sign') }}" method="post">
                         @csrf
                         <div>

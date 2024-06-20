@@ -40,7 +40,7 @@
                         PJAP Polibatam
                     </p>
                     <hr>
-                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-[700]">Daftar</h1>
+                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-[700]">Daftar</h1>
                     <form class="space-y-4 md:space-y-2" action="{{ route('register') }}" method="POST">
                         @csrf
                         <div>

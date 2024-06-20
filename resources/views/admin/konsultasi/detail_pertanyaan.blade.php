@@ -13,7 +13,7 @@
     @include('components.headeradmin')
 
     <!-- Content Start -->
-    <section class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
+    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center relative">
         <div class="bg-white w-full rounded-md pb-5">
             <h1 class="mx-5 md:mx-10 font-bold text-wjudul mt-8 md:text-lg lg:text-xl md:mt-12" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
                 Detail Pertanyaan
@@ -57,7 +57,7 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 
 </html>

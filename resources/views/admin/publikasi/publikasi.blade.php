@@ -18,7 +18,7 @@
     transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
 
-    <section class="pt-36 sm:pt-40 mb-12 mx-8">
+    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -67,7 +67,7 @@
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 
 </html>

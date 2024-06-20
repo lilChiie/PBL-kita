@@ -8,11 +8,13 @@
 </head>
 
 <body class="bg-latar text-black min-h-screen">
+   
+    
     <!-- header -->
     @include('components.headeradmin')
 
     <!-- Content Start -->
-    <section class="pt-32 sm:pt-40 mb-18">
+    <section class="pt-16 mb-18 sm:ml-[220px]">
         <form class="w-8/12 mx-3">
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div class="relative">

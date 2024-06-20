@@ -13,7 +13,7 @@
     @include('components.headeradmin')
 
     <!-- edited -->
-    <div class="fixed left-0 bottom-16 z-10">
+    <div class="fixed left-40 sm:left-56 bottom-16 z-10">
         <a href="/admin/berita" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Kembali
@@ -22,7 +22,7 @@
     <!-- edited -->
 
     <!-- Content Start -->
-    <section class="pt-36 mx-8 sm:pt-40 flex justify-center relative">
+    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center relative">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -81,15 +81,13 @@
     </section>
     <!-- Content End -->
 
-    <!-- modal -->
-    @include('modals.modal-hapus_berita')
 
     <!-- javascript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    @vite('resources/js/fituruser.js')
+    @vite('resources/js/admin.js')
 </body>
 
 </html>

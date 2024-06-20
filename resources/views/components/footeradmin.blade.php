@@ -1,5 +1,5 @@
 <!-- Footer Start -->
-<footer class="bg-fot mt-20" data-aos="fade-up" data-aos-duration="1000">
+<footer class="bg-fot mt-20 sm:ml-[220px]" data-aos="fade-up" data-aos-duration="1000">
   <div class="container max-w-full pt-2">
     <div class="grid grid-cols-3 gap-x-3 ">
       <div class="border-r-2 border-black px-5 justify-items-center grid ">

@@ -33,10 +33,9 @@
                     PJAP Polibatam
                 </p>
             </div>
-            <div class="relative text-black">
-                <a href="/login">
-                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="gambar properti" class="mt-1 mx-2 rounded-full sm:w-10 sm:ml-10 sm:mr-4 md:ml-24 md:mt-2
-                        object-fill w-10 h-10" id="user">
+            <div class="relative text-black hover:text-white mt-4 me-3">
+                <a href="/login" class=" py-2 px-4 bg-white rounded-xl hover:bg-blue-950 transition duration-700">
+                   Login
                 </a>
              </div>
         </div>

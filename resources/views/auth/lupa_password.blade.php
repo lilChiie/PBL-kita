@@ -38,7 +38,7 @@
               PJAP Polibatam
               </p>
               <hr>
-              <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-thin font-[700] py-6">Lupa Kata Sandi</h1>
+              <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl  font-[700] py-6">Lupa Kata Sandi</h1>
               <form class="space-y-4 md:space-y-6" action="/verifikasi">
                   <div>
                       <label for="email" class="block mb-2 text-xs  text-white">Masukkan alamat email anda</label>
