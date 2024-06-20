@@ -80,7 +80,7 @@
         </div>
         <!-- silder end -->
 
-        {{Auth::user()}}
+      
 
         <!-- text start -->
         <div class="bg-white">

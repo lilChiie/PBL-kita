@@ -35,7 +35,7 @@
             </div>
             <div class="relative text-black">
                 <img src="{{ asset('storage/properti/3.jpg') }}" alt="gambar properti" class="mt-1 mx-2 rounded-full sm:w-10 sm:ml-10 sm:mr-4 md:ml-24 md:mt-2
-                 object-fill w-10 h-10" id="user">
+                 object-cover w-10 h-10" id="user">
                 <ul class="dropdown bg-fot absolute top-0 right-0 mt-10 lg:mt-12 py-3 px-4 mr-5 lg:px-8 shadow-md z-20 hidden
                     transition duration-700" id="dropdownuser">
                     <li class="my-1 lg:my-2">

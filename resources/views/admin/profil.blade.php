@@ -32,11 +32,11 @@
                 Profil Admin
             </h1>
 
-            <form method="POST" action="{{ route('admin.profil.update') }}" enctype="multipart/form-data" class="sm:grid sm:grid-flow-row-dense sm:grid-cols-3">
+            <form method="POST" action="{{ route('admin.profil.update') }}" enctype="multipart/form-data" class="sm:grid sm:grid-flow-row-dense mx-12 pe-6">
                 @csrf
                 @method('PUT')
-                <div class="sm:col-span-1 mb-2 sm:mx-5">
-                    <img src="{{ asset('images/' . Auth::user()->photo) }}" class=" aspect-1/1 object-cover rounded-full" alt="">
+                <!-- <div class="sm:col-span-1 mb-2 sm:mx-5">
+                    <img src="{{ asset('images/' . Auth::user()->photo) }}" class=" aspect-square object-cover rounded-full" alt="">
                     <div>
                         <label for="foto" class="text-xs md:text-base">
                             Logo Aplikasi
@@ -46,9 +46,8 @@
                 </div>
                 @error('photo')
                 <small class=" text-red-700">{{ $message }}</small>
-                @enderror
-                <div class="sm:col-span-2 sm:ms-10 grid gap-y-5">
-
+                @enderror -->
+                <div class="sm:ms-10 grid ">
                     <div>
                         <label for="username" class="block text-xs md:text-base font-thin">
                             Nama Pengguna
@@ -58,7 +57,7 @@
                     @error('username')
                     <small class=" text-red-700">{{ $message }}</small>
                     @enderror
-                    <div>
+                    <div class="mt-5">
                         <label for="email" class="block text-xs md:text-base font-thin">
                             Email
                         </label>
@@ -67,7 +66,7 @@
                     @error('email')
                     <small class=" text-red-700">{{ $message }}</small>
                     @enderror
-                    <div>
+                    <!-- <div>
                         <label for="nohp" class="block text-xs md:text-base font-thin">
                             No. Telepon
                         </label>
@@ -85,9 +84,9 @@
                     </div>
                     @error('address')
                     <small class=" text-red-700">{{ $message }}</small>
-                    @enderror
+                    @enderror -->
 
-                    <div class="flex justify-end">
+                    <div class="flex justify-end mt-5">
                         <button type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
                             rounded-md ">
                             Edit Profil

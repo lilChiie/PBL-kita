@@ -36,7 +36,7 @@
                 @csrf
                 @method('PUT')
                 <div class="sm:col-span-1 mb-2 sm:mx-5">
-                    <img src="{{ asset('images/' . Auth::user()->photo) }}" class=" aspect-1/1 object-cover rounded-full" alt="">
+                    <img src="{{ asset('images/' . Auth::user()->photo) }}" class=" aspect-square object-cover rounded-full" alt="">
                     <div>
                         <label for="foto" class="text-xs md:text-base">
                             Foto Profil
@@ -56,7 +56,7 @@
                         <input type="text" id="username" name="username" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="Liam_12" value="{{ Auth::user()->username }}">
                     </div>
                     @error('username')
-                    <small class=" text-red-700">{{ $message }}</small>
+                    <small class=" text-red-700">{{ $message }}</small>            
                     @enderror
                     <div>
                         <label for="name" class="block text-xs md:text-base font-thin">
