@@ -80,6 +80,8 @@
         </div>
         <!-- silder end -->
 
+        {{Auth::user()}}
+
         <!-- text start -->
         <div class="bg-white">
             <p class="text-center font-serif py-10 text-lg md:text-2xl lg:text-4xl">Selamat Datang di Penyedia Jasa Aplikasi Perpajakan</p>

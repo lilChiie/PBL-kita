@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\TentangkamiController;
 use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\RisetController;
@@ -35,10 +37,10 @@ Route::get('/verifikasi', function () {
     return view('auth/verifikasi');
 });
 
-Route::get('/', [TentangkamiController::class, 'dashboard'])->name('home');
+Route::get('/', [HomeController::class, 'dashboard'])->name('home');
 
 Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
-    Route::get('/', [TentangkamiController::class, 'home'])->name('user.home');
+    Route::get('/', [HomeController::class, 'home'])->name('user.home');
 
     Route::get('/TentangKami', [TentangkamiController::class, 'selectUser'])->name('user.tentangkami');
     Route::get('/TentangKami/Detail/{id}', [TentangkamiController::class, 'showUser'])->name('user.tentangkami.detail');
@@ -72,7 +74,8 @@ Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
         return view('user/detail_riwayat');
     });
 
-    Route::get('/profil', [LoginController::class, 'profil'])->name('user.profil');
+    Route::get('/profil', [UserController::class, 'profiluser'])->name('user.profil');
+    Route::put('/profil/update', [UserController::class, 'updateuser'])->name('user.profil.update');
 });
 
 
@@ -111,11 +114,11 @@ Route::prefix('guest')->group(function () {
 
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
-    Route::get('/', [TentangkamiController::class, 'adminhome'])->name('admin.home');
+    Route::get('/', [HomeController::class, 'adminhome'])->name('admin.home');
 
-    Route::get('/profil', function () {
-        return view('admin/profil');
-    });
+    Route::get('/profil', [UserController::class, 'profiladmin'])->name('admin.profil');
+    Route::put('/profil/update', [UserController::class, 'updateadmin'])->name('admin.profil.update');
+
 
     Route::prefix('tentangkami')->group(function () {
         Route::get('/', [TentangkamiController::class, 'selectAdmin'])->name('admin.tentangkami');

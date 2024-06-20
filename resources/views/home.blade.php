@@ -98,6 +98,19 @@
 
     <!-- javascript -->
     @vite('resources/js/homeguest.js')
+    @if (session('success'))
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            Swal.fire({
+                position: "middle",
+                icon: "success",
+                title: "{{ session('success') }}",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        });
+    </script>
+    @endif
 </body>
 
 </html>

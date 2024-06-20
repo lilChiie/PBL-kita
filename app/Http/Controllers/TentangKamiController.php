@@ -9,19 +9,7 @@ use Illuminate\Http\Request;
 class TentangKamiController extends Controller
 {
 
-    //home user
-    public function home()
-    {
-        return view('user.user_home')->with('success', 'Login berhasil');
-    }
-    public function adminhome()
-    {
-        return view('admin.adm_home')->with('success', 'Login berhasil');
-    }
-    public function dashboard()
-    {
-        return view('home');
-    }
+
 
 
     //admin

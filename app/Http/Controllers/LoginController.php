@@ -111,12 +111,7 @@ class LoginController extends Controller
         return redirect()->route('login')->with('success', 'Pendaftaran berhasil, silahkan login');
     }
 
-    public function profil()
-    {
-        Auth::all();
 
-        return view('user.profil');
-    }
 
     //api
     // public function sign(Request $request)
