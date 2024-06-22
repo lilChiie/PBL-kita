@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,82 +9,82 @@
     @vite('resources/css/app.css')
 
 </head>
+
 <body class="bg-latar text-black min-h-screen">
     <!-- header -->
     @include('components.headeradmin')
-    
+
     <!-- Content Start -->
-    <section  class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center">
+    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center">
+
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
                 Swal.fire({
+                    position: "middle",
+                    icon: "success",
                     title: "{{ session('success') }}",
-                    icon: 'success',
-                    confirmButtonText: 'OK'
+                    showConfirmButton: false,
+                    timer: 1500
                 });
             });
         </script>
-        @endif
 
+        @endif
         <div class="bg-white w-full rounded-md">
             <div class="mx-3 my-2">
-                <h1 class=" text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-10"
-                data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="200"
-                data-aos-offset="0">Tambah Barcode</h1>
+                <h1 class=" text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-10" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Tambah Barcode</h1>
 
                 <form action="{{route('barcode.tambah')}}" method="POST" class="mx-5 sm:mx-16" enctype="multipart/form-data">
                     @csrf
                     <div class="my-6">
                         <label for="bank" class="block mb-2 text-xs md:text-base font-thin">Nama Bank</label>
-                        <input type="text" id="bank" name="bank" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="cth. BNI" >
+                        <input type="text" id="bank" name="bank" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="cth. BNI">
                     </div>
+                    @error('bank')
+                    <small class=" text-red-700">{{ $message }}</small>
+                    @enderror
                     <div>
                         <input name="photo" class="block w-full mb-5 text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="photo" type="file">
                     </div>
+                    @error('photo')
+                    <small class=" text-red-700">{{ $message }}</small>
+                    @enderror
                     <div class="my-10">
                         <button type="submit" class="text-xs md:text-base bg-nav text-white rounded-md py-2 px-5
                         hover:bg-gradb focus:bg-gradb transition duration-700">Tambahkan Barcode</button>
                     </div>
                 </form>
 
-                <h1 class=" text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-10"
-                data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="200"
-                data-aos-offset="0">Tambah Barcode</h1>
+                <h1 class=" text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-10" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Hapus Barcode</h1>
 
                 <!-- edited -->
-                <div class="relative overflow-x-auto shadow-md sm:rounded-lg x-5 sm:mx-16">
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
-                        <thead class="text-xs uppercase bg-gray-500 text-gray-100">
+                <div class=" relative overflow-x-auto mx-5 sm:mx-16">
+                    <table class="w-full text-xs sm:text-base text-left border-collapse border border-slate-500 ">
+                        <thead class="text-xs text-center sm:text-base">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-2 py-3 border border-slate-500">
                                     Nama Bank
                                 </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Nama File Barcode
+                                <th scope="col" class="px-2 py-3 border border-slate-500">
+                                    Nama File Berode
                                 </th>
-                                <th scope="col" class="px-6 py-3">
-                                    
+                                <th scope="col" class="px-2 py-3 border border-slate-500">
+
                                 </th>
                             </tr>
                         </thead>
-                        
-                        <tbody>
                         @foreach ($files as $file)
-                            <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <td class="px-2 py-4 border border-slate-500">
                                     {{ $file->bank }}
-                                </th>
-                                <td class="px-6 py-4">
+                                </td>
+                                <td class="px-2 py-4 border border-slate-500">
                                     {{ $file->photo }}
                                 </td>
-                               
-                                <td class="px-6 py-4">
-                                <form id="deleteForm" action="{{ route('barcode.delete', $file->barcode_id) }}" method="POST">
+                                <td class="px-2 py-4 border border-slate-500 text-center">
+                                    <form id="deleteForm" action="{{ route('barcode.delete', $file->barcode_id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="button" onclick="confirmDelete('{{ $file->bank }}')" class=" text-white p-1 px-2 sm:px-4 rounded-md bg-nav 
@@ -111,24 +112,23 @@
                                     </script>
                                 </td>
                             </tr>
-                            @endforeach
                         </tbody>
-                       
+                        @endforeach
                     </table>
                 </div>
                 <!-- edited -->
-                
+
                 <div class="my-24 sm:mx-10">
                     <a href="/admin/akademi" class="text-xs md:text-base text-white bg-gradb py-2 px-3 sm:px-10 rounded-md hover:bg-nav focus:bg-nav
                     transition duration-700">Kembali ke Halaman Akademi</a>
                 </div>
-            </div>    
+            </div>
         </div>
     </section>
     <!-- Content End -->
 
     <!-- modal -->
- 
+
 
     <!-- javascript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
@@ -137,5 +137,7 @@
         AOS.init();
     </script>
     @vite('resources/js/admin.js')
+
 </body>
+
 </html>

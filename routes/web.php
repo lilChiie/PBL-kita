@@ -205,7 +205,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
         //barcode
         Route::get('/barcode', [BarcodeController::class, 'index'])->name('barcode');
         Route::post('/tambah', [BarcodeController::class, 'insert'])->name('barcode.tambah');
-        Route::delete('/delete/{id}', [BarcodeController::class, 'delete'])->name('barcode.delete');
+        Route::delete('/barcode/delete/{id}', [BarcodeController::class, 'delete'])->name('barcode.delete');
 
         //pelatihan dan kegiatan
         Route::get('/detail/{id}', [AkademiController::class, 'showAkademi'])->name('admin.akademi.detail');

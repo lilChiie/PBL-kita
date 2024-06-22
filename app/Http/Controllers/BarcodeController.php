@@ -60,7 +60,9 @@ class BarcodeController extends Controller
         // Hapus data dari database
         $files->delete();
 
+
+
         // Redirect ke halaman yang sesuai dengan pesan sukses
-        return redirect()->back()->with(['success' => 'Barcode berhasil dihapus']);
+        return redirect()->back()->with(['success' => 'Barcode berhasil dihapus!']);
     }
 }
