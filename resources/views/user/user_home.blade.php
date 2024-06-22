@@ -94,7 +94,7 @@
     @include('components.footeruser')
 
     <!-- javascript -->
-    @vite('resources/js/app.js')
+    @vite('resources/js/homeuser.js')
     @if (session('success'))
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
