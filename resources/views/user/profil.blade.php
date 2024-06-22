@@ -36,7 +36,7 @@
                 @csrf
                 @method('PUT')
                 <div class="sm:col-span-1 mb-2 sm:mx-5">
-                    <img src="{{ asset('images/' . Auth::user()->photo) }}" class=" aspect-square object-cover rounded-full" alt="">
+                    <img src="{{ asset('profile/' . Auth::user()->photo) }}" class=" aspect-square object-cover rounded-full" alt="">
                     <div>
                         <label for="foto" class="text-xs md:text-base">
                             Foto Profil
@@ -56,16 +56,14 @@
                         <input type="text" id="username" name="username" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="Liam_12" value="{{ Auth::user()->username }}">
                     </div>
                     @error('username')
-                    <small class=" text-red-700">{{ $message }}</small>            
+                    <small class=" text-red-700">{{ $message }}</small>
                     @enderror
                     <div>
                         <label for="name" class="block text-xs md:text-base font-thin">
                             Nama Lengkap
                         </label>
                         <input type="text" id="name" name="name" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="cth. William James Moriarty" value="{{ Auth::user()->name }}">
-                        @error('name')
-                        <small class=" text-red-700">{{ $message }}</small>
-                        @enderror
+
                     </div>
                     <div>
                         <label for="email" class="block text-xs md:text-base font-thin">
@@ -92,9 +90,7 @@
                         </label>
                         <textarea id="alamat" name="address" rows="5" class="block w-full  text-sm border border-black focus:ring-primary-500 rounded-md focus:border-primary-500 overflow-y-scroll" placeholder="Jl. Ahmad Yani, Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29461">{{ Auth::user()->address }}</textarea>
                     </div>
-                    @error('address')
-                    <small class=" text-red-700">{{ $message }}</small>
-                    @enderror
+
 
                     <div class="flex justify-end">
                         <button type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8

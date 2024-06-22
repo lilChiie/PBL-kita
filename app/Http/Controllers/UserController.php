@@ -20,16 +20,17 @@ class UserController extends Controller
         // Validate form input
         $request->validate([
             'username' => 'required|unique:users,username,' . Auth::id(),
-            'name' => 'string|max:255',
+
             'email' => 'required|email|unique:users,email,' . Auth::id(),
             'phone' => 'required|string|max:15',
-            'address' => 'string|max:255',
+
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ], [
             'username.required' => 'Nama Pengguna wajib diisi',
             'username.unique' => 'Username sudah terdaftar',
             'email.required' => 'Email wajib diisi',
             'email.unique' => 'Email sudah terdaftar',
+            'email.email' => 'Email tidak valid',
             'phone.required' => 'No. Telepone wajib diisi',
             'photo.image' => 'Format gambar tidak sesuai',
             'photo.mimes' => 'Format gambar tidak sesuai',
@@ -47,19 +48,20 @@ class UserController extends Controller
             'phone' => $request->input('phone'),
             'address' => $request->input('address'),
         ];
-
+        $defaultPhoto = '5.jpg';
         // Check if a new profile photo is uploaded
+        // Memeriksa apakah ada foto profil baru yang diunggah
         if ($request->hasFile('photo')) {
-            // Get the uploaded file
+            // Mendapatkan file yang diunggah
             $image = $request->file('photo');
-            // Generate a new name for the file
+            // Menghasilkan nama baru untuk file
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            // Store the new image in public/images
-            $image->move(public_path('images'), $imageName);
+            // Menyimpan gambar baru di folder public/profile
+            $image->move(public_path('profile'), $imageName);
 
-            // Delete old image if it exists
-            if ($user->photo) {
-                $oldImagePath = public_path('images/' . $user->photo);
+            // Menghapus gambar lama jika bukan gambar default
+            if ($user->photo && $user->photo !== $defaultPhoto) {
+                $oldImagePath = public_path('profile/' . $user->photo);
                 if (File::exists($oldImagePath)) {
                     File::delete($oldImagePath);
                 }
@@ -88,13 +90,14 @@ class UserController extends Controller
         $request->validate([
             'username' => 'required|unique:users,username,' . Auth::id(),
             'email' => 'required|email|unique:users,email,' . Auth::id(),
-    
+
         ], [
             'username.required' => 'Nama Pengguna wajib diisi',
             'username.unique' => 'Username sudah terdaftar',
             'email.required' => 'Email wajib diisi',
             'email.unique' => 'Email sudah terdaftar',
-            
+            'email.email' => 'Email tidak valid',
+
         ]);
 
         // Get the authenticated user
@@ -104,10 +107,10 @@ class UserController extends Controller
         $data = [
             'username' => $request->input('username'),
             'email' => $request->input('email'),
-           
+
         ];
 
-      
+
 
         // Update user data
         $user->update($data);
