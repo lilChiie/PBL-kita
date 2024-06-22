@@ -30,7 +30,7 @@
 
                 <!-- tombol start -->
                 <div class="flex justify-end mt-10">
-                    <a href="/user/Pembayaran" type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
+                    <a href="{{ route('pembayaran', $files->kegiatan_id) }}" type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
                         rounded-md">
                         Daftar Sekarang
                     </a>

@@ -68,7 +68,9 @@ Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
     Route::get('/Kegiatan', [KegiatanController::class, 'selectUser'])->name('user.kegiatan');
     Route::get('/Kegiatan/detail/{id}', [KegiatanController::class, 'showUser'])->name('user.kegiatan.detail');
 
-    Route::get('/Pembayaran', [PembayaranController::class, 'showPembayaran'])->name('user.pembayaran');
+    Route::get('/Pembayaran/{id}', [PembayaranController::class, 'showPembayaran'])->name('pembayaran');
+    Route::post('/pembayaran', [PembayaranController::class, 'bayar'])->name('pembayaran.kirim');
+
 
     Route::get('/Detail_Riwayat', function () {
         return view('user/detail_riwayat');

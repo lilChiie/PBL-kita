@@ -24,4 +24,9 @@ class Akademi extends Model
         'date',
         'category'
     ];
+
+    public function payments()
+    {
+        return $this->hasMany(Pembayaran::class);
+    }
 }
