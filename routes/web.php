@@ -20,18 +20,18 @@ use App\Http\Controllers\PembayaranController;
 
 
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/sign', [LoginController::class, 'sign'])->name('sign');
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/sign', [LoginController::class, 'sign'])->middleware('guest')->name('sign');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
-Route::get('/daftar', [LoginController::class, 'daftar'])->name('daftar');
-Route::post('/register', [LoginController::class, 'register'])->name('register');
+Route::get('/daftar', [LoginController::class, 'daftar'])->middleware('guest')->name('daftar');
+Route::post('/register', [LoginController::class, 'register'])->middleware('guest')->name('register');
 
 Route::get('/LupaPassword', function () {
     return view('auth/lupa_password');
-});
+})->middleware('guest')->name('password.request');
 
 Route::get('/verifikasi', function () {
     return view('auth/verifikasi');
@@ -82,7 +82,7 @@ Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
 
 
 
-Route::prefix('guest')->group(function () {
+Route::prefix('guest')->middleware('guest')->group(function () {
 
     Route::get('/TentangKami', [TentangkamiController::class, 'selectGuest'])->name('guest.tentangkami');
     Route::get('/TentangKami/Detail/{id}', [TentangkamiController::class, 'showGuest'])->name('guest.tentangkami.detail');

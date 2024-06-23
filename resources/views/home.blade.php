@@ -31,6 +31,8 @@
             </div>
         </form>
 
+
+
         <!-- silder start-->
         <div id="silder" class="relative w-full px-2 md:px-5 my-12" data-carousel="slide">
             <!-- pembungkus -->
