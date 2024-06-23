@@ -11,8 +11,6 @@ hamburger.addEventListener("click", function () {
 });
 
 
-
-
 // home
 const navhome = document.querySelector("#navhome");
 
@@ -95,9 +93,6 @@ document.addEventListener("mouseover", function (event) {
         !targetElement.closest("#akademi")
     ) {
         dropdownakademi.classList.add("hidden");
-    }
-    {
-        dropdownuser.classList.add("hidden");
     }
 });
 

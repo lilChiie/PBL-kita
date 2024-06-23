@@ -17,7 +17,7 @@
         transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
 
-    <section class="pt-16 sm:ml-[220px] pb-12 flex justify-center">
+    <section class="pt-[90px] sm:ml-[220px] pb-12 flex justify-center">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {

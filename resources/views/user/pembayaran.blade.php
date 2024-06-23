@@ -66,7 +66,7 @@
 
 
                     <!-- barcode start -->
-                    <div class="px-5 sm:px-10 md:px-16 my-2">
+                    <div class="my-2">
                         <div>
                             <label class="text-xs md:text-base">
                                 Pilih Qris</label>

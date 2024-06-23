@@ -16,7 +16,7 @@
         <a href="/admin/berita/tambah" class="bg-nav rounded-l-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
     transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
-    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5">
+    <section class="pt-[90px] sm:ml-[235px] mx-5 sm:mr-5">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {

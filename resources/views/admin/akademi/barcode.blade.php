@@ -59,35 +59,36 @@
                 <h1 class=" text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-10" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Hapus Barcode</h1>
 
                 <!-- edited -->
-                <div class=" relative overflow-x-auto mx-5 sm:mx-16">
-                    <table class="w-full text-xs sm:text-base text-left border-collapse border border-slate-500 ">
-                        <thead class="text-xs text-center sm:text-base">
+                <div class=" relative overflow-x-auto shadow-md sm:rounded-l mx-5 sm:mx-16">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                        <thead class="text-xs uppercase bg-gray-500 text-gray-100">
                             <tr>
-                                <th scope="col" class="px-2 py-3 border border-slate-500">
+                                <th scope="col" class="px-6 py-3">
                                     Nama Bank
                                 </th>
-                                <th scope="col" class="px-2 py-3 border border-slate-500">
+                                <th scope="col" class="px-6 py-3">
                                     Nama File Berode
                                 </th>
-                                <th scope="col" class="px-2 py-3 border border-slate-500">
+                                <th scope="col" class="px-6 py-3">
 
                                 </th>
                             </tr>
                         </thead>
-                        @foreach ($files as $file)
+                        
                         <tbody>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <td class="px-2 py-4 border border-slate-500">
+                            @foreach ($files as $file)
+                            <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     {{ $file->bank }}
-                                </td>
-                                <td class="px-2 py-4 border border-slate-500">
+                                </th>
+                                <td class="px-6 py-4">
                                     {{ $file->photo }}
                                 </td>
-                                <td class="px-2 py-4 border border-slate-500 text-center">
+                                <td class="px-2 py-4">
                                     <form id="deleteForm" action="{{ route('barcode.delete', $file->barcode_id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="button" onclick="confirmDelete('{{ $file->bank }}')" class=" text-white p-1 px-2 sm:px-4 rounded-md bg-nav 
+                                        <button type="button" onclick="confirmDelete('{{ $file->bank }}')" class=" font-medium text-white p-1 px-2 sm:px-4 rounded-md bg-nav 
                                 hover:bg-gradb focus:bg-gradb transition duration-700">
                                             Hapus
                                         </button>
@@ -112,8 +113,9 @@
                                     </script>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
-                        @endforeach
+                       
                     </table>
                 </div>
                 <!-- edited -->

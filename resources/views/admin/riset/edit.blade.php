@@ -13,7 +13,7 @@
     @include('components.headeradmin')
 
     <!-- edited -->
-   <div class="fixed left-40 sm:left-56 bottom-16 z-10">
+   <div class="fixed left-0 sm:left-56 bottom-16 z-10">
         <a href="{{ route('admin.riset.detail', $post->riset_id) }}" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Kembali

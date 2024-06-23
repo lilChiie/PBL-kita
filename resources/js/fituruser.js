@@ -10,17 +10,8 @@ hamburger.addEventListener("click", function () {
 
 //dropdownuser
 const dropdownuser = document.querySelector("#dropdownuser");
-user.addEventListener("mouseover", function () {
-    dropdownuser.classList.remove("hidden");
-    dropdownakademi.classList.add("hidden");
-});
-
 user.addEventListener("click", function () {
     dropdownuser.classList.remove("hidden");
-    dropdownakademi.classList.add("hidden");
-});
-
-dropdownuser.addEventListener("mouseleave", function(){
     dropdownakademi.classList.add("hidden");
 });
 
@@ -102,17 +93,22 @@ berita.addEventListener("mouseover", function () {
 // Sembunyikan dropdown apabila mouse berada di tempat lain.
 document.addEventListener("mouseover", function (event) {
     const targetElement = event.target;
-
     if (
         !targetElement.closest("#dropdownakademi") &&
         !targetElement.closest("#akademi")
     ) {
         dropdownakademi.classList.add("hidden");
     }
+});
+
+// Sembunyikan dropdown apabila mouse menklik tempat lain di tempat lain.
+document.addEventListener("click", function (event) {
+    const targetElement = event.target;
     if (
         !targetElement.closest("#dropdownuser") &&
         !targetElement.closest("#user")
-    ) {
+    ) 
+    {
         dropdownuser.classList.add("hidden");
     }
 });

@@ -23,7 +23,7 @@
     </div>
     <!-- tombol tambah end -->
 
-    <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 pb-20">
+    <section class="pt-14 sm:ml-[235px] mx-5 sm:mr-5 pb-20">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {

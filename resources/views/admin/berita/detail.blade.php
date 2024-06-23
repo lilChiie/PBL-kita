@@ -13,7 +13,7 @@
     @include('components.headeradmin')
 
     <!-- edited -->
-    <div class="fixed left-40 sm:left-56 bottom-16 z-10">
+    <div class="fixed left-0 sm:left-56 bottom-16 z-10">
         <a href="/admin/berita" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Kembali
@@ -63,8 +63,8 @@
                         });
                     }
                 </script>
-                <a href="{{ route('admin.berita.edit', $files->berita_id) }}" class="text-xs bg-nav text-white py-1 px-4 rounded-md md:text-base hover:bg-latar focus:bg-latar
-                hover:text-black focus:text-black transition duration-700">Edit</a>
+                 <a href="{{ route('admin.berita.edit', $files->berita_id) }}" class="text-xs bg-nav text-white py-1 px-4 rounded-md md:text-base hover:bg-latar focus:bg-latar
+                 hover:text-black focus:text-black transition duration-700">Edit</a>
             </div>
             <!-- button end -->
 

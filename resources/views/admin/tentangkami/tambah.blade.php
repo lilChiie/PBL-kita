@@ -7,13 +7,13 @@
     <title>Tambah Tentang Kami</title>
 </head>
 
-<body class="bg-latar text-black pb-12">
+<body class="bg-latar text-black pb-12 min-h-screen">
 
     <!-- header -->
     @include('components.headeradmin')
 
      <!-- edited -->
-    <div class="fixed left-40 sm:left-56 top-24 z-10">
+    <div class="fixed left-0 sm:left-56 top-24 z-10">
         <a href="/admin/tentangkami" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Kembali
