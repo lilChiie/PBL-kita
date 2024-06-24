@@ -25,8 +25,8 @@ class Akademi extends Model
         'category'
     ];
 
-    public function payments()
+    public function users()
     {
-        return $this->hasMany(Pembayaran::class);
+        return $this->belongsToMany(User::class, 'pembayaran', 'kegiatan_id', 'user_id');
     }
 }

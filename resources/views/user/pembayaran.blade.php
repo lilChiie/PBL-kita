@@ -21,6 +21,9 @@
                     Form Pembayaran
                 </h1>
                 <!-- form pembayaran start -->
+
+
+
                 <form method="post" action="{{ route('pembayaran.kirim') }}" class="px-5 sm:px-10 md:px-16" enctype="multipart/form-data">
                     @csrf
                     <div>
@@ -42,17 +45,18 @@
                         <input type="email" id="email" name="email" autocomplete="email" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="{{ $user->email }}" readonly>
                     </div>
                     <div>
-                        <label for="pembayaran" class="text-xs md:text-base">
+                        <label for="title" class="text-xs md:text-base">
                             Judul Pembayaran
                         </label>
-                        <input type="text" id="pembayaran" name="kegiatan_id" autocomplete="pembayaran" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="{{ $akademi->title }}" readonly>
+                        <input type="hidden" id="kegiatan_title" name="kegiatan_id" value="{{ $akademi->kegiatan_id }}">
+                        <input type="text" id="title" name="title" autocomplete="title" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="{{ $akademi->title }}" readonly>
 
                     </div>
                     <div>
                         <label for="total" class="text-xs md:text-base">
                             Total
                         </label>
-                        <input type="text" id="total" name="kegiatan_id" autocomplete="total" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="Rp {{ number_format($akademi->price, 0, ',', '.') }}" readonly>
+                        <input type="text" id="total" name="total" autocomplete="total" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="Rp {{ number_format($akademi->price, 0, ',', '.') }}" readonly>
                     </div>
                     <div>
                         <label for="bukti" class="text-xs md:text-base my-5">

@@ -58,9 +58,7 @@ Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
     Route::get('/Berita', [BeritaController::class, 'selectUser'])->name('user.berita');
     Route::get('/Berita/Detail/{id}', [BeritaController::class, 'showUser'])->name('user.berita.detail');
 
-    Route::get('/Akademi', function () {
-        return view('user/akademi');
-    });
+    Route::get('/Akademi', [PembayaranController::class, 'list'])->name('user.akademi');
 
     Route::get('/Pelatihan', [AkademiController::class, 'selectUser'])->name('user.pelatihan');
     Route::get('/Pelatihan/Detail/{id}', [AkademiController::class, 'showUser'])->name('user.pelatihan.detail');
@@ -202,7 +200,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::prefix('akademi')->group(function () {
         Route::get('/', function () {
             return view('admin/akademi/akademi');
-        });
+        })->name('admin.akademi');
 
         //barcode
         Route::get('/barcode', [BarcodeController::class, 'index'])->name('barcode');

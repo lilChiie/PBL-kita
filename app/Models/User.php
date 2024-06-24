@@ -60,8 +60,8 @@ class User extends Authenticatable
         return $this->role === 'user';
     }
 
-    public function payments()
+    public function kegiatan()
     {
-        return $this->hasMany(Pembayaran::class);
+        return $this->belongsToMany(Akademi::class, 'pembayaran', 'user_id', 'kegiatan_id');
     }
 }

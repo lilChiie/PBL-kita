@@ -13,6 +13,19 @@
 
     <!-- Content Start -->
     <section class="pt-36 sm:pt-40 pb-12 mx-8 flex justify-center">
+        @if (session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                Swal.fire({
+                    title: "{{ session('success') }}",
+                    text: 'Silahkan tunggu admin mengonfirmasi pendaftaran anda',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            });
+        </script>
+        @endif
+
         <div class="bg-white w-full rounded-md pb-40">
             <div class="mx-3 my-2">
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
@@ -50,7 +63,7 @@
             <!-- riwayat pembayaran start -->
             <section class="mx-5 sm:mx-10">
                 <hr class="border-t-2 my-4 md:my-6  border-black">
-                <h1 class="text-nav mb-3 md:my-5 md:text-2xl">Riwayat Pembayaran</h1>
+                <h1 class="text-nav mb-3 md:my-5 md:text-2xl"> Pembayaran</h1>
                 <!-- edited -->
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
