@@ -58,7 +58,7 @@ Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
     Route::get('/Berita', [BeritaController::class, 'selectUser'])->name('user.berita');
     Route::get('/Berita/Detail/{id}', [BeritaController::class, 'showUser'])->name('user.berita.detail');
 
-    Route::get('/Akademi', [PembayaranController::class, 'list'])->name('user.akademi');
+
 
     Route::get('/Pelatihan', [AkademiController::class, 'selectUser'])->name('user.pelatihan');
     Route::get('/Pelatihan/Detail/{id}', [AkademiController::class, 'showUser'])->name('user.pelatihan.detail');
@@ -69,10 +69,8 @@ Route::prefix('user')->middleware(['auth', 'user'])->group(function () {
     Route::get('/Pembayaran/{id}', [PembayaranController::class, 'showPembayaran'])->name('pembayaran');
     Route::post('/pembayaran', [PembayaranController::class, 'bayar'])->name('pembayaran.kirim');
 
-
-    Route::get('/Detail_Riwayat', function () {
-        return view('user/detail_riwayat');
-    });
+    Route::get('/Akademi', [PembayaranController::class, 'list'])->name('user.akademi');
+    Route::get('/akademi/detail/{id}', [PembayaranController::class, 'show'])->name('user.akademi.detail');
 
     Route::get('/profil', [UserController::class, 'profiluser'])->name('user.profil');
     Route::put('/profil/update', [UserController::class, 'updateuser'])->name('user.profil.update');
@@ -198,9 +196,10 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
 
     Route::prefix('akademi')->group(function () {
-        Route::get('/', function () {
-            return view('admin/akademi/akademi');
-        })->name('admin.akademi');
+        Route::get('/', [PembayaranController::class, 'listadmin'])->name('admin.akademi');
+        Route::get('/detail/bayar/{id}', [PembayaranController::class, 'showadmin'])->name('admin.pembayaran.detail');
+        Route::post('/admin/akademi/{id}/konfirmasi', [PembayaranController::class, 'konfirmasiPendaftaran'])->name('admin.konfirmasi.pendaftaran');
+        Route::post('/admin/akademi/{id}/batalkan', [PembayaranController::class, 'batalkanPendaftaran'])->name('admin.batalkan.pendaftaran');
 
         //barcode
         Route::get('/barcode', [BarcodeController::class, 'index'])->name('barcode');
@@ -219,9 +218,5 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
         Route::post('/insert', [AkademiController::class, 'insertAkademi'])->name('admin.akademi.insert');
 
         Route::delete('/delete/{id}', [AkademiController::class, 'delete'])->name('admin.akademi.delete');
-
-        Route::get('/detail_pembayaran', function () {
-            return view('admin/akademi/detail_bayar');
-        });
     });
 });

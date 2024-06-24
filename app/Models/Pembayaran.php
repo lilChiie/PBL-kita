@@ -28,6 +28,6 @@ class Pembayaran extends Model
 
     public function activity()
     {
-        return $this->belongsTo(Akademi::class);
+        return $this->belongsTo(Akademi::class, 'kegiatan_id', 'kegiatan_id');
     }
 }

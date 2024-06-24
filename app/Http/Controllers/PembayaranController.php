@@ -55,10 +55,59 @@ class PembayaranController extends Controller
         return redirect()->route('user.akademi')->with('success', 'Pendaftaran berhasil!');
     }
 
+    //list pendaftaran user
     public function list()
     {
-        $pendaftaran = Pembayaran::with(['user', 'activity']);
+        $pendaftaran = Pembayaran::with('user', 'activity')->paginate(10);
 
         return view('user.akademi', ['pendaftaran' => $pendaftaran]);
+    }
+
+    public function show($id)
+    {
+        $pendaftaran = Pembayaran::with('user', 'activity')->findOrFail($id);
+
+        return view('user.detail_riwayat', ['pendaftaran' => $pendaftaran]);
+    }
+
+    //list pendaftaran admin
+    public function listadmin()
+    {
+        $pendaftaran = Pembayaran::with('user', 'activity')->paginate(10);
+
+        return view('admin.akademi.akademi', ['pendaftaran' => $pendaftaran]);
+    }
+
+    public function showadmin($id)
+    {
+        $pendaftaran = Pembayaran::with('user', 'activity')->findOrFail($id);
+
+        return view('admin.akademi.detail_bayar', ['pendaftaran' => $pendaftaran]);
+    }
+
+    public function konfirmasiPendaftaran($id)
+    {
+        // Temukan pembayaran berdasarkan ID
+        $pembayaran = Pembayaran::findOrFail($id);
+
+        // Ubah status pendaftaran menjadi "Pendaftaran dikonfirmasi"
+        $pembayaran->status = 'Pendaftaran dikonfirmasi';
+        $pembayaran->save();
+
+        // Redirect kembali atau lakukan sesuatu setelah konfirmasi
+        return redirect()->back()->with('success', 'Pendaftaran berhasil dikonfirmasi');
+    }
+
+    public function batalkanPendaftaran($id)
+    {
+        // Temukan pembayaran berdasarkan ID
+        $pembayaran = Pembayaran::findOrFail($id);
+
+        // Ubah status pendaftaran menjadi "Pendaftaran dibatalkan"
+        $pembayaran->status = 'Pendaftaran dibatalkan';
+        $pembayaran->save();
+
+        // Redirect kembali atau lakukan sesuatu setelah pembatalan
+        return redirect()->back()->with('success', 'Pendaftaran berhasil dibatalkan');
     }
 }

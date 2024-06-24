@@ -70,34 +70,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($pendaftaran as $data)
                             <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                    Pelatihan
+                                    {{$data->activity['title']}}
                                 </th>
                                 <td class="px-6 py-4">
-                                    17/10/2024
+                                    {{ \Carbon\Carbon::parse($data->created_at)->format('d/m/Y') }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    Belum dikonfirmasi
+                                    {{$data->status}}
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="/admin/akademi/detail_pembayaran" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
+                                    <a href="{{route('admin.pembayaran.detail', $data->pembayaran_id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
                                 </td>
                             </tr>
-                            <tr class="odd:bg-gray-300 even:bg-gray-50 border-b border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                    Kegiatan
-                                </th>
-                                <td class="px-6 py-4">
-                                    25/10/2024
-                                </td>
-                                <td class="px-6 py-4">
-                                    Sudah dikonfirmasi
-                                </td>
-                                <td class="px-6 py-4">
-                                    <a href="/admin/akademi/detail_pembayaran" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
-                                </td>
-                            </tr>
+                            @endforeach
 
                         </tbody>
                     </table>
