@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita</title>
+    <title>Detail Pendaftaran</title>
 </head>
 
 <body class="bg-latar text-black min-h-screen">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="mx-4 text-xs md:text-base sm:mx-10 my-3">
                     <label for="bukti bayar">Bukti Bayar</label>
-                    <img src="{{ asset('bukti/' . $pendaftaran->photo) }}" alt="">
+                    <img src="{{ asset('bukti/' . $pendaftaran->photo) }}" alt="" class=" w-4/12">
 
                 </div>
             </div>

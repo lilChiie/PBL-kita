@@ -27,7 +27,7 @@
                     <img src="{{ asset('storage/properti/logo polibatam.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 aspect-square object-cover rounded-full sm:w-10">
                 </a>
                 <a href="/user/">
-                    <img src="{{ asset('storage/properti/logo 5.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full aspect-square object-cover sm:w-10 sm:mx-2">
+                    <img src="{{ asset('storage/properti/LOGO BARU.png') }}" alt="gambar properti" class="w-8 my-2 mx-2 rounded-full aspect-square object-cover sm:w-10 sm:mx-2">
                 </a>
                 <p class="font-thin text-xs mx-2 mt-4 text-white sm:text-base">
                     PJAP Polibatam

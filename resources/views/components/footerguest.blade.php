@@ -29,7 +29,7 @@
           <div class="px-2">
             <div class="grid grid-cols-2 gap-3">
               <div>
-                <img src="{{ asset('storage/properti/logo 5.png') }}" alt="" class="w-4/5">
+                <img src="{{ asset('storage/properti/LOGO BARU.png') }}" alt="" class="w-4/5">
               </div>
               <div>
                 <img src="{{ asset('storage/properti/logo polibatam.png') }}" alt="" class="w-4/5">
