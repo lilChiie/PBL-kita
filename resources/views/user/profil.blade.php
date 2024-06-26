@@ -43,10 +43,10 @@
                         </label>
                         <input id="foto" name="photo" class="block w-full text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="small_size" type="file">
                     </div>
+                    @error('photo')
+                    <small class=" text-red-700">{{ $message }}</small>
+                    @enderror
                 </div>
-                @error('photo')
-                <small class=" text-red-700">{{ $message }}</small>
-                @enderror
                 <div class="sm:col-span-2 sm:ms-10 grid gap-y-5">
 
                     <div>
@@ -69,7 +69,7 @@
                         <label for="email" class="block text-xs md:text-base font-thin">
                             Email
                         </label>
-                        <input type="email" id="email" name="email" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="liam@gmail.com" value="{{ Auth::user()->email }}">
+                        <input type="text" id="email" name="email" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="liam@gmail.com" value="{{ Auth::user()->email }}">
                     </div>
                     @error('email')
                     <small class=" text-red-700">{{ $message }}</small>

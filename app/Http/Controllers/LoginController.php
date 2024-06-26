@@ -100,14 +100,7 @@ class LoginController extends Controller
 
         User::create($data);
 
-        $login = [
-            'email' => $request->email,
-            'username' => $request->username,
-            'phone' => $request->phone,
-            'password' => $request->password
-        ];
 
-        Auth::attempt($login);
         return redirect()->route('login')->with('success', 'Pendaftaran berhasil, silahkan login');
     }
 

@@ -58,7 +58,11 @@ class PembayaranController extends Controller
     //list pendaftaran user
     public function list()
     {
-        $pendaftaran = Pembayaran::with('user', 'activity')->paginate(10);
+        $userId = Auth::id();
+
+        $pendaftaran = Pembayaran::with('user', 'activity')
+            ->where('user_id', $userId)
+            ->paginate(10);
 
         return view('user.akademi', ['pendaftaran' => $pendaftaran]);
     }

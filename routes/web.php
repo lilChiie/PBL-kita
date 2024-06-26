@@ -24,7 +24,7 @@ Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->na
 Route::post('/sign', [LoginController::class, 'sign'])->middleware('guest')->name('sign');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-
+// 
 
 Route::get('/daftar', [LoginController::class, 'daftar'])->middleware('guest')->name('daftar');
 Route::post('/register', [LoginController::class, 'register'])->middleware('guest')->name('register');
@@ -116,6 +116,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/profil', [UserController::class, 'profiladmin'])->name('admin.profil');
     Route::put('/profil/update', [UserController::class, 'updateadmin'])->name('admin.profil.update');
+
+    // Route::get('/ListUser', [UserController::class, 'list'])->name('admin.listUser');
+    Route::get('/ListUser', function () {
+        return view('admin/list');
+    });
 
 
     Route::prefix('tentangkami')->group(function () {

@@ -50,12 +50,12 @@
                         <label for="email" class="block text-xs md:text-base font-thin">
                             Email
                         </label>
-                        <input type="email" id="email" name="email" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="liam@gmail.com" value="{{ Auth::user()->email }}">
+                        <input type="text" id="email" name="email" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="liam@gmail.com" value="{{ Auth::user()->email }}">
                     </div>
                     @error('email')
                     <small class=" text-red-700">{{ $message }}</small>
                     @enderror
-                    
+
 
                     <div class="flex justify-end">
                         <button type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
