@@ -119,7 +119,8 @@
 
                     <ul class="bottom-16 left-0 absolute">
                         <li class="my-1 lg:my-2">
-                            <a href="" class="hover:text-sky-600 mx-8 lg:mx-5 sm:text-base text-[12px]" >
+                            <a href="/admin/ListUser" class="hover:text-sky-600 mx-8 lg:mx-5 sm:text-base text-[12px] 
+                            {{ request()->is('admin/ListUser') ? 'text-sky-600' : 'text-black' }}" >
                                 List Pengguna
                             </a>
                         </li>
