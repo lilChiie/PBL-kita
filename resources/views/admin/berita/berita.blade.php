@@ -14,10 +14,10 @@
     <!-- Content Start -->
     <div class="fixed right-0 bottom-16 z-10">
         <a href="/admin/berita/tambah" class="bg-nav rounded-l-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
-    transition duration-700 focus:bg-gradb">Tambah</a>
+        transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
-    <section class="pt-[90px] sm:ml-[235px] mx-5 sm:mr-5">
 
+    <section class="pt-14 sm:ml-[235px] mx-5 sm:mr-5 pb-20">
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -29,13 +29,11 @@
             });
         </script>
         @endif
-        <div class="bg-white w-full pt-2 pb-20 mb-12 rounded-md">
+        <div class="bg-white w-full pb-20 mb-12 rounded-md">
+            <h1 class="ml-3 pt-2 sm:pt-6 md:ml-8 font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-8" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
+                Berita
+            </h1>
 
-            <div class="mx-3 my-2">
-                <h1 class="font-bold pt-6 text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
-                    Berita
-                </h1>
-            </div>
             <div class="mx-5 sm:mx-10 mt-4">
 
                 @forelse ($files as $file)

@@ -14,24 +14,10 @@
     <!-- Content Start -->
     <section class="pt-36 sm:pt-40 mx-8">
         <div class="bg-white w-full pt-2 pb-20">
-            <!-- berita utama start-->
-            <div class="flex gap-7 lg:gap-12 mx-5 sm:mx-10 my-2">
-                <div class="w-full">
-                    <a href="/guest/Detail_Berita">
-                        <img class="w-full aspect-16/9 object-cover  hover:brightness-50" src="{{ asset('storage/properti/6.jpg') }}" alt="gambar berita" data-aos="fade-right">
-                    </a>
-                </div>
-            </div>
-            <!-- berita utama end -->
-
-            <!-- sub berita start -->
             <div class="mx-5 sm:mx-10 mt-4">
-                <div class=" w-4/12">
-                    <h2 class="text-base md:text-2xl">
-                        Sub News
-                    </h2>
-                    <hr class="border-t-1 border-black my-1 lg:my-3">
-                </div>
+                <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-8" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
+                    Berita
+                </h1>
 
                 @forelse ($files as $file)
                 <div class="items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
