@@ -20,7 +20,7 @@
                 </h1>
             </div>
 
-            <div class=" grid gap-x-1 sm:gap-x-2 gap-y-1 grid-cols-3 ms-5 me-2 sm:mx-10 pb-12">
+            <div class=" grid gap-x-1 sm:gap-x-2 gap-y-1 grid-cols-3 ms-5 me-2 sm:mx-20 pb-12">
                 <!-- letakin disini foreachnya -->
                 <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
                     <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
@@ -32,6 +32,42 @@
                     </div>  
                 </div>
                <!-- enforeach -->
+               <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
+                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
+                    <div class="flex justify-end">
+                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
+                        transition duration-700 focus:bg-gradb">Detail</button>
+                    </div>  
+                </div>
+                <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
+                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
+                    <div class="flex justify-end">
+                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
+                        transition duration-700 focus:bg-gradb">Detail</button>
+                    </div>  
+                </div>
+                <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
+                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
+                    <div class="flex justify-end">
+                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
+                        transition duration-700 focus:bg-gradb">Detail</button>
+                    </div>  
+                </div>
+                <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
+                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
+                    <div class="flex justify-end">
+                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
+                        transition duration-700 focus:bg-gradb">Detail</button>
+                    </div>  
+                </div>
             </div>
         </div>
     </section>
