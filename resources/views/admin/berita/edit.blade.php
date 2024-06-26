@@ -52,7 +52,7 @@
 
 
 
-                        <div class="flex justify-end">
+                        <div class="flex justify-end mt-2">
                             <button type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
                             rounded-md">Simpan</button>
                         </div>

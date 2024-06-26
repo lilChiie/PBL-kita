@@ -8,10 +8,6 @@ use Illuminate\Http\Request;
 
 class TentangKamiController extends Controller
 {
-
-
-
-
     //admin
     public function selectAdmin()
     {
