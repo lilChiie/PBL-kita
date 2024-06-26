@@ -37,14 +37,14 @@
 
                 <form action="{{route('barcode.tambah')}}" method="POST" class="mx-5 sm:mx-16" enctype="multipart/form-data">
                     @csrf
-                    <div class="my-6">
+                    <div class="mt-6">
                         <label for="bank" class="block mb-2 text-xs md:text-base font-thin">Nama Bank</label>
                         <input type="text" id="bank" name="bank" class="block w-full p-2 border-black rounded-md  focus:ring-blue-500 focus:border-blue-500 " placeholder="cth. BNI">
                     </div>
                     @error('bank')
                     <small class=" text-red-700">{{ $message }}</small>
                     @enderror
-                    <div>
+                    <div class="mt-6">
                         <input name="photo" class="block w-full mb-5 text-xs text-gray-900 border border-black rounded-lg cursor-pointer focus:outline-none" id="photo" type="file">
                     </div>
                     @error('photo')
