@@ -11,13 +11,6 @@
     <!-- header -->
     @include('components.headeradmin')
 
-    <div class="fixed left-0 sm:left-56 bottom-16 z-10">
-        <a href="/admin/akademi/" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
-            transition duration-700 focus:bg-gradb">
-            Kembali
-        </a>
-    </div>
-
     <!-- Content Start -->
     <section class="pt-16 sm:ml-[235px] mx-5 sm:mr-5 flex justify-center">
         <div class="bg-white w-full rounded-md">
@@ -55,19 +48,19 @@
                 </div>
                 <div class="mx-4 text-xs md:text-base sm:mx-10 my-3">
                     <label for="bukti bayar">Bukti Bayar</label>
-                    <img src="{{ asset('bukti/' . $pendaftaran->photo) }}" alt="">
+                    <img src="{{ asset('bukti/' . $pendaftaran->photo) }}" alt="" class=" w-4/12">
                 </div>
 
                 <div class="flex justify-center my-10">
                     @if ($pendaftaran->status == 'Belum di konfirmasi')
                     <form action="{{ route('admin.konfirmasi.pendaftaran', $pendaftaran->pembayaran_id) }}" method="POST">
                         @csrf
-                        <button type="submit" class="text-xs md:text-base bg-nav py-1 px-5 md:px-9 text-white rounded-full hover:bg-gradb focus:bg-gradb transition duration-700">Konfirmasi</button>
+                        <button type="submit" class="text-xs md:text-base bg-nav py-1 px-5 md:px-9 mx-3 text-white rounded-full hover:bg-gradb focus:bg-gradb transition duration-700">Konfirmasi</button>
                     </form>
 
                     <form action="{{ route('admin.batalkan.pendaftaran', $pendaftaran->pembayaran_id) }}" method="POST">
                         @csrf
-                        <button type="submit" class="text-xs md:text-base bg-nav py-1 px-5 md:px-9 text-white rounded-full hover:bg-gradb focus:bg-gradb transition duration-700">Batalkan</button>
+                        <button type="submit" class="text-xs md:text-base bg-nav py-1 px-5 md:px-9 mx-3 text-white rounded-full hover:bg-gradb focus:bg-gradb transition duration-700">Batalkan</button>
                     </form>
                     @elseif ($pendaftaran->status == 'Pendaftaran dikonfirmasi')
                     <span class="text-xs md:text-base bg-gray-300 py-1 px-5 md:px-9 text-gray-600 rounded-full">Pendaftaran sudah dikonfirmasi</span>
