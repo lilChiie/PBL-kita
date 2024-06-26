@@ -115,24 +115,24 @@
                         </li>
                     </ul>
 
-                    
+
 
                     <ul class="bottom-16 left-0 absolute">
                         <li class="my-1 lg:my-2">
-                            <a href="/admin/ListUser" class="hover:text-sky-600 mx-8 lg:mx-5 sm:text-base text-[12px] 
-                            {{ request()->is('admin/ListUser') ? 'text-sky-600' : 'text-black' }}" >
+                            <a href="{{ route('admin.listUser') }}" class="hover:text-sky-600 mx-8 lg:mx-5 sm:text-base text-[12px] 
+                            {{ request()->is('admin/ListUser') ? 'text-sky-600' : 'text-black' }}">
                                 List Pengguna
                             </a>
                         </li>
                         <li class="my-1 lg:my-2">
                             <a href="{{ route('admin.profil') }}" class="hover:text-sky-600 mx-8 lg:mx-5 sm:text-base text-[12px] 
-                            {{ request()->is('admin/profil') ? 'text-sky-600' : 'text-black' }}" >
+                            {{ request()->is('admin/profil') ? 'text-sky-600' : 'text-black' }}">
                                 Profil
                             </a>
                         </li>
                         <li class="my-1 lg:my-2">
                             <a href="{{ route('logout') }}" class="hover:text-sky-600 mx-8 lg:mx-5 sm:text-base text-[12px]">
-                                Logout 
+                                Logout
                             </a>
                         </li>
                     </ul>
@@ -140,7 +140,7 @@
             </div>
             <!-- navbar end -->
 
-           
+
         </div>
         <!-- navbar end -->
     </div>

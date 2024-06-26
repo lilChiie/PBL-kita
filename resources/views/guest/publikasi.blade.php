@@ -18,7 +18,7 @@
                 <h1 class="font-bold pt-6 text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Publikasi</h1>
             </div>
             <div class="grid gap-x-5 sm:gap-x-10 gap-y-2 grid-cols-2 mx-5 sm:mx-10 my-2 ">
-                @foreach ($files as $file)
+                @forelse ($files as $file)
                 <!-- contennt 1 -->
                 <div class="w-full" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="{{ route('guest.publikasi.detail', $file->publikasi_id) }}">
@@ -35,7 +35,9 @@
                         </p>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                <p class=" text-gray-400 ">Belum ada data Publikasi</p>
+                @endforelse
 
 
             </div>

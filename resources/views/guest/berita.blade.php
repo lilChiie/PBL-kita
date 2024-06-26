@@ -33,7 +33,7 @@
                     <hr class="border-t-1 border-black my-1 lg:my-3">
                 </div>
 
-                @foreach ($files as $file)
+                @forelse ($files as $file)
                 <div class="items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
@@ -44,7 +44,7 @@
                         <div class="mx-2 h-20 sm:px-2 sm:h-28 md:h-44 sm:pt-3 md:pt-5 overflow-hidden col-span-2 ">
                             <h5 class="font-bold text-[11px] md:text-lg lg:text-2xl overflow-hidden h-4 md:h-10 ">{{ $file->title }}</h5>
                             <p class="text-[9px] md:text-base overflow-hidden h-[40px] sm:h-10 md:h-12 lg:h-[72px]">
-                            {!! nl2br(e($file->content)) !!}
+                                {!! nl2br(e($file->content)) !!}
                             </p>
                             <hr class="border-t-1 border-black mt-1">
                             <a href="{{ route('guest.berita.detail', $file->berita_id) }}" class="text-[8px] md:text-xs lg:text-base hover:text-sky-600">
@@ -53,9 +53,11 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                <p class=" text-gray-400 ">Belum ada data Berita</p>
+                @endforelse
 
-               
+
             </div>
             <!-- sub berita end -->
         </div>

@@ -37,7 +37,7 @@
 
 
                     <tbody>
-                        @foreach ($files as $file)
+                        @forelse ($files as $file)
                         <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $file->name }}
@@ -50,9 +50,14 @@
                                 <a href="{{ route('admin.detail.pertanyaan', $file->pertanyaan_id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
                             </td>
                         </tr>
-                        @endforeach
+                        @empty
+                        <p class=" text-gray-400 ">Belum ada pertanyaan</p>
+                        @endforelse
 
                     </tbody>
+                    <div class="mt-4 my-4">
+                        {{ $files->links() }}
+                    </div>
 
                 </table>
             </div>

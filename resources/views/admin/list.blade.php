@@ -8,7 +8,7 @@
 </head>
 
 <body class=" bg-latar text-black pb-12 min-h-screen">
-    
+
     <!-- header -->
     @include('components.headeradmin')
 
@@ -22,53 +22,44 @@
 
             <div class=" grid gap-x-1 sm:gap-x-2 gap-y-1 grid-cols-3 ms-5 me-2 sm:mx-20 pb-12">
                 <!-- letakin disini foreachnya -->
+                @forelse ($user as $data)
                 <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
-                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
+                    <img src="{{ asset('profile/' .$data->photo) }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">{{$data->username}}</p>
+                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">{{$data->email}}</p>
                     <div class="flex justify-end">
-                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
+                        <button type="button" onclick="detailBayar('{{ $data->id }}', '{{ $data->username }}', '{{ $data->name }}', '{{ $data->email }}', '{{ $data->address }}')" class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
                         transition duration-700 focus:bg-gradb">Detail</button>
-                    </div>  
+                    </div>
+                    <script>
+                        function detailBayar(id, username, name, email, address) {
+                            Swal.fire({
+                                title: 'Detail User',
+                                html: `
+                                            <div class="swal-content" style="text-align: left;">
+                                                  <p style="margin-bottom: 10px;"><b>Username:</b> ${username}</p>
+                                                  <p style="margin-bottom: 10px;"><b>Nama Lengkap:</b> ${name}</p>
+                                                  <p style="margin-bottom: 10px;"><b>Email:</b> ${email}</p>
+                                                  <p style="margin-bottom: 10px;"><b>Alamat:</b> ${address}</p>
+                                                  </div>
+                                                
+                                                  
+                                                  `,
+                                confirmButtonText: 'OK'
+                            });
+                        }
+                    </script>
                 </div>
-               <!-- enforeach -->
-               <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
-                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
-                    <div class="flex justify-end">
-                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
-                        transition duration-700 focus:bg-gradb">Detail</button>
-                    </div>  
-                </div>
-                <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
-                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
-                    <div class="flex justify-end">
-                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
-                        transition duration-700 focus:bg-gradb">Detail</button>
-                    </div>  
-                </div>
-                <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
-                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
-                    <div class="flex justify-end">
-                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
-                        transition duration-700 focus:bg-gradb">Detail</button>
-                    </div>  
-                </div>
-                <div class=" w-full border-solid border-2 border-gray-400 rounded-lg shadow-xl px-4">
-                    <img src="{{ asset('storage/properti/5.jpg') }}" alt="" class=" w-8 my-5 aspect-square object-cover rounded-full sm:w-14">
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">Niati</p>
-                    <p class=" h-[14px] text-[7px] sm:text-base sm:my-3">niati@gmail.com</p>
-                    <div class="flex justify-end">
-                        <button class="bg-nav rounded-md hover:bg-gradb text-[7px] sm:text-base text-white py-1 px-2 sm:px-4 my-3 md:px-6
-                        transition duration-700 focus:bg-gradb">Detail</button>
-                    </div>  
-                </div>
+                @empty
+                <p class=" text-gray-400 ">Belum ada data User</p>
+                @endforelse
+                <!-- enforeach -->
+
+
             </div>
+        </div>
+        <div class="mt-4 my-4">
+            {{ $user->links() }}
         </div>
     </section>
 

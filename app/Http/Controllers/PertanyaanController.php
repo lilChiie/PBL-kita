@@ -11,7 +11,7 @@ class PertanyaanController extends Controller
 {
     public function selectAdmin()
     {
-        $files = Pertanyaan::all();
+        $files = Pertanyaan::paginate(20);
 
         return view('admin.konsultasi.pertanyaan', compact('files'));
     }

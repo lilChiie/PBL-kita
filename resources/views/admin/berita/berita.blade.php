@@ -17,6 +17,7 @@
     transition duration-700 focus:bg-gradb">Tambah</a>
     </div>
     <section class="pt-[90px] sm:ml-[235px] mx-5 sm:mr-5">
+
         @if (session('success'))
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -28,27 +29,16 @@
             });
         </script>
         @endif
-        <div class="bg-white w-full pt-2 pb-20 mb-12">
-            <!-- berita utama start-->
+        <div class="bg-white w-full pt-2 pb-20 mb-12 rounded-md">
 
-            <div class="flex gap-7 lg:gap-12 mx-5 sm:mx-10 my-2">
-                <div class="w-full">
-                    <a href="/admin/berita/detail">
-                        <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('storage/properti/6.jpg') }}" alt="gambar berita" data-aos="fade-right">
-                    </a>
-                </div>
-
-
+            <div class="mx-3 my-2">
+                <h1 class="font-bold pt-6 text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
+                    Berita
+                </h1>
             </div>
-            <!-- berita utama end -->
-
             <div class="mx-5 sm:mx-10 mt-4">
-                <div class=" w-4/12">
-                    <h2 class="text-base md:text-2xl">Sub News</h2>
-                    <hr class="border-t-1 border-black my-1 lg:my-3">
-                </div>
 
-                @foreach ($files as $file)
+                @forelse ($files as $file)
                 <div class="items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                     <div class="w-full grid grid-cols-3">
                         <div class="flex items-center">
@@ -68,7 +58,9 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                <p class=" text-gray-400 ">Belum ada data berita</p>
+                @endforelse
             </div>
         </div>
     </section>

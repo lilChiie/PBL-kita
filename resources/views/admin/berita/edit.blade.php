@@ -13,7 +13,7 @@
     @include('components.headeradmin')
 
     <!-- edited -->
-   <div class="fixed left-0 sm:left-56 bottom-16 z-10">
+    <div class="fixed left-0 sm:left-56 bottom-16 z-10">
         <a href="{{ route('admin.berita.detail', $post->berita_id) }}" class="bg-nav rounded-r-md hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
             transition duration-700 focus:bg-gradb">
             Kembali
@@ -49,13 +49,7 @@
                         <small class=" text-red-700">{{ $message }}</small>
                         @enderror
 
-                        <div class="w-full mt-5 mb-14">
-                            <select id="countries" name="type" class="bg-gray-50 border border-black text-gray-900 text-xs  md:text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                <option selected disabled>Pilih Jenis Berita</option>
-                                <option value="berita utama" {{ (old('type') == 'berita utama' || $post->type == 'berita utama') ? 'selected' : '' }}>Berita Utama</option>
-                                <option value="berita sekunder" {{ (old('type') == 'berita sekunder' || $post->type == 'berita sekunder') ? 'selected' : '' }}>Berita Sekunder</option>
-                            </select>
-                        </div>
+
 
 
                         <div class="flex justify-end">

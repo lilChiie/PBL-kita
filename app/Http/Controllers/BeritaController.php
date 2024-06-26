@@ -30,7 +30,6 @@ class BeritaController extends Controller
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-            'type' => 'required'
         ], [
             'title.required' => 'Judul wajib di isi',
             'content.required' => 'Informasi wajib di isi',
@@ -38,7 +37,6 @@ class BeritaController extends Controller
             'photo.image' => 'Format gambar tidak sesuai',
             'photo.mimes' => 'Format gambar tidak sesuai',
             'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb',
-            'type' => 'Jenis berita harus di isi'
         ]);
 
         $imageName = time() . '.' . $request->photo->extension();
@@ -47,7 +45,6 @@ class BeritaController extends Controller
         $produk = new Berita();
         $produk->title = $request->input('title');
         $produk->content = $request->input('content');
-        $produk->type = $request->input('type');
         $produk->photo = $imageName;
         $produk->save();
 

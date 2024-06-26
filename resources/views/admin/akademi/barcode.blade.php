@@ -74,9 +74,9 @@
                                 </th>
                             </tr>
                         </thead>
-                        
+
                         <tbody>
-                            @foreach ($files as $file)
+                            @forelse ($files as $file)
                             <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     {{ $file->bank }}
@@ -113,9 +113,11 @@
                                     </script>
                                 </td>
                             </tr>
-                            @endforeach
+                            @empty
+                            <p class=" text-gray-400 ">Belum ada data Barcode</p>
+                            @endforelse
                         </tbody>
-                       
+
                     </table>
                 </div>
                 <!-- edited -->

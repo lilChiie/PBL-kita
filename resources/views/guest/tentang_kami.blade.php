@@ -16,7 +16,7 @@
         <div class="bg-white w-full rounded-md pb-2">
             <h1 class="text-center font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-8" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Tentang Kami</h1>
 
-            @foreach ($files as $file)
+            @forelse ($files as $file)
             <!-- content 1 -->
             <div class="px-2 md:px-10 items-center mb-2 sm:mb-4 lg:mb-8 block" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
@@ -39,7 +39,9 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+            <p class=" text-gray-400 ">Belum ada data Tentang kami</p>
+            @endforelse
 
         </div>
     </section>

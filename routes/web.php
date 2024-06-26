@@ -117,10 +117,10 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/profil', [UserController::class, 'profiladmin'])->name('admin.profil');
     Route::put('/profil/update', [UserController::class, 'updateadmin'])->name('admin.profil.update');
 
-    // Route::get('/ListUser', [UserController::class, 'list'])->name('admin.listUser');
-    Route::get('/ListUser', function () {
-        return view('admin/list');
-    });
+    Route::get('/ListUser', [UserController::class, 'list'])->name('admin.listUser');
+    // Route::get('/ListUser', function () {
+    //     return view('admin/list');
+    // });
 
 
     Route::prefix('tentangkami')->group(function () {

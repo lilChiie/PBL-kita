@@ -84,7 +84,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($pendaftaran as $data)
+                            @forelse ($pendaftaran as $data)
                             <tr class="odd:bg-sky-100 even:bg-gray-50 border-b border-gray-500">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     {{$data->activity['title']}}
@@ -98,29 +98,11 @@
                                 <td class="px-6 py-4">
                                     <a href="{{route('user.akademi.detail', $data->pembayaran_id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
                                 </td>
-                                <!-- <td class="px-6 py-4">
 
-                                    <button type="button" onclick="detailBayar('{{ $data->pembayaran_id }}', '{{ $data->user->username }}')" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</button>
-
-                                </td>
-                                <script>
-                                    function detailBayar(pembayaran_id, username) {
-                                        Swal.fire({
-                                            title: 'Detail Pembayaran',
-                                            html: `
-                                            <div class="swal-content" style="text-align: left;">
-                                                  <p style="margin-bottom: 10px;">ID: ${pembayaran_id}</p>
-                                                  <p style="margin-bottom: 10px;">ID: ${username}</p>
-                                                  </div>
-                                                
-                                                  
-                                                  `,
-                                            confirmButtonText: 'OK'
-                                        });
-                                    }
-                                </script> -->
                             </tr>
-                            @endforeach
+                            @empty
+                            <p class=" text-gray-400 ">Belum ada data Pendaftaran</p>
+                            @endforelse
 
 
                         </tbody>

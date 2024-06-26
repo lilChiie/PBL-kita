@@ -27,7 +27,7 @@
             </div>
 
             <div class="grid gap-x-5 sm:gap-x-10 gap-y-2 grid-cols-2 mx-5 sm:mx-10 my-2 ">
-                @foreach ($files as $file)
+                @forelse ($files as $file)
                 <!-- content 1 -->
                 <div class="w-full" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="{{ route('user.publikasi.detail', $file->publikasi_id) }}">
@@ -42,7 +42,9 @@
                         </p>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                <p class=" text-gray-400 ">Belum ada data Publikasi</p>
+                @endforelse
 
             </div>
         </div>

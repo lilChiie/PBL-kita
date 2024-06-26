@@ -46,19 +46,7 @@
                         @error('content')
                         <small class=" text-red-700">{{ $message }}</small>
                         @enderror
-                        <div class="w-full  mt-5 ">
-                            <select id="countries" name="type" class="bg-gray-50 border border-black text-gray-900 text-xs  md:text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                                <option selected disabled>Pilih Jenis Berita</option>
-                                <option value="berita utama" {{ old('type') == 'berita utama' ? 'selected' : '' }}>Berita Utama</option>
-                                <option value="berita sekunder" {{ old('type') == 'berita sekunder' ? 'selected' : '' }}>Berita Sekunder</option>
-                            </select>
 
-
-
-                        </div>
-                        @error('type')
-                        <small class=" text-red-700">{{ $message }}</small>
-                        @enderror
 
                         <div class="flex justify-end mt-14">
                             <button type="submit" href="/admin/berita" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8

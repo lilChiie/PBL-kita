@@ -21,7 +21,7 @@
             </div>
 
             <!-- content 1 -->
-            @foreach($files as $file)
+            @forelse($files as $file)
             @if($file['category'] == 'pelatihan')
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 <div class="w-full grid grid-cols-3">
@@ -41,7 +41,9 @@
                 </div>
             </div>
             @endif
-            @endforeach
+            @empty
+            <p class=" text-gray-400 ">Belum ada data Pelatihan</p>
+            @endforelse
 
 
 

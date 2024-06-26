@@ -118,4 +118,11 @@ class UserController extends Controller
         // Redirect back with a success message
         return redirect()->back()->with('success', 'Profil berhasil di update!');
     }
+
+    public function list()
+    {
+        $user = User::where('role', 'user')->paginate(9);
+
+        return view('admin.list', compact('user'));
+    }
 }
