@@ -85,23 +85,21 @@
                         <li class="group relative text-black ">
                             <a href="/admin/akademi/" class="text-base py-2 mx-8 flex group-hover:text-sky-600
                                     lg:mx-5
-                                    {{ request()->is('admin/akademi', 'admin/akademi/bercode', 'admin/akademi/detail pembayaran', 'admin/pelatihan', 'admin/pelatihan/detail',
-                                    'admin/pelatihan/edit', 'admin/pelatihan/tambah', 'admin/kegiatan', 'admin/kegiatan/detail', 'admin/kegiatan/edit', 'admin/kegiatan/tambah') ? 'text-sky-600' : 'text-black' }}" id="akademi">
+                                    {{ request()->is('admin/akademi', 'admin/akademi/detail/bayar/*', 'admin/akademi/barcode', 'admin/akademi/tambah', 'admin/akademi/edit/*',
+                                    'admin/akademi/update/*', 'admin/pelatihan', 'admin/kegiatan', 'admin/kegiatan/tambah', 'admin/akademi/detail/*') ? 'text-sky-600' : 'text-black' }}" id="akademi">
                                 Akademi
                             </a>
                             <ul class="dropdown bg-latar lg:bg-fot hidden py-3 px-8 lg:px-5 lg:pt-5 lg:shadow-md lg:rounded-md
                                     w-full transition duration-700" id="dropdownakademi">
                                 <li class="my-2">
                                     <a href="/admin/pelatihan/" class="hover:text-sky-600 
-                                            {{ request()->is('admin/akademi', 'admin/akademi/bercode', 'admin/akademi/detail pembayaran', 'admin/pelatihan', 'admin/pelatihan/detail',
-                                            'admin/pelatihan/edit', 'admin/pelatihan/tambah') ? 'text-sky-600' : 'text-black' }}">
+                                            {{ request()->is('admin/pelatihan', 'admin/akademi/detail/*', 'admin/akademi/tambah', 'admin/akademi/edit/*') ? 'text-sky-600' : 'text-black' }}">
                                         Pelatihan
                                     </a>
                                 </li>
                                 <li class="my-2">
                                     <a href="/admin/kegiatan" class="hover:text-sky-600 
-                                            {{ request()->is('admin/akademi', 'admin/akademi/bercode', 'admin/akademi/detail pembayaran', 'admin/kegiatan', 'admin/kegiatan/detail',
-                                            'admin/kegiatan/edit', 'admin/kegiatan/tambah') ? 'text-sky-600' : 'text-black' }}">
+                                            {{ request()->is('admin/kegiatan', 'admin/kegiatan/tambah', 'admin/akademi/detail/*', 'admin/akademi/edit/*') ? 'text-sky-600' : 'text-black' }}">
                                         Kegiatan
                                     </a>
                                 </li>
