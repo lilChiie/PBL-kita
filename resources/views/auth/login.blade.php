@@ -105,6 +105,39 @@
         });
     </script>
     @endif
+
+    @if ($errors->any())
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let errorMessages = "";
+            <?php foreach ($errors->all() as $error) : ?>
+                errorMessages += "{{ $error }}<br>";
+            <?php endforeach; ?>
+
+            Swal.fire({
+                position: "middle",
+                icon: "error",
+                title: "Errors",
+                html: errorMessages,
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
+    </script>
+    @endif
+    @if (session()->has('status'))
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            Swal.fire({
+                position: "middle",
+                icon: "success",
+                title: "{{ session()->get('status') }}",
+                showConfirmButton: false,
+                timer: 2000
+            });
+        });
+    </script>
+    @endif
     <!-- javascript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

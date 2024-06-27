@@ -26,9 +26,6 @@
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 
 <body>
@@ -43,22 +40,29 @@
                         PJAP Polibatam
                     </p>
                     <hr>
-                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-[700] py-6">Reset Kata Sandi</h1>
-                    <form class="space-y-4 md:space-y-6" action="{{route('password.update')}}" method="post">
+                    <h1 class="text-center text-2xl leading-tight tracking-tight md:text-4xl font-[700] py-6">Ganti Kata Sandi</h1>
+                    <form class="space-y-4 md:space-y-6" action="{{ route('password.update') }}" method="post">
                         @csrf
                         <div>
-                            <label for="password" class="block mb-2 text-xs  text-white">Kata Sandi Baru</label>
-                            <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Kombinasi Huruf Kecil, Kapital dan Angka">
+                            <label for="current_password" class="block mb-2 text-xs text-white">Password lama</label>
+                            <input type="password" name="current_password" id="current_password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Masukkan password lama" required>
+                            @error('current_password')
+                            <span class="text-red-500 text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div>
-                            <label for="password" class="block mb-2 text-xs  text-white">Konfirmasi Kata Sandi</label>
-                            <input type="password" name="password_confirmation" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs " placeholder="Kombinasi Huruf Kecil, Kapital dan Angka">
+                            <label for="new_password" class="block mb-2 text-xs text-white">Kata Sandi Baru</label>
+                            <input type="password" name="new_password" id="new_password" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="Masukkan password baru" required>
+                            @error('new_password')
+                            <span class="text-red-500 text-xs">{{ $message }}</span>
+                            @enderror
                         </div>
-                        <input type="hidden" name="token" value="{{request()->token}}">
-                        <input type="hidden" name="email" value="{{request()->email}}">
+                        <div>
+                            <label for="new_password_confirmation" class="block mb-2 text-xs text-white">Konfirmasi Kata Sandi</label>
+                            <input type="password" name="new_password_confirmation" id="new_password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 md:text-xs rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full px-3 placeholder:text-xs" placeholder="verifikasi password baru" required>
+                        </div>
                         <div class="text-center mt-4 lg:text-xs lg:mt-5">
-                            <button type="submit" class="bg-gradb text-[10px] w-8/12 rounded-2xl py-2 text-white lg:text-xs
-                        lg:py-3 lg:rounded-3xl hover:bg-nav transition duration-700 mt-6 ">Simpan</button>
+                            <button type="submit" class="bg-gradb text-[10px] w-8/12 rounded-2xl py-2 text-white lg:text-xs lg:py-3 lg:rounded-3xl hover:bg-nav transition duration-700 mt-6">Simpan</button>
                         </div>
                     </form>
                 </div>
@@ -73,37 +77,6 @@
         AOS.init();
     </script>
     <!-- @vite('resources/js/app.js') -->
-    @if ($errors->any())
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            let errorMessages = "";
-            <?php foreach ($errors->all() as $error) : ?>
-                errorMessages += "{{ $error }}<br>";
-            <?php endforeach; ?>
-
-            Swal.fire({
-                position: "middle",
-                icon: "error",
-                title: "Errors",
-                html: errorMessages,
-                showConfirmButton: "ok",
-
-            });
-        });
-    </script>
-    @endif
-    @if (session()->has('status'))
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            Swal.fire({
-                position: "middle",
-                icon: "success",
-                title: "{{ session()->get('status') }}",
-                showConfirmButton: "ok",
-            });
-        });
-    </script>
-    @endif
 </body>
 
 </html>

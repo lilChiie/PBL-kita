@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\TentangkamiController;
 use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\RisetController;
@@ -24,18 +27,26 @@ Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->na
 Route::post('/sign', [LoginController::class, 'sign'])->middleware('guest')->name('sign');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-// 
-
 Route::get('/daftar', [LoginController::class, 'daftar'])->middleware('guest')->name('daftar');
 Route::post('/register', [LoginController::class, 'register'])->middleware('guest')->name('register');
+
 
 Route::get('/LupaPassword', function () {
     return view('auth/lupa_password');
 })->middleware('guest')->name('password.request');
 
+Route::post('/forgot-password', [PasswordController::class, 'resetlink'])->middleware('guest')->name('password.email');
+
+Route::get('/reset-password/{token}', function (string $token) {
+    return view('auth.verifikasi', ['token' => $token]);
+})->middleware('guest')->name('password.reset');
+
 Route::get('/verifikasi', function () {
     return view('auth/verifikasi');
 });
+
+Route::post('reset-password', [PasswordController::class, 'verifikasi'])->middleware('guest')->name('password.update');
+
 
 Route::get('/', [HomeController::class, 'dashboard'])->name('home');
 

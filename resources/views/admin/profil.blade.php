@@ -56,7 +56,6 @@
                     <small class=" text-red-700">{{ $message }}</small>
                     @enderror
 
-
                     <div class="flex justify-end">
                         <button type="submit" class="bg-nav hover:bg-gradb text-xs md:text-base text-white py-2 px-4 md:px-8
                             rounded-md">
@@ -73,6 +72,12 @@
 
     <!-- javascript -->
     @vite('resources/js/admin.js')
+    <script>
+        document.getElementById('togglePasswordForm').addEventListener('click', function() {
+            var dropdown = document.getElementById('passwordFormDropdown');
+            dropdown.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
