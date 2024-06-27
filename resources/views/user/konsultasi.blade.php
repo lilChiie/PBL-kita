@@ -33,8 +33,8 @@
             </div>
 
             <div class="grid gap-x-5 sm:gap-x-10 gap-y-2 grid-cols-2 mx-5 sm:mx-10 my-2 ">
-                @forelse ($files as $file)
                 <!-- content 1 -->
+                @forelse ($files as $file)
                 <div class="w-full" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="{{ route('user.konsultasi.detail', $file->konsultasi_id) }}">
                         <img src="{{ asset('images/'.$file->photo) }}" alt="konsultasi" class="w-full object-cover aspect-16/9 hover:brightness-50" />
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 @empty
-                <p class=" text-gray-400 ">Belum ada data Konsultasi</p>
+                <p class=" text-gray-400 mb-6">Belum ada data Konsultasi</p>
                 @endforelse
 
 

@@ -18,9 +18,9 @@
                 Tentang Kami
             </h1>
 
-            @forelse ($files as $file)
             <!-- content 1 -->
             <div class="px-2 md:px-10 items-center mb-2 sm:mb-4 lg:mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
+                @forelse ($files as $file)
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
                         <a href="{{ route('user.tentangkami.detail', $file->tentang_id) }}">
@@ -40,10 +40,10 @@
                         </a>
                     </div>
                 </div>
+                @empty
+                <p class=" text-gray-400 ">Belum ada data Tentang kami</p>
+                @endforelse
             </div>
-            @empty
-            <p class=" text-gray-400 ">Belum ada data Tentang kami</p>
-            @endforelse
 
 
         </div>

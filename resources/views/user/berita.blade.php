@@ -13,7 +13,7 @@
 
     <!-- Content Start -->
     <section class="pt-36 sm:pt-32 mx-8">
-        <div class="bg-white w-full pb-20">
+        <div class="bg-white w-full pb-20 rounded-md">
             <div class="mx-3">
                 <h1 class="font-bold pt-6 text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
                     Berita

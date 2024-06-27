@@ -34,9 +34,9 @@
                 <h1 class="font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-6 sm:mx-6" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">Pelatihan</h1>
             </div>
 
-            @forelse($files as $file)
-            @if($file['category'] == 'pelatihan')
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
+                @forelse($files as $file)
+                @if($file['category'] == 'pelatihan')
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
                         <a href="{{ route('admin.akademi.detail', $file->kegiatan_id) }}">
@@ -55,11 +55,11 @@
 
                     </div>
                 </div>
+                @endif
+                @empty
+                <p class=" text-gray-400 ">Belum ada data Pelatihan</p>
+                @endforelse
             </div>
-            @endif
-            @empty
-            <p class=" text-gray-400 ">Belum ada data Pelatihan</p>
-            @endforelse
 
 
 

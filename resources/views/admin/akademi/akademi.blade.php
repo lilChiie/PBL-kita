@@ -85,8 +85,14 @@
                                     <a href="{{route('admin.pembayaran.detail', $data->pembayaran_id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Detail</a>
                                 </td>
                             </tr>
+
                             @empty
-                            <p class=" text-gray-400 ">Belum ada data Pendaftaran</p>
+                            <tr>
+                                <td colspan="4" class="px-6 py-4 text-gray-400">
+                                    Belum ada data Pendaftaran
+                                </td>
+                            </tr>
+
                             @endforelse
 
                         </tbody>

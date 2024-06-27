@@ -35,9 +35,9 @@
             </div>
 
             <!-- content 1 -->
-            @forelse($files as $file)
-            @if($file['category'] == 'kegiatan')
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
+                @forelse($files as $file)
+                @if($file['category'] == 'kegiatan')
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
                         <a href="{{ route('admin.akademi.detail', $file->kegiatan_id) }}">
@@ -56,11 +56,11 @@
 
                     </div>
                 </div>
+                @endif
+                @empty
+                <p class=" text-gray-400 ">Belum ada data Kegiatan</p>
+                @endforelse
             </div>
-            @endif
-            @empty
-            <p class=" text-gray-400 ">Belum ada data Kegiatan</p>
-            @endforelse
         </div>
         </div>
     </section>

@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 @empty
-                <p class=" text-gray-400 ">Belum ada data Publikasi</p>
+                <p class=" text-gray-400  mb-6">Belum ada data Publikasi</p>
                 @endforelse
 
             </div>

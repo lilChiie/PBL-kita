@@ -114,7 +114,11 @@
                                 </td>
                             </tr>
                             @empty
-                            <p class=" text-gray-400 ">Belum ada data Barcode</p>
+                            <tr>
+                                <td colspan="4" class="px-6 py-4 text-gray-400">
+                                    Belum ada data Barcode
+                                </td>
+                            </tr>
                             @endforelse
                         </tbody>
 

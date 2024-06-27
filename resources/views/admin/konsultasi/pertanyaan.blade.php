@@ -51,7 +51,11 @@
                             </td>
                         </tr>
                         @empty
-                        <p class=" text-gray-400 ">Belum ada pertanyaan</p>
+                        <tr>
+                            <td colspan="4" class="px-6 py-4 text-gray-400">
+                                Belum ada data Pertanyaan
+                            </td>
+                        </tr>
                         @endforelse
 
                     </tbody>

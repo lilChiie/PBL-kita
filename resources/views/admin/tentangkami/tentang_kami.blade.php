@@ -40,10 +40,10 @@
             <h1 class="ml-2 pt-2 sm:pt-6 md:ml-8 font-bold text-wjudul my-4 md:text-2xl lg:text-3xl md:my-8" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
                 Tentang Kami
             </h1>
-
-            @forelse ($files as $file)
             <!-- item 1 -->
             <div class="px-2 md:px-10 items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
+
+                @forelse ($files as $file)
                 <div class="w-full grid grid-cols-3">
                     <div class="flex items-center">
                         <a href="{{ route('admin.tentangkami.detail', $file->tentang_id) }}">
@@ -61,10 +61,10 @@
                         </a>
                     </div>
                 </div>
+                @empty
+                <p class=" text-gray-400 ">Belum ada data Tentang kami</p>
+                @endforelse
             </div>
-            @empty
-            <p class=" text-gray-400 ">Belum ada data Tentang kami</p>
-            @endforelse
 
         </div>
     </section>

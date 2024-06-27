@@ -101,7 +101,11 @@
 
                             </tr>
                             @empty
-                            <p class=" text-gray-400 ">Belum ada data Pendaftaran</p>
+                            <tr>
+                                <td colspan="4" class="px-6 py-4 text-gray-400">
+                                    Belum ada data Pendaftaran
+                                </td>
+                            </tr>
                             @endforelse
 
 

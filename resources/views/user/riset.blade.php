@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 @empty
-                <p class=" text-gray-400 ">Belum ada data Riset</p>
+                <p class=" text-gray-400  mb-6">Belum ada data Riset</p>
                 @endforelse
 
 
