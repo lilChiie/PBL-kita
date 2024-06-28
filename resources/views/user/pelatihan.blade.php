@@ -22,7 +22,7 @@
             <div class="px-2 md:px-10 items-center my-4" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 @forelse($files as $file)
                 @if($file['category'] == 'pelatihan')
-                <div class="w-full grid grid-cols-3">
+                <div class="w-full grid grid-cols-3 mb-4">
                     <div class="flex items-center">
                         <a href="{{ route('user.pelatihan.detail', $file->kegiatan_id) }}">
                             <img class="w-full aspect-16/9 object-cover hover:brightness-50" src="{{ asset('images/'.$file->photo) }}" alt="gambar pelatihan" />

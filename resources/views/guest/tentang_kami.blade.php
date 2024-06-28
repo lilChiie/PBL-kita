@@ -19,7 +19,7 @@
             <!-- content 1 -->
             <div class="px-2 md:px-10 items-center mb-2 sm:mb-4 lg:mb-8 block" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
                 @forelse ($files as $file)
-                <div class="w-full grid grid-cols-3">
+                <div class="w-full grid grid-cols-3 mb-4">
                     <div class="flex items-center">
                         <a href="{{ route('guest.tentangkami.detail', $file->tentang_id) }}">
                             <img src="{{ asset('images/'.$file->photo) }}" alt="{ $file->photo }}" class="w-full object-cover xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 hover:brightness-50">

@@ -44,7 +44,7 @@
             <div class="px-2 md:px-10 items-center mb-8" data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
 
                 @forelse ($files as $file)
-                <div class="w-full grid grid-cols-3">
+                <div class="w-full grid grid-cols-3 mb-3">
                     <div class="flex items-center">
                         <a href="{{ route('admin.tentangkami.detail', $file->tentang_id) }}">
                             <img class="w-full xl:w-[419px] xl:h-[236px] 2xl:h-[414px] 2xl:w-[736px] aspect-16/9 object-cover hover:brightness-50" src="{{ asset('images/'.$file->photo) }}" alt="gambar pelatihan" />
