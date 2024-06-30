@@ -104,7 +104,7 @@
                 <!-- edited -->
 
                 <hr class="border-t-2 my-8 md:my-12  border-black">
-                <a href="/admin/akademi/barcode" class="text-xs md:text-base bg-nav text-white py-2 px-8 rounded-full hover:bg-gradb focus:bg-gradb">Edit Bercode Pembayaran</a>
+                <a href="/admin/akademi/barcode" class="text-xs md:text-base bg-nav text-white py-2 px-8 rounded-full hover:bg-gradb focus:bg-gradb">Edit Barcode Pembayaran</a>
             </div>
             <!-- list peserta end -->
     </section>
