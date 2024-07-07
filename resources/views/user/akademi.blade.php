@@ -20,7 +20,8 @@
                     title: "{{ session('success') }}",
                     text: 'Silahkan tunggu admin mengonfirmasi pendaftaran anda',
                     icon: 'success',
-                    confirmButtonText: 'OK'
+                    // confirmButtonText: 'OK'
+                    confirmButtonColor: "#3085d6",
                 });
             });
         </script>
