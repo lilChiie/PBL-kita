@@ -23,7 +23,7 @@
                         <p>Tanggal Pelatihan : {{$files->date}}</p>
                         <p>Lokasi Pelatihan : {{$files->location}}</p>
                         <p>Harga : Rp {{ number_format($files->price, 0, ',', '.') }}</p>
-                        <p>Slot Peserta :{{$files->slot}} Peserta</p>
+                        <p>Slot Peserta : {{$files->slot}} Peserta</p>
                         <p>{!! nl2br($files->description) !!}</p>
                     </div>
                 </div>

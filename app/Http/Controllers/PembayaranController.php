@@ -33,24 +33,37 @@ class PembayaranController extends Controller
 
         $request->validate([
             'photo' => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'name' => 'required'
         ], [
+            'photo.required' => 'Bukti pembayaran harus di isi',
             'photo.image' => 'Format gambar tidak sesuai',
             'photo.mimes' => 'Format gambar tidak sesuai',
-            'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb'
+            'photo.max' => 'Ukuran gambar melebihi kapasitas, max 2 mb',
+            'name.required' => 'Nama harus di isi, silahkan melengkapi profil',
+
         ]);
         $user = Auth::user();
         $akademi = Akademi::find($request->kegiatan_id);
 
 
 
-        $imageName = time() . '.' . $request->photo->extension();
-        $request->photo->move(public_path('bukti'), $imageName);
+        if ($akademi->slot > 0) {
+            $imageName = time() . '.' . $request->photo->extension();
+            $request->photo->move(public_path('bukti'), $imageName);
 
-        $produk = new Pembayaran();
-        $produk->user_id = $user->id;
-        $produk->kegiatan_id = $akademi->kegiatan_id;
-        $produk->photo = $imageName;
-        $produk->save();
+            $pembayaran = new Pembayaran();
+            $pembayaran->user_id = $user->id;
+            $pembayaran->kegiatan_id = $akademi->kegiatan_id;
+            $pembayaran->photo = $imageName;
+            $pembayaran->save();
+
+            // Kurangi slot yang tersedia
+            $akademi->decrement('slot', 1);
+
+            return redirect()->route('user.akademi')->with('success', 'Pendaftaran berhasil!');
+        } else {
+            return redirect()->back()->with(['error' => 'Jumlah peserta sudah terpenuhi, anda tidak dapat melakukan pendaftaran lagi']);
+        }
 
         return redirect()->route('user.akademi')->with('success', 'Pendaftaran berhasil!');
     }
@@ -106,10 +119,13 @@ class PembayaranController extends Controller
     {
         // Temukan pembayaran berdasarkan ID
         $pembayaran = Pembayaran::findOrFail($id);
+        $akademi = Akademi::findOrFail($pembayaran->kegiatan_id);
 
         // Ubah status pendaftaran menjadi "Pendaftaran dibatalkan"
         $pembayaran->status = 'Pendaftaran dibatalkan';
         $pembayaran->save();
+
+        $akademi->increment('slot', 1);
 
         // Redirect kembali atau lakukan sesuatu setelah pembatalan
         return redirect()->back()->with('success', 'Pendaftaran berhasil dibatalkan');

@@ -36,10 +36,13 @@
                         <label for="name" class="text-xs md:text-base">
                             Nama
                         </label>
-                        <input type="text" id="name" name="name" autocomplete="name" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="{{ $user->name }}" readonly>
+                        <input type="text" id="name" name="name" autocomplete="name" class="text-xs md:text-base w-full border-black rounded-lg mt-2" value="{{ $user->name }}" readonly>
                     </div>
-                    <div>
-                        <label for="email" class="text-xs md:text-base">
+                    @error('name')
+                    <small class=" text-red-700">{{ $message }}</small>
+                    @enderror
+                    <div class="mt-2">
+                        <label for="email" class="text-xs md:text-base ">
                             Email
                         </label>
                         <input type="email" id="email" name="email" autocomplete="email" class="text-xs md:text-base w-full border-black rounded-lg my-2" value="{{ $user->email }}" readonly>
@@ -124,6 +127,18 @@
 
     <!-- javascript -->
     @vite('resources/js/fituruser.js')
+
+    @if (session('error'))
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            Swal.fire({
+                title: "{{ session('error') }}",
+                icon: 'errors',
+                confirmButtonText: 'OK'
+            });
+        });
+    </script>
+    @endif
 </body>
 
 </html>
